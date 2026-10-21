@@ -222,6 +222,7 @@
         "meaning": "{\"prompt\":\"Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\",\"correct_sentence\":\"Selamat beristirahat / Selamat tidur.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_1.webp",
         "example": ""
       },
       {
@@ -231,6 +232,7 @@
         "meaning": "{\"prompt\":\"Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\",\"full_text\":\"Halo / Selamat siang. Saya Sari. Saya datang dari Indonesia. Senang berkenalan dengan Anda / Mohon bimbingannya.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_2.webp",
         "example": ""
       },
       {
@@ -240,6 +242,7 @@
         "meaning": "{\"prompt\":\"Apa yang dilakukan Yuki dan Tania saat waktu luang?\\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"full_text\":\"Yuki dan Tania saat waktu senggang sering berbelanja. Kadang-kadang mereka memasak bersama. Tania suka piano, tetapi Yuki suka karate.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_3.webp",
         "example": ""
       },
       {
@@ -249,6 +252,7 @@
         "meaning": "{\"prompt\":\"Bagaimana rumah Megumi?\",\"correct_sentence\":\"Rumah Megumi kecil dan sempit.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_4.webp",
         "example": ""
       },
       {
@@ -258,6 +262,7 @@
         "meaning": "{\"prompt\":\"Pilihlah pernyataan yang sesuai dengan teks!\\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"full_text\":\"Saya suka olahraga. Saya bisa sepak bola dan badminton. Setiap hari saya bermain sepak bola. Selain itu, sekitar dua kali seminggu, saya bermain badminton bersama teman.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_5.webp",
         "example": ""
       },
       {
@@ -267,6 +272,7 @@
         "meaning": "{\"prompt\":\"Perhatikan gambar berikut lalu pilihlah pernyataan yang sesuai!\",\"passage\":null}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_6.webp",
         "example": ""
       },
       {
@@ -276,6 +282,7 @@
         "meaning": "Hobi ayah saya adalah mendengarkan musik. (Ayah) sering mendengarkan musik rock. Ayah suka apa?",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_7.webp",
         "example": ""
       },
       {
@@ -285,6 +292,7 @@
         "meaning": "Keluargaku\n\nPerkenalkan, saya Rika. Keluarga saya berjumlah 4 orang.\nAyah, ibu, adik perempuan, dan saya.\nAyah suka bunga. Ibu selalu membuat makanan yang enak.\nLusa adalah hari ulang tahun ibu. Tanggal 15 Mei. Pada hari itu, ibu tidak melakukan apa-apa.\nSaya sering bersih-bersih. Karena adik perempuan masih berumur 4 tahun, dia tidak membantu apa-apa.",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_8.webp",
         "example": ""
       },
       {
@@ -294,6 +302,7 @@
         "meaning": "Keluargaku\n\nPerkenalkan, saya Rika. Keluarga saya berjumlah 4 orang.\nAyah, ibu, adik perempuan, dan saya.\nAyah suka bunga. Ibu selalu membuat makanan yang enak.\nLusa adalah hari ulang tahun ibu. Tanggal 15 Mei. Pada hari itu, ibu tidak melakukan apa-apa.\nSaya sering bersih-bersih. Karena adik perempuan masih berumur 4 tahun, dia tidak membantu apa-apa.",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_9.webp",
         "example": ""
       },
       {
@@ -303,6 +312,7 @@
         "meaning": "Kalender Mei 2025\nMinggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu\nTanggal 9: Kemping / Perkemahan\nTanggal 10: Kemping / Perkemahan\nTanggal 12-16: Ujian\nTanggal 29-31: Berwisata / Liburan",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_10.webp",
         "example": ""
       },
       {
@@ -312,6 +322,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_11.webp",
         "example": ""
       },
       {
@@ -321,6 +332,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_12.webp",
         "example": ""
       },
       {
@@ -330,6 +342,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_13.webp",
         "example": ""
       },
       {
@@ -339,6 +352,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_14.webp",
         "example": ""
       },
       {
@@ -348,6 +362,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_15.webp",
         "example": ""
       },
       {
@@ -357,6 +372,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_16.webp",
         "example": ""
       },
       {
@@ -366,6 +382,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_17.webp",
         "example": ""
       },
       {
@@ -375,6 +392,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_18.webp",
         "example": ""
       },
       {
@@ -384,6 +402,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_19.webp",
         "example": ""
       },
       {
@@ -393,6 +412,7 @@
         "meaning": "",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_20.webp",
         "example": ""
       },
       {
@@ -402,6 +422,7 @@
         "meaning": "{\"prompt\":\"Pilih pernyataan yang sesuai dengan wacana tersebut!\",\"full_text\":\"PENGUMUMAN\\n• Festival / Pertandingan Olahraga: 17 Juni – 20 Juni\\n• Upacara Kelulusan: 24 Juni\\n• Libur: 25 Juni – 14 Juli\",\"correct_sentence\":\"Upacara kelulusan diselenggarakan sebelum liburan sekolah.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_21.webp",
         "example": ""
       },
       {
@@ -411,6 +432,7 @@
         "meaning": "{\"prompt\":\"Kapan Ali bermain bulu tangkis / badminton?\",\"correct_sentence\":\"Hari Sabtu.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_22.webp",
         "example": ""
       },
       {
@@ -420,6 +442,7 @@
         "meaning": "{\"prompt\":\"Dari jam berapa sampai jam berapa Ali berbelanja?\",\"correct_sentence\":\"Dari jam 11 sampai jam 13.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_23.webp",
         "example": ""
       },
       {
@@ -429,6 +452,7 @@
         "meaning": "{\"prompt\":\"Kalimat manakah yang benar?\\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"correct_sentences\":[\"Kenta ada di depan Kazama.\",\"Nanako ada di depan Masao.\"]}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_24.webp",
         "example": ""
       },
       {
@@ -438,6 +462,7 @@
         "meaning": "{\"prompt\":\"Bagaimana informasi pernyataan terkait dengan wacana tersebut?\\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi wacana!\",\"dialogue\":[{\"speaker\":\"Siswa\",\"text\":\"Hari ini jam berapa kamu belajar sejarah?\"},{\"speaker\":\"Siswi\",\"text\":\"Dari jam 10 sampai jam 12.\"},{\"speaker\":\"Siswa\",\"text\":\"Begitu ya. Apakah besok juga belajar sejarah?\"},{\"speaker\":\"Siswi\",\"text\":\"Tidak, (belajarnya) hari ini dan lusa.\"}]}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_25.webp",
         "example": ""
       },
       {
@@ -447,6 +472,7 @@
         "meaning": "{\"prompt\":\"Bagaimana informasi pernyataan terkait dengan tabel tersebut? Klik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi tabel!\",\"table_title\":\"Jadwal Sepak Bola\",\"headers\":\"Nama | Minggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu\",\"statement_1\":\"Maya selalu bermain sepak bola.\",\"statement_2\":\"Rama jarang bermain sepak bola.\",\"statement_3\":\"Mira kadang-kadang bermain sepak bola.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_26.webp",
         "example": ""
       },
       {
@@ -456,6 +482,7 @@
         "meaning": "{\"prompt\":\"Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"table_content\":\"Pengumuman:\\n- Ujian: 2 Juni s.d. 13 Juni\\n- Libur: 30 Juni s.d. 16 Juli\",\"option_1\":\"Libur mulai dari tanggal 13 Juni.\",\"option_2\":\"Libur mulai dari tanggal 30 Juni.\",\"option_3\":\"Ujian sampai tanggal 13 Juni.\",\"option_4\":\"Ujian sampai tanggal 16 Juli.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_27.webp",
         "example": ""
       },
       {
@@ -465,6 +492,7 @@
         "meaning": "{\"prompt\":\"Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"table_content\":\"Jadwal Sekolah:\\n- Pendidikan Jasmani (体育): 08:00 - 09:30 (Durasi: 1,5 jam / 1時間半)\\n- Geografi (地理学): 09:30 - 11:30 (Durasi: 2 jam / 2時間)\\n- Matematika (数学): 12:30 - 13:00 (Durasi: 30 menit / 30分)\\n- Musik (音楽): 13:00 - 14:30 (Durasi: 1,5 jam / 1時間半)\",\"option_1\":\"Musik adalah mata pelajaran terakhir.\",\"option_2\":\"Geografi memakan waktu 2 jam.\",\"option_3\":\"Matematika mulai dari jam 10:30.\",\"option_4\":\"Pendidikan jasmani adalah mata pelajaran urutan kedua.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_28.webp",
         "example": ""
       },
       {
@@ -474,6 +502,7 @@
         "meaning": "{\"prompt\":\"Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"letter_text\":\"Kepada Dina,\\nApa kabar? Saya bangun sekitar jam 6 setiap hari. Sekolah dari hari Senin sampai Jumat. Pada hari Sabtu, saya sering menonton film bersama teman. Kadang-kadang berenang di kolam renang. Pada hari Minggu pagi selalu jalan-jalan santai. Malam hari menonton TV di rumah. Dina kalau sedang ada waktu luang melakukan apa? Tolong beri tahu ya. Nanti saya akan menulis surat lagi.\\n20 Mei\\nYukiko\",\"option_1\":\"Dina menulis surat ini.\",\"option_2\":\"Yukiko pergi ke sekolah selama lima hari.\",\"option_3\":\"Yukiko suka menonton film.\",\"option_4\":\"Sekolah Dina dari hari Senin sampai hari Minggu.\"}",
         "furigana": "",
         "romaji": "",
+        "image": "images/soal/soal_29.webp",
         "example": ""
       }
     ]

@@ -301,6 +301,16 @@ class AnkiApp {
     document.getElementById('study-progress-bar').style.width = `${progressPercent}%`;
 
     // Render Front content
+    const imgContainer = document.getElementById('card-image-container');
+    const imgEl = document.getElementById('card-image-element');
+    if (card.image) {
+      imgEl.src = card.image;
+      imgContainer.classList.remove('hidden');
+    } else {
+      imgContainer.classList.add('hidden');
+      imgEl.src = '';
+    }
+
     const frontEl = document.getElementById('card-front-content');
     let frontHtml = this.formatFurigana(card.furigana && !card.furigana.includes('[') ? card.front : (card.furigana || card.front));
     frontEl.innerHTML = frontHtml;
