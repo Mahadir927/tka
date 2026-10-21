@@ -1,0 +1,513 @@
+[
+  {
+    "id": "soal-6",
+    "question_number": 6,
+    "package": "Bahasa Jepang (Paket 2)",
+    "image_file": "7693851726323092788_6_1791368440.jpeg",
+    "prompt": "Perhatikan gambar berikut lalu pilihlah pernyataan yang sesuai!",
+    "image_description": "Ilustrasi ruangan kamar/keluarga yang rapi dari irasutoya.com. Tampak jendela dengan gorden di tengah, sofa hijau di sebelah kiri, dan meja kayu berkaki empat dengan televisi di atasnya di sebelah kanan.",
+    "text_content": null,
+    "question_type": "single_choice",
+    "options": [
+      {
+        "index": 1,
+        "text": "このへやに　せんぷうきが　あります。",
+        "furigana": "この部屋[へや]に　扇風機[せんぷうき]が　あります。",
+        "meaning": "Di kamar ini ada kipas angin."
+      },
+      {
+        "index": 2,
+        "text": "この　へやは　きたないです。",
+        "furigana": "この　部屋[へや]は　汚[きたな]いです。",
+        "meaning": "Kamar ini kotor."
+      },
+      {
+        "index": 3,
+        "text": "このへやに　テレビは　ありません。",
+        "furigana": "この部屋[へや]に　テレビは　ありません。",
+        "meaning": "Di kamar ini tidak ada televisi."
+      },
+      {
+        "index": 4,
+        "text": "このへやに　ソファが　あります。",
+        "furigana": "この部屋[へや]に　ソファが　あります。",
+        "meaning": "Di kamar ini ada sofa."
+      },
+      {
+        "index": 5,
+        "text": "このへやは　ふるいです。",
+        "furigana": "この部屋[へや]は　古[ふる]いです。",
+        "meaning": "Kamar ini sudah tua/usang."
+      }
+    ],
+    "user_selection": [
+      "このへやに　ソファが　あります。"
+    ],
+    "correct_answer": [
+      "このへやに　ソファが　あります。"
+    ],
+    "is_user_correct": true,
+    "translation": {
+      "prompt": "Perhatikan gambar berikut lalu pilihlah pernyataan yang sesuai!",
+      "passage": null
+    },
+    "explanation": "Pada gambar terlihat jelas ruangan yang bersih dengan sofa berwarna hijau di samping meja televisi. Analisis pilihan:\n1. 'このへやに せんぷうきが あります' salah karena tidak ada kipas angin (扇風機/せんぷうき).\n2. 'この へやは きたないです' salah karena ruangan tampak bersih dan rapi, bukan kotor (汚い/きたない).\n3. 'このへやに テレビは ありません' salah karena di atas meja jelas terdapat televisi.\n4. 'このへやに ソファが あります' BENAR, karena di dalam kamar memang terdapat sofa (ソファ).\n5. 'このへやは ふるいです' salah karena ruangan tersebut tampak modern dan tidak ada indikasi sudah tua/kuno (古い/ふるい).\nOleh karena itu, pernyataan yang sesuai adalah opsi ke-4.",
+    "grammar_and_vocabulary": [
+      {
+        "japanese": "部屋[へや]",
+        "romaji": "heya",
+        "indonesian": "kamar / ruangan"
+      },
+      {
+        "japanese": "扇風機[せんぷうき]",
+        "romaji": "senpuuki",
+        "indonesian": "kipas angin"
+      },
+      {
+        "japanese": "テレビ",
+        "romaji": "terebi",
+        "indonesian": "televisi"
+      },
+      {
+        "japanese": "ソファ",
+        "romaji": "sofa",
+        "indonesian": "sofa"
+      },
+      {
+        "japanese": "汚[きたな]い",
+        "romaji": "kitanai",
+        "indonesian": "kotor (kata sifat-i)"
+      },
+      {
+        "japanese": "古[ふる]い",
+        "romaji": "furui",
+        "indonesian": "tua / kuno / usang (kata sifat-i)"
+      },
+      {
+        "japanese": "[Tempat] に [Benda] が あります",
+        "romaji": "[Tempat] ni [Benda] ga arimasu",
+        "indonesian": "Pola kalimat keberadaan benda mati: 'Di [Tempat] ada [Benda]'"
+      }
+    ]
+  },
+  {
+    "id": "soal-7",
+    "question_number": 7,
+    "package": "Bahasa Jepang (Paket 2)",
+    "image_file": "7693851726323092788_7_1791368440.jpeg",
+    "prompt": "ちちは　なにが　すきですか。",
+    "image_description": null,
+    "text_content": "ちちの　しゅみは　おんがくを　きく　ことです。\nよく　ロックを　ききます。\nちちは　なにが　すきですか。",
+    "text_furigana": "父[ちち]の　趣味[しゅみ]は　音楽[おんがく]を　聞[き]く　ことです。\nよく　ロックを　聞[き]きます。\n父[ちち]は　何[なに]が　好[す]きですか。",
+    "question_type": "single_choice",
+    "options": [
+      {
+        "index": 1,
+        "text": "おんがくです。",
+        "furigana": "音楽[おんがく]です。",
+        "meaning": "Musik."
+      },
+      {
+        "index": 2,
+        "text": "おかしです。",
+        "furigana": "お菓子[かし]です。",
+        "meaning": "Kue / makanan ringan."
+      },
+      {
+        "index": 3,
+        "text": "おかねです。",
+        "furigana": "お金[かね]です。",
+        "meaning": "Uang."
+      },
+      {
+        "index": 4,
+        "text": "おさけです。",
+        "furigana": "お酒[さけ]です。",
+        "meaning": "Sake / minuman beralkohol."
+      },
+      {
+        "index": 5,
+        "text": "おにぎりです。",
+        "furigana": "おにぎりです。",
+        "meaning": "Onigiri / nasi kepal."
+      }
+    ],
+    "user_selection": [
+      "おんがくです。"
+    ],
+    "correct_answer": [
+      "おんがくです。"
+    ],
+    "is_user_correct": true,
+    "translation": {
+      "prompt": "Ayah suka apa?",
+      "passage": "Hobi ayah saya adalah mendengarkan musik. (Ayah) sering mendengarkan musik rock. Ayah suka apa?"
+    },
+    "explanation": "Pada teks disebutkan bahwa hobi ayah adalah mendengarkan musik ('ちちの しゅみは おんがくを きく ことです') dan sering mendengarkan musik rock ('よく ロックを ききます'). Berdasarkan hobi tersebut, pertanyaan 'ちちは なにが すきですか' (Ayah suka apa?) dijawab dengan tepat oleh 'おんがくです' (Musik). Opsi lainnya (おかし/kue, おかね/uang, おさけ/sake, おにぎり/nasi kepal) merupakan kata benda umum berawalan 'お' sebagai pengecoh bunyi dan tidak relevan dengan bacaan.",
+    "grammar_and_vocabulary": [
+      {
+        "japanese": "父[ちち]",
+        "romaji": "chichi",
+        "indonesian": "ayah (kandung/pembicara)"
+      },
+      {
+        "japanese": "趣味[しゅみ]",
+        "romaji": "shumi",
+        "indonesian": "hobi / kegemaran"
+      },
+      {
+        "japanese": "音楽[おんがく]",
+        "romaji": "ongaku",
+        "indonesian": "musik"
+      },
+      {
+        "japanese": "聞[き]く",
+        "romaji": "kiku",
+        "indonesian": "mendengar / mendengarkan"
+      },
+      {
+        "japanese": "〜ことです",
+        "romaji": "~ koto desu",
+        "indonesian": "Pola nominalisasi: kata kerja bentuk kamus + koto desu untuk menyatakan 'hobinya adalah melakukan...'"
+      },
+      {
+        "japanese": "よく",
+        "romaji": "yoku",
+        "indonesian": "sering (kata keterangan frekuensi)"
+      },
+      {
+        "japanese": "ロック",
+        "romaji": "rokku",
+        "indonesian": "musik rock"
+      },
+      {
+        "japanese": "何[なに]",
+        "romaji": "nani",
+        "indonesian": "apa"
+      },
+      {
+        "japanese": "好[す]き",
+        "romaji": "suki",
+        "indonesian": "suka / gemar (kata sifat-na, pola: [Objek] が 好きです)"
+      }
+    ]
+  },
+  {
+    "id": "soal-8",
+    "question_number": 8,
+    "package": "Bahasa Jepang (Paket 2)",
+    "image_file": "7693851726323092788_8_1791368440.jpeg",
+    "prompt": "Manakah pernyataan yang sesuai dengan teks? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+    "image_description": null,
+    "text_content": "Watashi no Kazoku\n\nHajimemashite, watashi wa Rika desu. Watashi no kazoku wa yo nin desu.\nChichi to haha to imouto to watashi desu.\nChichi wa hana ga suki desu. Haha wa itsumo oishii tabemono o tsukurimasu.\nAsatte wa haha no tanjoubi desu. 5 gatsu 15 nichi desu. Sono hi, haha wa nani mo shimasen.\nWatashi wa yoku souji wo shimasu. Imouto wa mada 4 sai desu kara, nani mo tetsudaimasen.",
+    "text_furigana": "私[わたし]の家族[かぞく]\n\n初[はじ]めまして、私[わたし]はリカです。私[わたし]の家族[かぞく]は四人[よにん]です。\n父[ちち]と母[はは]と妹[いもうと]と私[わたし]です。\n父[ちち]は花[はな]が好[す]きです。母[はは]はいつもおいしい食[た]べ物[もの]を作[つく]ります。\n明後日[あさって]は母[はは]の誕生日[たんじょうび]です。5月[ごがつ]15日[じゅうごにち]です。その日[ひ]、母[はは]は何[なに]もしません。\n私[わたし]はよく掃除[そうじ]をします。妹[いもうと]はまだ4歳[よんさい]ですから、何[なに]も手伝[てつだ]いません。",
+    "question_type": "multiple_choice_complex",
+    "options": [
+      {
+        "index": 1,
+        "text": "Hari ini tanggal 15 Mei.",
+        "furigana": null,
+        "meaning": "Hari ini tanggal 15 Mei."
+      },
+      {
+        "index": 2,
+        "text": "Ibu Rika suka memasak.",
+        "furigana": null,
+        "meaning": "Ibu Rika suka memasak."
+      },
+      {
+        "index": 3,
+        "text": "Ayah Rika tidak suka bunga.",
+        "furigana": null,
+        "meaning": "Ayah Rika tidak suka bunga."
+      },
+      {
+        "index": 4,
+        "text": "Adik perempuan Rika tidak melakukan bersih-bersih.",
+        "furigana": null,
+        "meaning": "Adik perempuan Rika tidak melakukan bersih-bersih."
+      }
+    ],
+    "user_selection": [
+      "Ibu Rika suka memasak.",
+      "Adik perempuan Rika tidak melakukan bersih-bersih."
+    ],
+    "correct_answer": [
+      "Ibu Rika suka memasak.",
+      "Adik perempuan Rika tidak melakukan bersih-bersih."
+    ],
+    "is_user_correct": true,
+    "translation": {
+      "prompt": "Manakah pernyataan yang sesuai dengan teks? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "passage": "Keluargaku\n\nPerkenalkan, saya Rika. Keluarga saya berjumlah 4 orang.\nAyah, ibu, adik perempuan, dan saya.\nAyah suka bunga. Ibu selalu membuat makanan yang enak.\nLusa adalah hari ulang tahun ibu. Tanggal 15 Mei. Pada hari itu, ibu tidak melakukan apa-apa.\nSaya sering bersih-bersih. Karena adik perempuan masih berumur 4 tahun, dia tidak membantu apa-apa."
+    },
+    "explanation": "Analisis setiap pernyataan terhadap isi bacaan:\n1. 'Hari ini tanggal 15 Mei': SALAH. Teks berbunyi 'Asatte wa haha no tanjoubi desu. 5 gatsu 15 nichi desu.' (Lusa adalah ulang tahun ibu. Tanggal 15 Mei). Kata 'asatte' berarti lusa, sehingga tanggal 15 Mei adalah lusa, bukan hari ini.\n2. 'Ibu Rika suka memasak': BENAR. Teks menyatakan 'Haha wa itsumo oishii tabemono o tsukurimasu' (Ibu selalu membuat makanan enak), yang mendeskripsikan aktivitas memasak hidangan enak oleh ibu.\n3. 'Ayah Rika tidak suka bunga': SALAH. Teks secara jelas menyatakan 'Chichi wa hana ga suki desu' (Ayah suka bunga).\n4. 'Adik perempuan Rika tidak melakukan bersih-bersih': BENAR. Teks menyatakan bahwa Rika yang sering bersih-bersih ('Watashi wa yoku souji wo shimasu'), sedangkan adiknya masih 4 tahun sehingga belum membantu apa pun ('Imouto wa mada 4 sai desu kara, nani mo tetsudaimasen').\nJadi, jawaban benar ada dua: 'Ibu Rika suka memasak.' dan 'Adik perempuan Rika tidak melakukan bersih-bersih.'",
+    "grammar_and_vocabulary": [
+      {
+        "japanese": "家族[かぞく]",
+        "romaji": "kazoku",
+        "indonesian": "keluarga"
+      },
+      {
+        "japanese": "四人[よにん]",
+        "romaji": "yonin",
+        "indonesian": "4 orang"
+      },
+      {
+        "japanese": "母[はは]",
+        "romaji": "haha",
+        "indonesian": "ibu (sendiri)"
+      },
+      {
+        "japanese": "妹[いもうと]",
+        "romaji": "imouto",
+        "indonesian": "adik perempuan"
+      },
+      {
+        "japanese": "花[はな]",
+        "romaji": "hana",
+        "indonesian": "bunga"
+      },
+      {
+        "japanese": "おいしい",
+        "romaji": "oishii",
+        "indonesian": "enak / lezat"
+      },
+      {
+        "japanese": "食[た]べ物[もの]",
+        "romaji": "tabemono",
+        "indonesian": "makanan"
+      },
+      {
+        "japanese": "作[つく]る",
+        "romaji": "tsukuru",
+        "indonesian": "membuat / memasak"
+      },
+      {
+        "japanese": "明後日[あさって]",
+        "romaji": "asatte",
+        "indonesian": "lusa"
+      },
+      {
+        "japanese": "誕生日[たんじょうび]",
+        "romaji": "tanjoubi",
+        "indonesian": "ulang tahun"
+      },
+      {
+        "japanese": "何[なに]も",
+        "romaji": "nani mo",
+        "indonesian": "apa pun (diikuti bentuk negatif = tidak melakukan apa pun)"
+      },
+      {
+        "japanese": "掃除[そうじ]",
+        "romaji": "souji",
+        "indonesian": "membersihkan / bebenah"
+      },
+      {
+        "japanese": "歳[さい]",
+        "romaji": "sai",
+        "indonesian": "tahun (satuan umur)"
+      },
+      {
+        "japanese": "手伝[てつだ]う",
+        "romaji": "tetsudau",
+        "indonesian": "membantu / menolong"
+      }
+    ]
+  },
+  {
+    "id": "soal-9",
+    "question_number": 9,
+    "package": "Bahasa Jepang (Paket 2)",
+    "image_file": "7693851726323092788_9_1791368440.jpeg",
+    "prompt": "きのうは____________。",
+    "image_description": null,
+    "text_content": "Watashi no Kazoku\n\nHajimemashite, watashi wa Rika desu. Watashi no kazoku wa yo nin desu.\nChichi to haha to imouto to watashi desu.\nChichi wa hana ga suki desu. Haha wa itsumo oishii tabemono o tsukurimasu.\nAsatte wa haha no tanjoubi desu. 5 gatsu 15 nichi desu. Sono hi, haha wa nani mo shimasen.\nWatashi wa yoku souji wo shimasu. Imouto wa mada 4 sai desu kara, nani mo tetsudaimasen.",
+    "text_furigana": "私[わたし]の家族[かぞく]\n\n初[はじ]めまして、私[わたし]はリカです。私[わたし]の家族[かぞく]は四人[よにん]です。\n父[ちち]と母[はは]と妹[いもうと]と私[わたし]です。\n父[ちち]は花[はな]が好[す]きです。母[はは]はいつもおいしい食[た]べ物[もの]を作[つく]ります。\n明後日[あさって]は母[はは]の誕生日[たんじょうび]です。5月[ごがつ]15日[じゅうごにち]です。その日[ひ]、母[はは]は何[なに]もしません。\n私[わたし]はよく掃除[そうじ]をします。妹[いもうと]はまだ4歳[よんさい]ですから、何[なに]も手伝[てつだ]いません。",
+    "question_type": "single_choice",
+    "options": [
+      {
+        "index": 1,
+        "text": "じゅうににちです",
+        "furigana": "12日[じゅうににち]です",
+        "meaning": "Tanggal 12 (bentuk non-lampau)."
+      },
+      {
+        "index": 2,
+        "text": "じゅうににちでした",
+        "furigana": "12日[じゅうににち]でした",
+        "meaning": "Tanggal 12 (bentuk lampau)."
+      },
+      {
+        "index": 3,
+        "text": "じゅうさんにちでした",
+        "furigana": "13日[じゅうさんにち]でした",
+        "meaning": "Tanggal 13 (bentuk lampau)."
+      },
+      {
+        "index": 4,
+        "text": "じゅうよんにちです",
+        "furigana": "14日[じゅうよんにち]です",
+        "meaning": "Tanggal 14 (bentuk non-lampau)."
+      },
+      {
+        "index": 5,
+        "text": "じゅうごにちです",
+        "furigana": "15日[じゅうごにち]です",
+        "meaning": "Tanggal 15 (bentuk non-lampau)."
+      }
+    ],
+    "user_selection": [
+      "じゅうににちでした"
+    ],
+    "correct_answer": [
+      "じゅうににちでした"
+    ],
+    "is_user_correct": true,
+    "translation": {
+      "prompt": "Kemarin adalah ____________.",
+      "passage": "Keluargaku\n\nPerkenalkan, saya Rika. Keluarga saya berjumlah 4 orang.\nAyah, ibu, adik perempuan, dan saya.\nAyah suka bunga. Ibu selalu membuat makanan yang enak.\nLusa adalah hari ulang tahun ibu. Tanggal 15 Mei. Pada hari itu, ibu tidak melakukan apa-apa.\nSaya sering bersih-bersih. Karena adik perempuan masih berumur 4 tahun, dia tidak membantu apa-apa."
+    },
+    "explanation": "Analisis Perhitungan Tanggal & Tata Bahasa:\n1. Di teks disebutkan: 'Asatte wa haha no tanjoubi desu. 5 gatsu 15 nichi desu.' (Lusa adalah hari ulang tahun ibu. Tanggal 15 Mei).\n- Asatte (明後日 / Lusa) = Tanggal 15 Mei.\n- Ashita (明日 / Besok) = Tanggal 14 Mei.\n- Kyou (今日 / Hari ini) = Tanggal 13 Mei.\n- Kinou (昨日 / Kemarin) = Tanggal 12 Mei.\n2. Soal menanyakan waktu kemarin: 'きのうは____________。'.\n- Karena subjek waktunya adalah 'きのう' (kemarin / masa lalu), predikatnya wajib menggunakan bentuk lampau (past tense) yaitu 'でした' (deshita), BUKAN 'です' (desu).\n- Opsi 'じゅうににちです' salah karena berakhiran 'です' (non-lampau).\n- Opsi 'じゅうさんにちでした' salah tanggal (13 adalah hari ini).\n- Opsi 'じゅうよんにちです' dan 'じゅうごにちです' salah tanggal dan tenses.\nOleh sebab itu, jawaban yang paling tepat secara tanggal dan tata bahasa adalah 'じゅうににちでした'.",
+    "grammar_and_vocabulary": [
+      {
+        "japanese": "昨日[きのう]",
+        "romaji": "kinou",
+        "indonesian": "kemarin (waktu lampau)"
+      },
+      {
+        "japanese": "今日[きょう]",
+        "romaji": "kyou",
+        "indonesian": "hari ini"
+      },
+      {
+        "japanese": "明日[あした]",
+        "romaji": "ashita",
+        "indonesian": "besok"
+      },
+      {
+        "japanese": "明後日[あさって]",
+        "romaji": "asatte",
+        "indonesian": "lusa"
+      },
+      {
+        "japanese": "十二日[じゅうににち]",
+        "romaji": "juuninichi",
+        "indonesian": "tanggal 12"
+      },
+      {
+        "japanese": "十三日[じゅうさんにち]",
+        "romaji": "juusannichi",
+        "indonesian": "tanggal 13"
+      },
+      {
+        "japanese": "十四日[じゅうよんにち]",
+        "romaji": "juuyonnichi",
+        "indonesian": "tanggal 14"
+      },
+      {
+        "japanese": "十五日[じゅうごにち]",
+        "romaji": "juugonichi",
+        "indonesian": "tanggal 15"
+      },
+      {
+        "japanese": "でした",
+        "romaji": "deshita",
+        "indonesian": "kopula bentuk lampau positif (past affirmative)"
+      }
+    ]
+  },
+  {
+    "id": "soal-10",
+    "question_number": 10,
+    "package": "Bahasa Jepang (Paket 2)",
+    "image_file": "7693851726323092788_10_1791368440.jpeg",
+    "prompt": "Hari apa perkemahan diadakan? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+    "image_description": "Kalender bulan Mei (5がつ) tahun 2025 dengan kolom hari: にちようび (Minggu), げつようび (Senin), かようび (Selasa), すいようび (Rabu), もくようび (Kamis), きんようび (Jumat), どようび (Sabtu). Tertera kegiatan 'キャンプ' pada tanggal 9 dan 10.",
+    "text_content": "カレンダー\n5がつ 2025\nにちようび | げつようび | かようび | すいようび | もくようび | きんようび | どようび\n9日: キャンプ\n10日: キャンプ\n12日〜16日: しけん\n29日〜31日: りょこう",
+    "text_furigana": "カレンダー\n5月[がつ] 2025\n日曜日[にちようび] | 月曜日[げつようび] | 火曜日[かようび] | 水曜日[すいようび] | 木曜日[もくようび] | 金曜日[きんようび] | 土曜日[どようび]\n9日[ここのか]: キャンプ\n10日[とおか]: キャンプ\n12日[じゅうににち]〜16日[じゅうろくにち]: 試験[しけん]\n29日[にじゅうくにち]〜31日[さんじゅういちにち]: 旅行[りょこう]",
+    "question_type": "multiple_choice_complex",
+    "options": [
+      {
+        "index": 1,
+        "text": "きんようび",
+        "furigana": "金曜日[きんようび]",
+        "meaning": "Jumat"
+      },
+      {
+        "index": 2,
+        "text": "どようび",
+        "furigana": "土曜日[どようび]",
+        "meaning": "Sabtu"
+      },
+      {
+        "index": 3,
+        "text": "もくようび",
+        "furigana": "木曜日[もくようび]",
+        "meaning": "Kamis"
+      },
+      {
+        "index": 4,
+        "text": "すいようび",
+        "furigana": "水曜日[すいようび]",
+        "meaning": "Rabu"
+      }
+    ],
+    "user_selection": [
+      "きんようび",
+      "どようび"
+    ],
+    "correct_answer": [
+      "きんようび",
+      "どようび"
+    ],
+    "is_user_correct": true,
+    "translation": {
+      "prompt": "Hari apa perkemahan diadakan? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "passage": "Kalender Mei 2025\nMinggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu\nTanggal 9: Kemping / Perkemahan\nTanggal 10: Kemping / Perkemahan\nTanggal 12-16: Ujian\nTanggal 29-31: Berwisata / Liburan"
+    },
+    "explanation": "Pada kalender Mei 2025, perkemahan ditulis dalam bentuk katakana 'キャンプ' (kyanpu / camp). Kegiatan 'キャンプ' dijadwalkan pada:\n- Tanggal 9 yang berada di kolom 'きんようび' (Jumat).\n- Tanggal 10 yang berada di kolom 'どようび' (Sabtu).\nOleh karena itu, hari diadakannya perkemahan adalah 'きんようび' (Jumat) dan 'どようび' (Sabtu). Pilihan 'もくようび' (Kamis) dan 'すいようび' (Rabu) tidak terdapat agenda perkemahan.",
+    "grammar_and_vocabulary": [
+      {
+        "japanese": "カレンダー",
+        "romaji": "karendaa",
+        "indonesian": "kalender"
+      },
+      {
+        "japanese": "キャンプ",
+        "romaji": "kyanpu",
+        "indonesian": "kemping / perkemahan (kata serapan dari bahasa Inggris 'camp')"
+      },
+      {
+        "japanese": "試験[しけん]",
+        "romaji": "shiken",
+        "indonesian": "ujian"
+      },
+      {
+        "japanese": "旅行[りょこう]",
+        "romaji": "ryokou",
+        "indonesian": "perjalanan / liburan / wisata"
+      },
+      {
+        "japanese": "金曜日[きんようび]",
+        "romaji": "kinyoubi",
+        "indonesian": "Jumat"
+      },
+      {
+        "japanese": "土曜日[どようび]",
+        "romaji": "doyoubi",
+        "indonesian": "Sabtu"
+      },
+      {
+        "japanese": "木曜日[もくようび]",
+        "romaji": "mokuyoubi",
+        "indonesian": "Kamis"
+      },
+      {
+        "japanese": "水曜日[すいようび]",
+        "romaji": "suiyoubi",
+        "indonesian": "Rabu"
+      }
+    ]
+  }
+]

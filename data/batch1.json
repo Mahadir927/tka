@@ -1,0 +1,417 @@
+{
+  "batch": 1,
+  "description": "Hasil ekstraksi dan analisis soal TKA Bahasa Jepang Paket 2 (Soal 1 - 5)",
+  "total_questions": 5,
+  "questions": [
+    {
+      "question_number": 1,
+      "image_file": "7693851726323092788_1_1791368440.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "single_choice",
+      "prompt": "Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!",
+      "visual_description": "Ilustrasi seorang ibu tersenyum menunggui anak laki-lakinya yang sedang tidur di ranjang berselimut. Jam di samping tempat tidur menunjukkan pukul 02:30 AM dan jendela memperlihatkan pemandangan malam dengan bulan sabit dan bintang-bintang. Terdapat balon percakapan dari arah ibu.",
+      "japanese_content": {
+        "text": "",
+        "furigana": "お休[やす]みなさい",
+        "romaji": "Oyasuminasai"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "こんにちは",
+          "romaji": "Konnichiwa",
+          "meaning": "Selamat siang / Halo",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "こんばんは",
+          "romaji": "Konbanwa",
+          "meaning": "Selamat malam (salam saat bertemu)",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "いただきます",
+          "romaji": "Itadakimasu",
+          "meaning": "Selamat makan (diucapkan sebelum menyantap hidangan)",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "おやすみなさい",
+          "romaji": "Oyasuminasai",
+          "meaning": "Selamat beristirahat / Selamat tidur",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 5,
+          "text": "おはようございます",
+          "romaji": "Ohayou gozaimasu",
+          "meaning": "Selamat pagi",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [4],
+        "selected_texts": ["おやすみなさい"],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [4],
+        "texts": ["おやすみなさい"]
+      },
+      "translation": {
+        "prompt": "Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!",
+        "correct_sentence": "Selamat beristirahat / Selamat tidur."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-4: 「おやすみなさい」(Oyasuminasai).",
+        "detailed_analysis": "Gambar memperlihatkan suasana kamar tidur pada larut malam (jam meja menunjukkan 02:30 AM dan di luar jendela tampak bulan serta bintang). Anak laki-laki sudah terlelap di tempat tidur, dan sang ibu memberikan salam/ucapan selamat tidur. Dalam tata bahasa dan budaya Jepang, salam perpisahan di malam hari saat seseorang hendak beristirahat/tidur adalah 「おやすみなさい」 (Oyasuminasai) atau bentuk kasualnya 「おやすみ」 (Oyasumi), diturunkan dari kata kerja 休む (yasumu = beristirahat).",
+        "distractor_analysis": [
+          "こんにちは (Konnichiwa): Salam perjumpaan pada siang hari (kurang lebih pukul 10:00 - 17:00).",
+          "こんばんは (Konbanwa): Salam saat berpapasan/bertemu seseorang di malam hari, bukan ungkapan saat hendak tidur.",
+          "いただきます (Itadakimasu): Ungkapan doa/terima kasih yang diucapkan sebelum makan.",
+          "おはようございます (Ohayou gozaimasu): Salam sopan di pagi hari atau saat pertama kali memulai hari kerja."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "お休[やす]みなさい", "romaji": "oyasuminasai", "meaning": "selamat tidur / istirahat" },
+        { "japanese": "今[こん]日[にち]は", "romaji": "konnichiwa", "meaning": "selamat siang" },
+        { "japanese": "今[こん]晩[ばん]は", "romaji": "konbanwa", "meaning": "selamat malam" },
+        { "japanese": "いただきます", "romaji": "itadakimasu", "meaning": "selamat makan" },
+        { "japanese": "お早[はや]うございます", "romaji": "ohayou gozaimasu", "meaning": "selamat pagi" },
+        { "japanese": "夜[よる]", "romaji": "yoru", "meaning": "malam" },
+        { "japanese": "寝[ね]る", "romaji": "neru", "meaning": "tidur" }
+      ]
+    },
+    {
+      "question_number": 2,
+      "image_file": "7693851726323092788_2_1791368440.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "single_choice",
+      "prompt": "Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!",
+      "visual_description": "Ilustrasi siswi SMA berkerudung putih dengan seragam putih abu-abu khas Indonesia, tersenyum sambil mengibarkan bendera Merah Putih Republik Indonesia di tangan kanannya.",
+      "japanese_content": {
+        "text": "こんにちは。\nわたしは サリです。＿＿＿＿＿＿から きました。\nどうぞ よろしく おねがいします。",
+        "furigana": "今[こん]日[にち]は。\n私[わたし]は サリです。インドネシアから 来[き]ました。\nどうぞ よろしく お願[ねが]いします。",
+        "romaji": "Konnichiwa.\nWatashi wa Sari desu. Indoneshia kara kimashita.\nDouzo yoroshiku onegaishimasu."
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "インド",
+          "romaji": "Indo",
+          "meaning": "India",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "ドイツ",
+          "romaji": "Doitsu",
+          "meaning": "Jerman",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "イギリス",
+          "romaji": "Igirisu",
+          "meaning": "Inggris",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "アメリカ",
+          "romaji": "Amerika",
+          "meaning": "Amerika Serikat",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 5,
+          "text": "インドネシア",
+          "romaji": "Indoneshia",
+          "meaning": "Indonesia",
+          "user_selected": true,
+          "is_correct": true
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [5],
+        "selected_texts": ["インドネシア"],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [5],
+        "texts": ["インドネシア"]
+      },
+      "translation": {
+        "prompt": "Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!",
+        "full_text": "Halo / Selamat siang. Saya Sari. Saya datang dari Indonesia. Senang berkenalan dengan Anda / Mohon bimbingannya."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-5: 「インドネシア」(Indoneshia).",
+        "detailed_analysis": "Kalimat perkenalan diri (jikoshoukai) menggunakan pola: `[Nama Negara/Daerah] + から来ました` (~kara kimashita), yang artinya 'datang/berasal dari [negara/daerah]'. Partikel 「から」 berarti 'dari', dan 「来ました」 adalah bentuk lampau sopan dari kata kerja 「来る」 (kuru = datang). Pada gambar, siswi bernama Sari mengenakan seragam SMA Indonesia (putih abu-abu lengkap dengan jilbab) dan memegang bendera nasional Indonesia (Merah Putih). Nama negara Indonesia dalam aksara Katakana adalah 「インドネシア」.",
+        "distractor_analysis": [
+          "インド (Indo): Negara India.",
+          "ドイツ (Doitsu): Negara Jerman.",
+          "イギリス (Igirisu): Negara Inggris / Britania Raya.",
+          "アメリカ (Amerika): Negara Amerika Serikat."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "〜から来[き]ました", "romaji": "~kara kimashita", "meaning": "datang/berasal dari ~" },
+        { "japanese": "どうぞよろしくお願[ねが]いします", "romaji": "douzo yoroshiku onegaishimasu", "meaning": "senang berkenalan dengan Anda / mohon bantuannya" },
+        { "japanese": "インドネシア", "romaji": "indoneshia", "meaning": "Indonesia" },
+        { "japanese": "私[わたし]", "romaji": "watashi", "meaning": "saya" }
+      ]
+    },
+    {
+      "question_number": 3,
+      "image_file": "7693851726323092788_3_1791368440.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "multiple_choice",
+      "prompt": "Yuki san to Tania san wa himana toki nani o shimasuka?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "visual_description": "Terdapat empat kartu pilihan bertulisan nama dan gambar aktivitas:\n1. 'Yuki' dengan gambar wanita membawa kantung kertas belanjaan bahan makanan (kaimono).\n2. 'Yuki' dengan gambar wanita bermain piano hitam.\n3. 'Tania' dengan gambar wanita berseragam karate sabuk hitam melakukan tendangan samping.\n4. 'Tania' dengan gambar wanita sedang memasak menumis di wajan penggorengan menggunakan spatula (ryouri).",
+      "japanese_content": {
+        "text": "Yuki san to Tania san wa himana toki yoku kaimono shimasu.\nTokidoki isshoni ryouri o shimasu.\nTania san wa piano ga suki desuga Yuki san wa karate ga suki desu.",
+        "furigana": "由紀[ゆき]さんと タニアさんは 暇[ひま]な時[とき] よく 買[か]い物[もの]します。\n時々[ときどき] 一緒[いっしょ]に 料理[りょうり]を します。\nタニアさんは ピアノが 好[す]きですが、由紀[ゆき]さんは 空手[からて]が 好[す]きです。",
+        "romaji": "Yuki-san to Tania-san wa himana toki yoku kaimono shimasu.\nTokidoki isshoni ryouri o shimasu.\nTania-san wa piano ga suki desuga Yuki-san wa karate ga suki desu."
+      },
+      "options": [
+        {
+          "index": 1,
+          "label": "Yuki",
+          "activity_description": "Yuki membawa barang belanjaan makanan / kaimono",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 2,
+          "label": "Yuki",
+          "activity_description": "Yuki bermain piano",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "label": "Tania",
+          "activity_description": "Tania berlatih karate",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "label": "Tania",
+          "activity_description": "Tania sedang memasak / ryouri",
+          "user_selected": true,
+          "is_correct": true
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [1, 4],
+        "selected_labels": ["Yuki (belanja)", "Tania (memasak)"],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [1, 4],
+        "labels": ["Yuki (belanja)", "Tania (memasak)"]
+      },
+      "translation": {
+        "prompt": "Apa yang dilakukan Yuki dan Tania saat waktu luang?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+        "full_text": "Yuki dan Tania saat waktu senggang sering berbelanja. Kadang-kadang mereka memasak bersama. Tania suka piano, tetapi Yuki suka karate."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah Opsi 1 (Yuki berbelanja) dan Opsi 4 (Tania memasak).",
+        "detailed_analysis": "Pertanyaan berfokus pada aktivitas saat waktu luang (himana toki nani o shimasuka):\n1. Teks menyatakan: 'Yuki san to Tania san wa himana toki yoku kaimono shimasu' -> Yuki dan Tania sering berbelanja saat waktu luang. Maka gambar Yuki membawa belanjaan (Opsi 1) BENAR.\n2. Teks menyatakan: 'Tokidoki isshoni ryouri o shimasu' -> Kadang-kadang memasak bersama. Kata 'isshoni' (bersama-sama) berarti baik Yuki maupun Tania melakukan aktivitas memasak. Maka gambar Tania sedang memasak (Opsi 4) BENAR.\n3. Kalimat ketiga: 'Tania san wa piano ga suki desuga Yuki san wa karate ga suki desu' (Tania suka piano, tapi Yuki suka karate). Pilihan 2 memasangkan Yuki dengan piano (salah orang, yang suka piano adalah Tania). Pilihan 3 memasangkan Tania dengan karate (salah orang, yang suka karate adalah Yuki). Selain tertukar orangnya, hobi/kesukaan ini bukan merupakan jawaban langsung atas aktivitas rutin di waktu luang yang dipaparkan dalam paragraf.",
+        "distractor_analysis": [
+          "Opsi 2 (Yuki main piano): Salah subjek, yang menyukai piano di teks adalah Tania (Tania-san wa piano ga suki desu).",
+          "Opsi 3 (Tania berlatih karate): Salah subjek, yang menyukai karate di teks adalah Yuki (Yuki-san wa karate ga suki desu)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "暇[ひま]な時[とき]", "romaji": "himana toki", "meaning": "waktu luang / senggang" },
+        { "japanese": "よく", "romaji": "yoku", "meaning": "sering" },
+        { "japanese": "買[か]い物[もの]する", "romaji": "kaimono suru", "meaning": "berbelanja" },
+        { "japanese": "時々[ときどき]", "romaji": "tokidoki", "meaning": "kadang-kadang" },
+        { "japanese": "一緒[いっしょ]に", "romaji": "isshoni", "meaning": "bersama-sama" },
+        { "japanese": "料理[りょうり]をする", "romaji": "ryouri o suru", "meaning": "memasak" },
+        { "japanese": "好[す]き", "romaji": "suki", "meaning": "suka / gemar" },
+        { "japanese": "〜ですが", "romaji": "~desuga", "meaning": "~, tetapi ~" }
+      ]
+    },
+    {
+      "question_number": 4,
+      "image_file": "7693851726323092788_4_1791368440.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "single_choice",
+      "prompt": "めぐみさんの　うちは　どう　ですか。",
+      "visual_description": "Ilustrasi sebuah rumah tinggal satu lantai berukuran mungil dan sempit dengan dinding abu-abu kecokelatan, atap merah bertingkat dengan cerobong asap, pintu depan kayu sempit, dan dua jendela bertirai.",
+      "japanese_content": {
+        "text": "めぐみさんの うちは どう ですか。\nめぐみさんの うちは ちいさくて せまいです。",
+        "furigana": "めぐみさんの 家[うち]は どう ですか。\nめぐみさんの 家[うち]は 小[ちい]さくて 狭[せま]いです。",
+        "romaji": "Megumi-san no uchi wa dou desu ka?\nMegumi-san no uchi wa chiisakute semai desu."
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "めぐみさんの　うちは　ちいさくて　せまいです。",
+          "romaji": "Megumi-san no uchi wa chiisakute semai desu.",
+          "meaning": "Rumah Megumi kecil dan sempit.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 2,
+          "text": "めぐみさんの　うちは　ちいさいと　せまいです。",
+          "romaji": "Megumi-san no uchi wa chiisai to semai desu.",
+          "meaning": "Rumah Megumi kalau kecil, sempit. (salah tata bahasa)",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "めぐみさんの　うちは　ちいさくって　せまいです。",
+          "romaji": "Megumi-san no uchi wa chiisakutte semai desu.",
+          "meaning": "Rumah Megumi kecil dan sempit (bentuk ragam lisan santai/kolokial).",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "めぐみさんの　うちは　ちいさいで　せまいです。",
+          "romaji": "Megumi-san no uchi wa chiisai de semai desu.",
+          "meaning": "Rumah Megumi kecil dan sempit (salah konjugasi partikel/sambungan).",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 5,
+          "text": "めぐみさんの　うちは　ちいさいですが　せまいです。",
+          "romaji": "Megumi-san no uchi wa chiisai desu ga semai desu.",
+          "meaning": "Rumah Megumi kecil, tetapi sempit (salah penggunaan konjungsi pertentangan).",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [1],
+        "selected_texts": ["めぐみさんの　うちは　ちいさくて　せまいです。"],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [1],
+        "texts": ["めぐみさんの　うちは　ちいさくて　せまいです。"]
+      },
+      "translation": {
+        "prompt": "Bagaimana rumah Megumi?",
+        "correct_sentence": "Rumah Megumi kecil dan sempit."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-1: 「めぐみさんの うちは ちいさくて せまいです。」",
+        "detailed_analysis": "Soal ini menguji aturan penyambungan dua kata sifat-i (い形容詞の接続・て形):\n- Kata sifat 1: 小さい (chiisai = kecil)\n- Kata sifat 2: 狭い (semai = sempit)\nAturan menyambungkan dua kata sifat-i secara setara yang sifatnya sejalan (positif & positif atau negatif & negatif) adalah dengan menghilangkan akhiran ~い (~i) pada kata sifat pertama, lalu menggantinya dengan ~くて (~kute).\nRumus: `[Kata Sifat-i tanpa い] + くて + [Kata Sifat berikutnya]`\nちいさい (chiisai) -> ちいさくて (chiisakute).\nSehingga menjadi: 「ちいさくて せまいです」(Kecil dan sempit).",
+        "distractor_analysis": [
+          "ちいさいと (chiisai to): Partikel 'to' digunakan untuk menyambung nomina (kata benda) atau sebagai kondisional (jika/kalau), tidak bisa digunakan menyambung kata sifat-i secara predikatif.",
+          "ちいさくって (chiisakutte): Merupakan bentuk ragam percakapan santai (slang/spoken Japanese) dengan penekanan bunyi ganda (sokuon), bukan bentuk bahasa baku formal standar dalam kurikulum TKA.",
+          "ちいさいで (chiisai de): Penggunaan akhiran 'de' hanya berlaku untuk kata sifat-na (な形容詞) atau kata benda (名詞), contohnya 'kirei de', bukan untuk kata sifat-i.",
+          "ちいさいですが (chiisai desu ga): Partikel '~ga' bermakna pertentangan ('tetapi'). Karena 'kecil' dan 'sempit' merupakan sifat yang sejalan/selaras (sama-sama mendeskripsikan keterbatasan ruang), kata sambung pertentangan 'tetapi' tidak tepat."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "家[うち]", "romaji": "uchi", "meaning": "rumah" },
+        { "japanese": "どうですか", "romaji": "dou desu ka", "meaning": "bagaimana? / seperti apa?" },
+        { "japanese": "小[ちい]さい", "romaji": "chiisai", "meaning": "kecil" },
+        { "japanese": "狭[せま]い", "romaji": "semai", "meaning": "sempit" },
+        { "japanese": "〜くて", "romaji": "~kute", "meaning": "dan (penyambung kata sifat-i)" }
+      ]
+    },
+    {
+      "question_number": 5,
+      "image_file": "7693851726323092788_5_1791368440.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "multiple_choice",
+      "prompt": "Pilihlah pernyataan yang sesuai dengan teks!\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "visual_description": "Teks bacaan tanpa gambar ilustrasi, berisi empat baris teks romaji tentang kegemaran berolahraga dan frekuensi bermain sepak bola serta bulu tangkis.",
+      "japanese_content": {
+        "text": "Watashi wa supootsu ga suki desu.\nSakkaa to badominton ga dekimasu.\nMainichi sakkaa o shimasu.\nSore ni, isshuukan ni nikai gurai, tomodachi to badominton o shimasu.",
+        "furigana": "私[わたし]は スポーツが 好[す]きです。\nサッカーと バドミントンが できます。\n毎日[まいにち] サッカーを します。\nそれに、一週間[いっしゅうかん]に 二回[にかい]ぐらい、友達[ともだち]と バドミントンを します。",
+        "romaji": "Watashi wa supootsu ga suki desu.\nSakkaa to badominton ga dekimasu.\nMainichi sakkaa o shimasu.\nSore ni, isshuukan ni nikai gurai, tomodachi to badominton o shimasu."
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "Saya setiap hari berolahraga.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 2,
+          "text": "Saya seminggu sekali bermain badminton.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "Saya sering bermain sepak bola.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 4,
+          "text": "Saya memiliki minat di bidang olahraga.",
+          "user_selected": true,
+          "is_correct": true
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [1, 3, 4],
+        "selected_texts": [
+          "Saya setiap hari berolahraga.",
+          "Saya sering bermain sepak bola.",
+          "Saya memiliki minat di bidang olahraga."
+        ],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [1, 3, 4],
+        "texts": [
+          "Saya setiap hari berolahraga.",
+          "Saya sering bermain sepak bola.",
+          "Saya memiliki minat di bidang olahraga."
+        ]
+      },
+      "translation": {
+        "prompt": "Pilihlah pernyataan yang sesuai dengan teks!\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+        "full_text": "Saya suka olahraga. Saya bisa sepak bola dan badminton. Setiap hari saya bermain sepak bola. Selain itu, sekitar dua kali seminggu, saya bermain badminton bersama teman."
+      },
+      "explanation": {
+        "summary": "Pernyataan yang sesuai adalah: (1) 'Saya setiap hari berolahraga', (3) 'Saya sering bermain sepak bola', dan (4) 'Saya memiliki minat di bidang olahraga'.",
+        "detailed_analysis": "Uji kebenaran tiap pernyataan terhadap isi teks:\n1. 'Saya setiap hari berolahraga' -> BENAR. Kalimat 'Mainichi sakkaa o shimasu' menyatakan bahwa ia setiap hari bermain sepak bola. Karena bermain sepak bola adalah berolahraga, maka ia berolahraga setiap hari.\n2. 'Saya seminggu sekali bermain badminton' -> SALAH. Teks secara eksplisit menyebutkan 'isshuukan ni nikai gurai' (一週間に二回ぐらい = sekitar dua kali dalam satu minggu). Seminggu sekali dalam bahasa Jepang adalah 'isshuukan ni ikkai' (一回).\n3. 'Saya sering bermain sepak bola' -> BENAR. Karena dilakukan setiap hari ('mainichi'), intensitas bermain sepak bola tersebut masuk ke dalam kategori sangat sering/sering.\n4. 'Saya memiliki minat di bidang olahraga' -> BENAR. Kalimat pertama menyatakan 'Watashi wa supootsu ga suki desu' (Saya suka olahraga). Rasa suka mencerminkan adanya minat dan kegemaran yang jelas terhadap olahraga.",
+        "distractor_analysis": [
+          "Pernyataan 'Saya seminggu sekali bermain badminton' bertentangan dengan teks karena teks menyatakan 'nikai' (2 kali), bukan 'ikkai' (1 kali)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "スポーツ", "romaji": "supootsu", "meaning": "olahraga (sports)" },
+        { "japanese": "好[す]き", "romaji": "suki", "meaning": "suka / gemar / minat" },
+        { "japanese": "できる", "romaji": "dekiru", "meaning": "bisa / mampu" },
+        { "japanese": "毎日[まいにち]", "romaji": "mainichi", "meaning": "setiap hari" },
+        { "japanese": "サッカー", "romaji": "sakkaa", "meaning": "sepak bola" },
+        { "japanese": "バドミントン", "romaji": "badominton", "meaning": "bulu tangkis / badminton" },
+        { "japanese": "それに", "romaji": "sore ni", "meaning": "selain itu / di samping itu" },
+        { "japanese": "一週間[いっしゅうかん]", "romaji": "isshuukan", "meaning": "satu minggu" },
+        { "japanese": "二回[にかい]", "romaji": "nikai", "meaning": "dua kali" },
+        { "japanese": "〜ぐらい", "romaji": "~gurai", "meaning": "kira-kira / sekitar ~" },
+        { "japanese": "友達[ともだち]", "romaji": "tomodachi", "meaning": "teman / kawan" }
+      ]
+    }
+  ]
+}

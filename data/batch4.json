@@ -1,0 +1,359 @@
+[
+  {
+    "question_number": 16,
+    "image_filename": "7693853515265002773_1_1791368460.jpeg",
+    "question_type": "multiple_response",
+    "subject": "Bahasa Jepang (Paket 2)",
+    "prompt": "Manakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+    "content": {
+      "raw_text": "おしらせ\n・らいしゅうの げつようび から、がっこうで しけん が はじまります。\n・こんしゅうの もくようびと きんようびは やすみです。\nがんばってください！",
+      "furigana": "お知[し]らせ\n・来週[らいしゅう]の 月曜日[げつようび]から、学校[がっこう]で 試験[しけん]が 始[はじ]まります。\n・今週[こんしゅう]の 木曜日[もくようび]と 金曜日[きんようび]は 休[やす]みです。\n頑張[がんば]ってください！",
+      "romaji": "Oshirase\n・Raishuu no getsuyoubi kara, gakkou de shiken ga hajimarimasu.\n・Konshuu no mokuyoubi to kinyoubi wa yasumi desu.\nGanbatte kudasai!",
+      "indonesian_translation": "Pengumuman\n・Mulai hari Senin minggu depan, ujian di sekolah akan dimulai.\n・Hari Kamis dan Jumat minggu ini libur.\nSemangat, berusahalah!"
+    },
+    "options": [
+      {
+        "id": "A",
+        "text": "しけんは　らいしゅうの　もくようびからです。",
+        "furigana": "試験[しけん]は 来週[らいしゅう]の 木曜日[もくようび]からです。",
+        "romaji": "Shiken wa raishuu no mokuyoubi kara desu.",
+        "meaning": "Ujian dimulai dari hari Kamis minggu depan.",
+        "is_correct": false
+      },
+      {
+        "id": "B",
+        "text": "らいしゅうは　しけんが　あります。",
+        "furigana": "来週[らいしゅう]は 試験[しけん]が あります。",
+        "romaji": "Raishuu wa shiken ga arimasu.",
+        "meaning": "Minggu depan ada ujian.",
+        "is_correct": true
+      },
+      {
+        "id": "C",
+        "text": "こんしゅうの　きんようびは　やすみです。",
+        "furigana": "今週[こんしゅう]の 金曜日[きんようび]は 休[やす]みです。",
+        "romaji": "Konshuu no kinyoubi wa yasumi desu.",
+        "meaning": "Hari Jumat minggu ini libur.",
+        "is_correct": true
+      },
+      {
+        "id": "D",
+        "text": "がっこうの　しけんは　らいしゅうからです。",
+        "furigana": "学校[がっこう]の 試験[しけん]は 来週[らいしゅう]からです。",
+        "romaji": "Gakkou no shiken wa raishuu kara desu.",
+        "meaning": "Ujian sekolah mulai dari minggu depan.",
+        "is_correct": true
+      }
+    ],
+    "user_selected": ["B", "C", "D"],
+    "correct_answers": ["B", "C", "D"],
+    "user_evaluation": {
+      "is_correct": true,
+      "details": "Pilihan user sangat tepat. User mencentang opsi B, C, dan D serta tidak mencentang opsi A."
+    },
+    "explanation": {
+      "summary": "Pernyataan yang sesuai dengan wacana adalah B, C, dan D. Ujian dimulai hari Senin minggu depan (bukan Kamis), dan libur jatuh pada hari Kamis dan Jumat minggu ini.",
+      "detailed_analysis": "1. Analisis Opsi A (Salah): Di wacana tertulis 「らいしゅうの げつようび から、がっこうで しけん が はじまります」 yang berarti ujian dimulai pada hari Senin (げつようび), bukan hari Kamis (もくようび).\n2. Analisis Opsi B (Benar): Kalimat wacana menyebutkan ujian dimulai hari Senin minggu depan, yang berarti pada minggu depan ada ujian (らいしゅうは しけんが あります).\n3. Analisis Opsi C (Benar): Kalimat kedua wacana menyatakan 「こんしゅうの もくようびと きんようびは やすみです」, yang secara eksplisit memvalidasi bahwa hari Jumat minggu ini libur (こんしゅうの きんようびは やすみです).\n4. Analisis Opsi D (Benar): Wacana menyatakan bahwa ujian di sekolah akan dimulai minggu depan (らいしゅうの げつようび から), sehingga kalimat 「がっこうの しけんは らいしゅうからです」 adalah pernyataan yang benar dan sesuai.",
+      "vocabulary": [
+        {"word": "おしらせ (お知らせ)", "romaji": "oshirase", "meaning": "Pengumuman / pemberitahuan"},
+        {"word": "らいしゅう (来週)", "romaji": "raishuu", "meaning": "Minggu depan"},
+        {"word": "げつようび (月曜日)", "romaji": "getsuyoubi", "meaning": "Hari Senin"},
+        {"word": "がっこう (学校)", "romaji": "gakkou", "meaning": "Sekolah"},
+        {"word": "しけん (試験)", "romaji": "shiken", "meaning": "Ujian"},
+        {"word": "はじまります (始まります)", "romaji": "hajimarimasu", "meaning": "Dimulai"},
+        {"word": "こんしゅう (今週)", "romaji": "konshuu", "meaning": "Minggu ini"},
+        {"word": "もくようび (木曜日)", "romaji": "mokuyoubi", "meaning": "Hari Kamis"},
+        {"word": "きんようび (金曜日)", "romaji": "kinyoubi", "meaning": "Hari Jumat"},
+        {"word": "やすみ (休み)", "romaji": "yasumi", "meaning": "Libur / istirahat"},
+        {"word": "がんばってください (頑張ってください)", "romaji": "ganbatte kudasai", "meaning": "Semangat / berjuanglah"}
+      ]
+    }
+  },
+  {
+    "question_number": 17,
+    "image_filename": "7693853515265002773_2_1791368460.jpeg",
+    "question_type": "single_choice",
+    "subject": "Bahasa Jepang (Paket 2)",
+    "prompt": "Lengkapilah dialog rumpang berikut:",
+    "content": {
+      "raw_text": "アジ：せんしゅう、なんじに　えいがを　みましたか。\nレレ：ごご　３じに　＿＿＿＿＿＿＿＿。",
+      "furigana": "アジ：先週[せんしゅう]、何時[なんじ]に 映画[えいが]を 見[み]ましたか。\nレレ：午後[ごご] 3時[じ]に ＿＿＿＿＿＿＿＿。",
+      "romaji": "Aji: Senshuu, nanji ni eiga o mimashita ka.\nRere: Gogo 3-ji ni __________.",
+      "indonesian_translation": "Aji: Minggu lalu, pada jam berapa kamu menonton film?\nRere: (Saya) menonton pada jam 3 sore."
+    },
+    "options": [
+      {
+        "id": "A",
+        "text": "みます",
+        "furigana": "見[み]ます",
+        "romaji": "mimasu",
+        "meaning": "Menonton / akan menonton (bentuk non-lampau positif)",
+        "is_correct": false
+      },
+      {
+        "id": "B",
+        "text": "みません",
+        "furigana": "見[み]ません",
+        "romaji": "mimasen",
+        "meaning": "Tidak menonton (bentuk non-lampau negatif)",
+        "is_correct": false
+      },
+      {
+        "id": "C",
+        "text": "みました",
+        "furigana": "見[み]ました",
+        "romaji": "mimashita",
+        "meaning": "Sudah menonton (bentuk lampau positif)",
+        "is_correct": true
+      },
+      {
+        "id": "D",
+        "text": "みませんでした",
+        "furigana": "見[み]ませんでした",
+        "romaji": "mimasendeshita",
+        "meaning": "Tidak menonton (bentuk lampau negatif)",
+        "is_correct": false
+      },
+      {
+        "id": "E",
+        "text": "みましたか",
+        "furigana": "見[み]ましたか",
+        "romaji": "mimashita ka",
+        "meaning": "Apakah sudah menonton? (bentuk tanya)",
+        "is_correct": false
+      }
+    ],
+    "user_selected": "C",
+    "correct_answers": ["C"],
+    "user_evaluation": {
+      "is_correct": true,
+      "details": "Pilihan user 'みました' (C) benar."
+    },
+    "explanation": {
+      "summary": "Jawaban yang tepat adalah 'みました' (C). Karena Aji menanyakan kegiatan yang terjadi minggu lalu (せんしゅう - bentuk lampau) pada jam berapa, dan Rere mengonfirmasi waktu penayangannya (ごご 3じに), maka verba yang digunakan adalah bentuk lampau positif.",
+      "detailed_analysis": "1. Penanda Waktu Lampau: Pertanyaan Aji menggunakan keterangan waktu 「せんしゅう」(minggu lalu) dan predikat bentuk lampau tanya 「みましたか」 (apakah sudah menonton?).\n2. Konteks Dialog: Pertanyaan berfokus pada waktu 「なんじに」(jam berapa). Respons Rere menyebutkan titik waktu spesifik 「ごご 3じに」(pada jam 3 sore), yang mengindikasikan bahwa Rere memang menonton film tersebut pada waktu tersebut. Bentuk yang sesuai untuk menyatakan tindakan lampau positif adalah 「みました」.\n3. Mengapa pilihan lain salah:\n- 'みます' (A) dan 'みません' (B) merupakan bentuk waktu non-lampau (present/future), tidak cocok dengan penanda waktu 'せんしゅう'.\n- 'みませんでした' (D) adalah bentuk lampau negatif. Jika Rere tidak menonton film, tidak masuk akal menyertakan waktu pelaksanaan 'ごご 3じに'.\n- 'みましたか' (E) adalah bentuk kalimat tanya (ada partikel ka), sedangkan kalimat Rere adalah kalimat deklaratif/jawaban yang berakhiran tanda titik.",
+      "vocabulary": [
+        {"word": "せんしゅう (先週)", "romaji": "senshuu", "meaning": "Minggu lalu"},
+        {"word": "なんじ (何時)", "romaji": "nanji", "meaning": "Jam berapa"},
+        {"word": "えいが (映画)", "romaji": "eiga", "meaning": "Film / bioskop"},
+        {"word": "みます (見ます)", "romaji": "mimasu", "meaning": "Menonton / melihat"},
+        {"word": "ごご (午後)", "romaji": "gogo", "meaning": "PM / siang-sore hari"}
+      ]
+    }
+  },
+  {
+    "question_number": 18,
+    "image_filename": "7693853515265002773_3_1791368460.jpeg",
+    "question_type": "multiple_response",
+    "subject": "Bahasa Jepang (Paket 2)",
+    "prompt": "Manakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+    "content": {
+      "raw_text": "Riri san wa getsuyoubi no gogo 1-ji to suiyoubi no gozen 10-ji ni nihongo o benkyou shite imasu.\nSuugaku wa getsuyoubi no gogo 3-ji to kayoubi no gozen 10-ji desu.\nKamoku no naka de Riri san wa suugaku to Nihonggo ga suki desu.",
+      "furigana": "リリさんは月曜日[げつようび]の午後[ごご]１時[じ]と水曜日[すいようび]の午前[ごぜん]10時[じ]に日本語[にほんご]を勉強[べんきょう]しています。\n数学[すうがく]は月曜日[げつようび]の午後[ごご]3時[じ]と火曜日[かようび]の午前[ごぜん]10時[じ]です。\n科目[かもく]の中[なか]でリリさんは数学[すうがく]と日本語[にほんご]が好[す]きです。",
+      "romaji": "Riri san wa getsuyoubi no gogo 1-ji to suiyoubi no gozen 10-ji ni nihongo o benkyou shite imasu.\nSuugaku wa getsuyoubi no gogo 3-ji to kayoubi no gozen 10-ji desu.\nKamoku no naka de Riri san wa suugaku to Nihongo ga suki desu.",
+      "indonesian_translation": "Riri belajar bahasa Jepang pada hari Senin jam 1 siang dan hari Rabu jam 10 pagi.\nMatematika ada pada hari Senin jam 3 sore dan hari Selasa jam 10 pagi.\nDi antara mata pelajaran, Riri menyukai Matematika dan Bahasa Jepang."
+    },
+    "options": [
+      {
+        "id": "A",
+        "text": "Suugaku to Nihongo wa getsuyoubi desu.",
+        "furigana": "数学[すうがく]と 日本語[にほんご]は 月曜日[げつようび]です。",
+        "romaji": "Suugaku to Nihongo wa getsuyoubi desu.",
+        "meaning": "Matematika dan Bahasa Jepang ada pada hari Senin.",
+        "is_correct": true
+      },
+      {
+        "id": "B",
+        "text": "Suugaku wa getsuyoubi no asa desu.",
+        "furigana": "数学[すうがく]は 月曜日[げつようび]の 朝[あさ]です。",
+        "romaji": "Suugaku wa getsuyoubi no asa desu.",
+        "meaning": "Matematika ada pada hari Senin pagi.",
+        "is_correct": false
+      },
+      {
+        "id": "C",
+        "text": "Nihongo wa suiyoubi no asa desu.",
+        "furigana": "日本語[にほんご]は 水曜日[すいようび]の 朝[あさ]です。",
+        "romaji": "Nihongo wa suiyoubi no asa desu.",
+        "meaning": "Bahasa Jepang ada pada hari Rabu pagi.",
+        "is_correct": true
+      },
+      {
+        "id": "D",
+        "text": "Nihongo wa isshuukan ni nikai desu.",
+        "furigana": "日本語[にほんご]は 一週間[いっしゅうかん]に 二回[にかい]です。",
+        "romaji": "Nihongo wa isshuukan ni nikai desu.",
+        "meaning": "Bahasa Jepang ada dua kali dalam seminggu.",
+        "is_correct": true
+      }
+    ],
+    "user_selected": ["A", "C", "D"],
+    "correct_answers": ["A", "C", "D"],
+    "user_evaluation": {
+      "is_correct": true,
+      "details": "Pilihan user sangat tepat. User memilih opsi A, C, dan D serta tidak memilih opsi B."
+    },
+    "explanation": {
+      "summary": "Pernyataan yang sesuai adalah A, C, dan D. Matematika pada hari Senin adalah sore hari (gogo 3-ji), bukan pagi hari (asa), sehingga pilihan B salah.",
+      "detailed_analysis": "1. Analisis Opsi A (Benar): Pelajaran Bahasa Jepang diadakan pada 'getsuyoubi no gogo 1-ji' dan Matematika pada 'getsuyoubi no gogo 3-ji'. Keduanya sama-sama ada di hari Senin (getsuyoubi).\n2. Analisis Opsi B (Salah): Di teks tertulis 'Suugaku wa getsuyoubi no gogo 3-ji' (jam 3 sore/siang). Kata 'asa' berarti pagi hari, sedangkan jadwal pagi untuk Matematika adalah hari Selasa (kayoubi no gozen 10-ji).\n3. Analisis Opsi C (Benar): Di teks tertulis Bahasa Jepang dipelajari pada 'suiyoubi no gozen 10-ji'. Kata 'gozen' (a.m.) menunjukkan rentang waktu pagi hari ('asa'), sehingga 'Nihongo wa suiyoubi no asa desu' adalah benar.\n4. Analisis Opsi D (Benar): Bahasa Jepang dipelajari pada hari Senin dan hari Rabu, yang berarti berlangsung 2 kali seminggu ('isshuukan ni nikai').",
+      "vocabulary": [
+        {"word": "getsuyoubi (月曜日)", "meaning": "Hari Senin"},
+        {"word": "kayoubi (火曜日)", "meaning": "Hari Selasa"},
+        {"word": "suiyoubi (水曜日)", "meaning": "Hari Rabu"},
+        {"word": "gozen (午前)", "meaning": "AM / pagi hari"},
+        {"word": "gogo (午後)", "meaning": "PM / siang-sore hari"},
+        {"word": "asa (朝)", "meaning": "Pagi"},
+        {"word": "suugaku (数学)", "meaning": "Matematika"},
+        {"word": "nihongo (日本語)", "meaning": "Bahasa Jepang"},
+        {"word": "benkyou shite imasu (勉強しています)", "meaning": "Sedang belajar / mempelajari"},
+        {"word": "kamoku (科目)", "meaning": "Mata pelajaran"},
+        {"word": "suki (好き)", "meaning": "Suka / gemar"},
+        {"word": "isshuukan ni nikai (一週間に二回)", "meaning": "2 kali dalam satu minggu"}
+      ]
+    }
+  },
+  {
+    "question_number": 19,
+    "image_filename": "7693853515265002773_4_1791368460.jpeg",
+    "question_type": "multiple_response",
+    "subject": "Bahasa Jepang (Paket 2)",
+    "prompt": "Manakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+    "content": {
+      "raw_text": "わたしは　じゅうねんせいです。\nちちは　いしゃです。ははも　いしゃです。\nびょういんで　はたらいています。\nあねは　じゅうななさい　です。\nいもうとは　まだ　ごさいです。",
+      "furigana": "私[わたし]は 10年生[じゅうねんせい]です。\n父[ちち]は 医者[いしゃ]です。母[はは]も 医者[いしゃ]です。\n病院[びょういん]で 働[はたら]いています。\n姉[あね]は 17歳[じゅうななさい]です。\n妹[いもうと]は まだ 5歳[ごさい]です。",
+      "romaji": "Watashi wa juunensei desu.\nChichi wa isha desu. Haha mo isha desu.\nByouin de hataraite imasu.\nAne wa juunanasai desu.\nImouto wa mada gosai desu.",
+      "indonesian_translation": "Saya adalah siswa kelas 10.\nAyah saya seorang dokter. Ibu saya juga seorang dokter.\n(Mereka) bekerja di rumah sakit.\nKakak perempuan saya berusia 17 tahun.\nAdik perempuan saya masih berusia 5 tahun."
+    },
+    "options": [
+      {
+        "id": "A",
+        "text": "このひとは　こうこうせいです。",
+        "furigana": "この人[ひと]は 高校生[こうこうせい]です。",
+        "romaji": "Kono hito wa koukousei desu.",
+        "meaning": "Orang ini adalah siswa SMA.",
+        "is_correct": true
+      },
+      {
+        "id": "B",
+        "text": "このひとは　さんにん　きょうだいです。",
+        "furigana": "この人[ひと]は 三人[さんにん] 兄弟[きょうだい]です。",
+        "romaji": "Kono hito wa sannin kyoudai desu.",
+        "meaning": "Orang ini tiga bersaudara.",
+        "is_correct": true
+      },
+      {
+        "id": "C",
+        "text": "いもうとさんと　おねえさんが　いません。",
+        "furigana": "妹[いもうと]さんと お姉[ねえ]さんが いません。",
+        "romaji": "Imoutosan to oneesan ga imasen.",
+        "meaning": "Tidak memiliki adik perempuan dan kakak perempuan.",
+        "is_correct": false
+      },
+      {
+        "id": "D",
+        "text": "おかあさんと　おとうさんの　しごとは　おなじです。",
+        "furigana": "お母[かあ]さんと お父[とう]さんの 仕事[しごと]は 同[おな]じです。",
+        "romaji": "Okaasan to otousan no shigoto wa onaji desu.",
+        "meaning": "Pekerjaan ibu dan ayah sama.",
+        "is_correct": true
+      }
+    ],
+    "user_selected": ["A", "B", "D"],
+    "correct_answers": ["A", "B", "D"],
+    "user_evaluation": {
+      "is_correct": true,
+      "details": "Pilihan user sangat tepat. User memilih opsi A, B, dan D serta tidak memilih opsi C."
+    },
+    "explanation": {
+      "summary": "Pernyataan yang sesuai adalah A, B, dan D. Siswa kelas 10 adalah siswa SMA (A), memiliki 1 kakak dan 1 adik perempuan sehingga total 3 bersaudara (B), dan kedua orang tuanya bekerja sebagai dokter sehingga pekerjaannya sama (D).",
+      "detailed_analysis": "1. Analisis Opsi A (Benar): Di teks tertulis 「わたしは じゅうねんせいです」 (Saya kelas 10). Jenjang kelas 10 (10年生) di Indonesia setara dengan tingkat SMA kelas 1 (高校生 - koukousei).\n2. Analisis Opsi B (Benar): Anggota saudara yang disebutkan adalah pembicara sendiri (わたし), seorang kakak perempuan (あね), dan seorang adik perempuan (いもうと). Jadi total mereka adalah 3 orang bersaudara (さんにん きょうだい).\n3. Analisis Opsi C (Salah): Wacana dengan jelas menyebutkan bahwa pembicara memiliki 'あね' (17 tahun) dan 'いもうと' (5 tahun), sehingga pernyataan 'tidak memiliki adik dan kakak perempuan' bertolak belakang dengan isi teks.\n4. Analisis Opsi D (Benar): Di wacana tertulis 「ちちは いしゃです。ははも いしゃです」 (Ayah dokter. Ibu juga dokter). Keduanya berprofesi sebagai dokter, yang berarti jenis pekerjaannya sama (しごとは おなじです).",
+      "vocabulary": [
+        {"word": "じゅうねんせい (10年生)", "romaji": "juunensei", "meaning": "Kelas 10"},
+        {"word": "こうこうせい (高校生)", "romaji": "koukousei", "meaning": "Siswa SMA"},
+        {"word": "ちち (父)", "romaji": "chichi", "meaning": "Ayah (sebutan untuk ayah kandung sendiri)"},
+        {"word": "はは (母)", "romaji": "haha", "meaning": "Ibu (sebutan untuk ibu kandung sendiri)"},
+        {"word": "おとうさん (お父さん)", "romaji": "otousan", "meaning": "Ayah"},
+        {"word": "おかあさん (お母さん)", "romaji": "okaasan", "meaning": "Ibu"},
+        {"word": "いしゃ (医者)", "romaji": "isha", "meaning": "Dokter"},
+        {"word": "びょういん (病院)", "romaji": "byouin", "meaning": "Rumah sakit"},
+        {"word": "はたらいています (働いています)", "romaji": "hataraite imasu", "meaning": "Bekerja"},
+        {"word": "あね (姉)", "romaji": "ane", "meaning": "Kakak perempuan (sendiri)"},
+        {"word": "いもうと (妹)", "romaji": "imouto", "meaning": "Adik perempuan (sendiri)"},
+        {"word": "きょうだい (兄弟)", "romaji": "kyoudai", "meaning": "Saudara kandung"},
+        {"word": "しごと (仕事)", "romaji": "shigoto", "meaning": "Pekerjaan"},
+        {"word": "おなじ (同じ)", "romaji": "onaji", "meaning": "Sama"}
+      ]
+    }
+  },
+  {
+    "question_number": 20,
+    "image_filename": "7693853515265002773_5_1791368460.jpeg",
+    "question_type": "single_choice",
+    "subject": "Bahasa Jepang (Paket 2)",
+    "prompt": "Susunlah kosakata berikut menjadi kalimat padu!\nは / べんきょう / わたし / まいにち / 7 じ / に / します",
+    "content": {
+      "raw_text": "は / べんきょう / わたし / まいにち / 7 じ / に / します",
+      "furigana": "は / 勉強[べんきょう] / 私[わたし] / 毎日[まいにち] / 7時[しちじ] / に / します",
+      "romaji": "wa / benkyou / watashi / mainichi / 7-ji / ni / shimasu",
+      "indonesian_translation": "Partikel wa / belajar / saya / setiap hari / jam 7 / partikel ni / melakukan"
+    },
+    "options": [
+      {
+        "id": "A",
+        "text": "わたしは　まいにちに　７じ　べんきょう　します。",
+        "furigana": "私[わたし]は 毎日[まいにち]に 7時[しちじ] 勉強[べんきょう]します。",
+        "romaji": "Watashi wa mainichi ni 7-ji benkyou shimasu.",
+        "meaning": "Saya belajar jam 7 pada setiap hari. (Tata bahasa keliru: mainichi tidak menggunakan ni)",
+        "is_correct": false
+      },
+      {
+        "id": "B",
+        "text": "わたしは　７じ　べんきょうに　まいにち　します。",
+        "furigana": "私[わたし]は 7時[しちじ] 勉強[べんきょう]に 毎日[まいにち]します。",
+        "romaji": "Watashi wa 7-ji benkyou ni mainichi shimasu.",
+        "meaning": "Susunan kata dan partikel tidak beraturan / salah.",
+        "is_correct": false
+      },
+      {
+        "id": "C",
+        "text": "わたしは　まいにち　７じに　べんきょう　します。",
+        "furigana": "私[わたし]は 毎日[まいにち] 7時[しちじ]に 勉強[べんきょう]します。",
+        "romaji": "Watashi wa mainichi 7-ji ni benkyou shimasu.",
+        "meaning": "Saya setiap hari belajar pada jam 7.",
+        "is_correct": true
+      },
+      {
+        "id": "D",
+        "text": "わたしに　まいにち　べんきょうは　７じ　します。",
+        "furigana": "私[わたし]に 毎日[まいにち] 勉強[べんきょう]は 7時[しちじ]します。",
+        "romaji": "Watashi ni mainichi benkyou wa 7-ji shimasu.",
+        "meaning": "Susunan kata dan partikel salah.",
+        "is_correct": false
+      },
+      {
+        "id": "E",
+        "text": "わたしは　７じに　べんきょう　まいにち　します。",
+        "furigana": "私[わたし]は 7時[しちじ]に 勉強[べんきょう] 毎日[まいにち]します。",
+        "romaji": "Watashi wa 7-ji ni benkyou mainichi shimasu.",
+        "meaning": "Keterangan frekuensi disisipkan di antara frasa verbal sehingga tidak lazim / salah.",
+        "is_correct": false
+      }
+    ],
+    "user_selected": "C",
+    "correct_answers": ["C"],
+    "user_evaluation": {
+      "is_correct": true,
+      "details": "Pilihan user 'わたしは　まいにち　７じに　べんきょう　します。' (C) benar."
+    },
+    "explanation": {
+      "summary": "Urutan kalimat yang benar dan alami sesuai kaidah tata bahasa Jepang adalah: Subjek/Topik (わたしは) + Keterangan Frekuensi (まいにち) + Keterangan Waktu Berangka (７じに) + Kata Kerja (べんきょう します).",
+      "detailed_analysis": "1. Partikel Topik 「は」 diletakkan setelah kata ganti orang pertama 「わたし」 membentuk subjek topik: 「わたしは」 (Saya...).\n2. Kata keterangan frekuensi / waktu relatif 「まいにち」 (setiap hari) tidak boleh diikuti partikel 「に」 (aturan tata bahasa Jepang: kata waktu relatif seperti kyou, ashita, kinou, mainichi, konshuu tidak memakai partikel 'ni'). Oleh karena itu, opsi yang menempatkan 'まいにちに' (opsi A) dipastikan salah.\n3. Titik waktu yang spesifik dan memakai angka jam 「７じ」 (jam 7) harus diikuti partikel penanda waktu 「に」 menjadi 「７じに」 (pada jam 7).\n4. Kata benda aktivitas 「べんきょう」 digabungkan dengan kata kerja bantu 「します」 membentuk predikat 「べんきょう します」 (belajar).\n5. Dengan demikian, struktur utuh yang baku dan tepat adalah: 「わたしは　まいにち　７じに　べんきょう　します。」 (Opsi C).",
+      "vocabulary": [
+        {"word": "わたし (私)", "romaji": "watashi", "meaning": "Saya"},
+        {"word": "まいにち (毎日)", "romaji": "mainichi", "meaning": "Setiap hari"},
+        {"word": "7じ (7時)", "romaji": "shichi-ji", "meaning": "Jam 7"},
+        {"word": "べんきょう します (勉強します)", "romaji": "benkyou shimasu", "meaning": "Belajar"}
+      ]
+    }
+  }
+]

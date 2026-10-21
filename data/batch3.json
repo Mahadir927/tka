@@ -1,0 +1,370 @@
+{
+  "batch_id": "batch_3",
+  "description": "Hasil analisis dan ekstraksi soal TKA Bahasa Jepang Nomor 11-15 (Paket 2)",
+  "total_questions": 5,
+  "source_files": [
+    "7693851726323092788_11_1791368440.jpeg",
+    "7693851726323092788_12_1791368440.jpeg",
+    "7693851726323092788_13_1791368440.jpeg",
+    "7693851726323092788_14_1791368440.jpeg",
+    "7693851726323092788_15_1791368440.jpeg"
+  ],
+  "questions": [
+    {
+      "question_number": 11,
+      "package": "Bahasa Jepang (Paket 2)",
+      "image_filename": "7693851726323092788_11_1791368440.jpeg",
+      "question_type": "Multi-statement True/False (Tabel Benar/Salah)",
+      "passage": {
+        "title": "カレンダー (Kalender)",
+        "content_description": "Kalender bulan Mei 2025 (5がつ 2025) dengan keterangan hari dan agenda: Tanggal 9-10 キャンプ (Kemping), Tanggal 12-16 しけん (Ujian), Tanggal 29-31 りょこう (Wisata/Liburan).",
+        "lead_sentence_jp": "きょうは　いつかです。",
+        "lead_sentence_furigana": "今日[きょう]は 五日[いつか]です。",
+        "lead_sentence_id": "Hari ini adalah tanggal 5."
+      },
+      "prompt": "Klik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai dengan wacana!",
+      "statements": [
+        {
+          "statement_number": 1,
+          "statement_jp": "きのうは　にちようび　でした。",
+          "statement_furigana": "昨日[きのう]は 日曜日[にちようび]でした。",
+          "statement_id": "Kemarin adalah hari Minggu.",
+          "correct_answer": "Benar",
+          "user_answer": "Benar",
+          "is_user_correct": true,
+          "explanation": "Hari ini tanggal 5 (五日 - いつか) jatuh pada hari Senin (げつようび). Berarti kemarin (きのう) adalah tanggal 4 (よっか) yang jatuh pada hari Minggu (にちようび). Oleh karena itu pernyataan ini BENAR."
+        },
+        {
+          "statement_number": 2,
+          "statement_jp": "あさっては　きんようび　でした。",
+          "statement_furigana": "あさっては 金曜日[きんようび]でした。",
+          "statement_id": "Lusa adalah hari Jumat.",
+          "correct_answer": "Salah",
+          "user_answer": "Salah",
+          "is_user_correct": true,
+          "explanation": "Hari ini adalah hari Senin tanggal 5. Lusa (あさって / 2 hari ke depan) adalah tanggal 7 (なのか), yaitu hari Rabu (すいようび), bukan hari Jumat (きんようび). Selain itu 'でした' adalah bentuk lampau sementara 'あさって' adalah waktu mendatang. Pernyataan ini SALAH."
+        },
+        {
+          "statement_number": 3,
+          "statement_jp": "おとといは　みっか　でした。",
+          "statement_furigana": "一昨日[おととい]は 三日[みっか]でした。",
+          "statement_id": "Kemarin lusa adalah tanggal 3.",
+          "correct_answer": "Benar",
+          "user_answer": "Benar",
+          "is_user_correct": true,
+          "explanation": "Hari ini tanggal 5 (いつか). Kemarin lusa (おととい / 2 hari yang lalu) adalah tanggal 3 (みっか / jatuh pada hari Sabtu どようび). Pernyataan ini BENAR."
+        }
+      ],
+      "user_overall_evaluation": {
+        "all_correct": true,
+        "score_percentage": 100,
+        "feedback": "Sempurna! Semua pilihan Benar/Salah dijawab dengan tepat sesuai analisis kalender."
+      },
+      "vocabulary_list": [
+        { "kanji": "今日", "kana": "きょう", "romaji": "kyou", "meaning": "hari ini" },
+        { "kanji": "昨日", "kana": "きのう", "romaji": "kinou", "meaning": "kemarin" },
+        { "kanji": "一昨日", "kana": "おととい", "romaji": "ototoi", "meaning": "kemarin lusa" },
+        { "kanji": "明日", "kana": "あした", "romaji": "ashita", "meaning": "besok" },
+        { "kanji": "明後日", "kana": "あさって", "romaji": "asatte", "meaning": "lusa" },
+        { "kanji": "五日", "kana": "いつか", "romaji": "itsuka", "meaning": "tanggal 5" },
+        { "kanji": "三日", "kana": "みっか", "romaji": "mikka", "meaning": "tanggal 3" },
+        { "kanji": "四日", "kana": "よっか", "romaji": "yokka", "meaning": "tanggal 4" },
+        { "kanji": "日曜日", "kana": "にちようび", "romaji": "nichiyoubi", "meaning": "hari Minggu" },
+        { "kanji": "月曜日", "kana": "げつようび", "romaji": "getsuyoubi", "meaning": "hari Senin" },
+        { "kanji": "金曜日", "kana": "きんようび", "romaji": "kinyoubi", "meaning": "hari Jumat" },
+        { "kanji": "土曜日", "kana": "どようび", "romaji": "doyoubi", "meaning": "hari Sabtu" },
+        { "kanji": "試験", "kana": "しけん", "romaji": "shiken", "meaning": "ujian" },
+        { "kanji": "旅行", "kana": "りょこう", "romaji": "ryokou", "meaning": "bepergian / wisata" }
+      ]
+    },
+    {
+      "question_number": 12,
+      "package": "Bahasa Jepang (Paket 2)",
+      "image_filename": "7693851726323092788_12_1791368440.jpeg",
+      "question_type": "Multiple Choice (Pilihan Ganda Tunggal)",
+      "passage": {
+        "title": "たろうさんの　まいにちの　せいかつ (Kehidupan Sehari-hari Taro)",
+        "title_furigana": "太郎[たろう]さんの 毎日[まいにち]の 生活[せいかつ]",
+        "table_headers": ["じかん (Waktu)", "かつどう (Kegiatan)"],
+        "table_data": [
+          { "time": "6じ", "time_furigana": "6時[ろくじ]", "activity": "おきます。", "activity_furigana": "起[お]きます。", "meaning": "Bangun tidur" },
+          { "time": "7じ", "time_furigana": "7時[しちじ]", "activity": "あさごはんを　たべます。", "activity_furigana": "朝[あさ]ごはんを 食[た]べます。", "meaning": "Sarapan pagi" },
+          { "time": "8じ", "time_furigana": "8時[はちじ]", "activity": "がっこうへ　いきます。", "activity_furigana": "学校[がっこう]へ 行[い]きます。", "meaning": "Pergi ke sekolah" },
+          { "time": "12じ", "time_furigana": "12時[じゅうにじ]", "activity": "ひるごはんを　たべます。", "activity_furigana": "昼[ひる]ごはんを 食[た]べます。", "meaning": "Makan siang" },
+          { "time": "3じ", "time_furigana": "3時[さんじ]", "activity": "うちへ　かえります。", "activity_furigana": "家[うち]へ 帰[かえ]ります。", "meaning": "Pulang ke rumah" },
+          { "time": "10じ", "time_furigana": "10時[じゅうじ]", "activity": "ねます。", "activity_furigana": "寝[ね]ます。", "meaning": "Tidur" }
+        ]
+      },
+      "prompt": "Pilihlah pernyataan dengan urutan waktu dan kegiatan yang runtut dan tepat sesuai dengan tabel!",
+      "options": [
+        {
+          "index": 1,
+          "text": "ろくじ　に　あさごはん　を　たべます。それから、がっこうへいきます。",
+          "furigana": "6時[ろくじ]に 朝[あさ]ごはんを 食[た]べます。それから、学校[がっこう]へ 行[い]きます。",
+          "meaning": "Jam 6 sarapan pagi. Setelah itu, pergi ke sekolah.",
+          "is_correct": false,
+          "reason": "Salah, pada jam 6 Taro bangun tidur (おきます), sarapan baru pada jam 7 (しちじ)."
+        },
+        {
+          "index": 2,
+          "text": "しちじ　に　がっこう　へ　いきます。そして　あさごはんを　たべます。",
+          "furigana": "7時[しちじ]に 学校[がっこう]へ 行[い]きます。そして 朝[あさ]ごはんを 食[た]べます。",
+          "meaning": "Jam 7 pergi ke sekolah. Lalu sarapan pagi.",
+          "is_correct": false,
+          "reason": "Salah, jam 7 sarapan pagi dan jam 8 baru pergi ke sekolah."
+        },
+        {
+          "index": 3,
+          "text": "じゅうじに　がっこうへ　いきます。それから、にじに　うちへ　かえります。",
+          "furigana": "10時[じゅうじ]に 学校[がっこう]へ 行[い]きます。それから、2時[にじ]に 家[うち]へ 帰[かえ]ります。",
+          "meaning": "Jam 10 pergi ke sekolah. Setelah itu, jam 2 pulang ke rumah.",
+          "is_correct": false,
+          "reason": "Salah, jam 10 adalah waktu tidur (ねます), bukan ke sekolah. Pulang ke rumah jam 3, bukan jam 2."
+        },
+        {
+          "index": 4,
+          "text": "はちじに　あさごはんを　たべます。それから、にじに　うちへ　かえります。",
+          "furigana": "8時[はちじ]に 朝[あさ]ごはんを 食[た]べます。それから、2時[にじ]に 家[うち]へ 帰[かえ]ります。",
+          "meaning": "Jam 8 sarapan pagi. Setelah itu, jam 2 pulang ke rumah.",
+          "is_correct": false,
+          "reason": "Salah, jam 8 pergi ke sekolah (sarapan jam 7), dan pulang jam 3 (bukan jam 2)."
+        },
+        {
+          "index": 5,
+          "text": "ろくじ　に　おきます。それから、はちじに　がっこう　へ　いきます。",
+          "furigana": "6時[ろくじ]に 起[お]きます。それから、8時[はちじ]に 学校[がっこう]へ 行[い]きます。",
+          "meaning": "Jam 6 bangun tidur. Setelah itu, jam 8 pergi ke sekolah.",
+          "is_correct": true,
+          "reason": "Benar, sesuai tabel jam 6 Taro bangun tidur (おきます), kemudian jam 8 pergi ke sekolah (がっこうへいきます). Urutan waktu dan aktivitasnya runtut dan tepat."
+        }
+      ],
+      "correct_answer": "ろくじ　に　おきます。それから、はちじに　がっこう　へ　いきます。",
+      "user_selected_option": "ろくじ　に　おきます。それから、はちじに　がっこう　へ　いきます。",
+      "user_evaluation": {
+        "is_correct": true,
+        "feedback": "Benar! User memilih opsi ke-5 yang merepresentasikan urutan aktivitas yang valid dan benar sesuai tabel."
+      },
+      "grammar_and_structure_explanation": "Kalimat menggunakan kata sambung kronologis 'それから' (setelah itu / kemudian) untuk menghubungkan dua kegiatan yang terjadi secara berurutan. Partikel 'に' digunakan setelah keterangan waktu spesifik berangka (ろくじに, はちじに), dan partikel arah 'へ' digunakan sebelum kata kerja perpindahan 'いきます'.",
+      "vocabulary_list": [
+        { "kanji": "生活", "kana": "せいかつ", "romaji": "seikatsu", "meaning": "kehidupan / rutinitas" },
+        { "kanji": "起きます", "kana": "おきます", "romaji": "okimasu", "meaning": "bangun tidur" },
+        { "kanji": "朝ご飯", "kana": "あさごはん", "romaji": "asagohan", "meaning": "makan pagi / sarapan" },
+        { "kanji": "学校", "kana": "がっこう", "romaji": "gakkou", "meaning": "sekolah" },
+        { "kanji": "昼ご飯", "kana": "ひるごはん", "romaji": "hirugohan", "meaning": "makan siang" },
+        { "kanji": "家", "kana": "うち", "romaji": "uchi", "meaning": "rumah" },
+        { "kanji": "帰ります", "kana": "かえります", "romaji": "kaerimasu", "meaning": "pulang" },
+        { "kanji": "寝ます", "kana": "ねます", "romaji": "nemasu", "meaning": "tidur" },
+        { "kanji": "", "kana": "それから", "romaji": "sorekara", "meaning": "setelah itu / kemudian" }
+      ]
+    },
+    {
+      "question_number": 13,
+      "package": "Bahasa Jepang (Paket 2)",
+      "image_filename": "7693851726323092788_13_1791368440.jpeg",
+      "question_type": "Multiple Response / Checkbox (Pilihan Jamak)",
+      "passage": {
+        "title": "Kaneko san no Ichinichi",
+        "title_furigana": "金子[かねこ]さんの 一日[いちにち]",
+        "original_text": "Kaneko san wa maiban gogo rokujihan ni mizu o abimasu.\nSorekara, shichi ji ni kazoku to ban gohan o tabemasu.\nHachi ji ni benkyoushimasu.\nKu ji han ni miruku o nonde, ha o migakimasu.\nSoshite, juuji ni nemasu.",
+        "japanese_transcription": "金子さんは毎晩午後6時半に水を浴びます。それから、7時に家族と晩ごはんを食べます。8時に勉強します。9時半にミルクを飲んで、歯を磨きます。そして、10時に寝ます。",
+        "japanese_furigana": "金子[かねこ]さんは 毎晩[まいばん] 午後[ごご] 6時半[ろくじはん]に 水[みず]を 浴[あ]びます。それから、7時[しちじ]に 家族[かぞく]と 晩[ばん]ごはんを 食[た]べます。8時[はちじ]に 勉強[べんきょう]します。9時半[くじはん]に ミルクを 飲[の]んで、歯[は]を 磨[みが]きます。そして、10時[じゅうじ]に 寝[ね]ます。",
+        "indonesian_translation": "Kaneko-san setiap malam pada pukul 18:30 mandi guyur air. Setelah itu, pada pukul 7 (19:00) makan malam bersama keluarga. Pada pukul 8 (20:00) belajar. Pada pukul 9:30 (21:30) minum susu dan menyikat gigi. Lalu, pada pukul 10 (22:00) tidur."
+      },
+      "prompt": "かねこさんは ______________。\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "prompt_furigana": "金子[かねこ]さんは ______________。",
+      "options": [
+        {
+          "index": 1,
+          "text": "ろくじに　みずを　あびます",
+          "furigana": "6時[ろくじ]に 水[みず]を 浴[あ]びます",
+          "meaning": "Mandi guyur air pada jam 6.",
+          "is_correct": false,
+          "user_checked": false,
+          "reason": "Salah, di teks tertulis 'gogo rokujihan' (jam 6:30), bukan jam 6 pas (ろくじ)."
+        },
+        {
+          "index": 2,
+          "text": "しちじに　ばんごはんを　たべます",
+          "furigana": "7時[しちじ]に 晩[ばん]ごはんを 食[た]べます",
+          "meaning": "Makan malam pada jam 7.",
+          "is_correct": true,
+          "user_checked": true,
+          "reason": "Benar, sesuai kalimat: 'Sorekara, shichi ji ni kazoku to ban gohan o tabemasu'."
+        },
+        {
+          "index": 3,
+          "text": "くじに　ミルクを　のみます",
+          "furigana": "9時[くじ]に ミルクを 飲[の]みます",
+          "meaning": "Minum susu pada jam 9.",
+          "is_correct": false,
+          "user_checked": false,
+          "reason": "Salah, di teks tertulis 'Ku ji han ni miruku o nonde' (jam 9:30), bukan jam 9 tepat (くじ)."
+        },
+        {
+          "index": 4,
+          "text": "じゅうじに　ねます",
+          "furigana": "10時[じゅうじ]に 寝[ね]ます",
+          "meaning": "Tidur pada jam 10.",
+          "is_correct": true,
+          "user_checked": true,
+          "reason": "Benar, sesuai kalimat penutup: 'Soshite, juuji ni nemasu'."
+        }
+      ],
+      "correct_answers": [
+        "しちじに　ばんごはんを　たべます",
+        "じゅうじに　ねます"
+      ],
+      "user_answers": [
+        "しちじに　ばんごはんを　たべます",
+        "じゅうじに　ねます"
+      ],
+      "user_evaluation": {
+        "is_correct": true,
+        "score_percentage": 100,
+        "feedback": "Luar biasa! User mencentang tepat dua opsi yang benar dan tidak terkecoh oleh perbedaan jam bulat vs setengah jam (han)."
+      },
+      "grammar_and_structure_explanation": "Soal ini menguji ketelitian membaca jam dalam bahasa Jepang, khususnya membedakan jam tepat (〜じ) dengan jam lewat 30 menit (〜じはん). 'Rokujihan' (6:30) ≠ 'rokuji' (6:00), dan 'kujihan' (9:30) ≠ 'kuji' (9:00).",
+      "vocabulary_list": [
+        { "kanji": "毎晩", "kana": "まいばん", "romaji": "maiban", "meaning": "setiap malam" },
+        { "kanji": "午後", "kana": "ごご", "romaji": "gogo", "meaning": "PM / petang - malam" },
+        { "kanji": "水", "kana": "みず", "romaji": "mizu", "meaning": "air" },
+        { "kanji": "浴びます", "kana": "あびます", "romaji": "abimasu", "meaning": "mandi guyur / menyiram tubuh" },
+        { "kanji": "家族", "kana": "かぞく", "romaji": "kazoku", "meaning": "keluarga" },
+        { "kanji": "晩ご飯", "kana": "ばんごはん", "romaji": "bangohan", "meaning": "makan malam" },
+        { "kanji": "勉強します", "kana": "べんきょうします", "romaji": "benkyoushimasu", "meaning": "belajar" },
+        { "kanji": "歯を磨きます", "kana": "はをみがきます", "romaji": "ha o migakimasu", "meaning": "menggosok gigi" },
+        { "kanji": "半", "kana": "はん", "romaji": "han", "meaning": "setengah (30 menit)" }
+      ]
+    },
+    {
+      "question_number": 14,
+      "package": "Bahasa Jepang (Paket 2)",
+      "image_filename": "7693851726323092788_14_1791368440.jpeg",
+      "question_type": "Multiple Choice (Pilihan Ganda Tunggal)",
+      "passage": {
+        "title": "Kaneko san no Ichinichi",
+        "title_furigana": "金子[かねこ]さんの 一日[いちにち]",
+        "original_text": "Kaneko san wa maiban gogo rokujihan ni mizu o abimasu.\nSorekara, shichi ji ni kazoku to ban gohan o tabemasu.\nHachi ji ni benkyoushimasu.\nKu ji han ni miruku o nonde, ha o migakimasu.\nSoshite, juuji ni nemasu.",
+        "japanese_transcription": "金子さんは毎晩午後6時半に水を浴びます。それから、7時に家族と晩ごはんを食べます。8時に勉強します。9時半にミルクを飲んで、歯を磨きます。そして、10時に寝ます。",
+        "japanese_furigana": "金子[かねこ]さんは 毎晩[まいばん] 午後[ごご] 6時半[ろくじはん]に 水[みず]を 浴[あ]びます。それから、7時[しちじ]に 家族[かぞく]と 晩[ばん]ごはんを 食[た]べます。8時[はちじ]に 勉強[べんきょう]します。9時半[くじはん]に ミルクを 飲[の]んで、歯[は]を 磨[みが]きます。そして、10時[じゅうじ]に 寝[ね]ます。",
+        "indonesian_translation": "Kaneko-san setiap malam pada pukul 18:30 mandi guyur air. Setelah itu, pada pukul 7 (19:00) makan malam bersama keluarga. Pada pukul 8 (20:00) belajar. Pada pukul 9:30 (21:30) minum susu dan menyikat gigi. Lalu, pada pukul 10 (22:00) tidur."
+      },
+      "prompt": "Lengkapilah kalimat berikut sesuai dengan susunan kalimat yang benar berdasarkan wacana!\nかねこさんは　まいばん　___________",
+      "prompt_furigana": "金子[かねこ]さんは 毎晩[まいばん] ___________",
+      "options": [
+        {
+          "index": 1,
+          "text": "ねます。それから、みずを　あびます。",
+          "furigana": "寝[ね]ます。それから、水[みず]を 浴[あ]びます。",
+          "meaning": "Tidur. Setelah itu, mandi guyur air.",
+          "is_correct": false,
+          "reason": "Salah, urutan terbalik total (mandi dilakukan di awal malam jam 18:30, tidur di akhir malam jam 22:00)."
+        },
+        {
+          "index": 2,
+          "text": "ばんごはんを　たべます。それから、ねます。",
+          "furigana": "晩[ばん]ごはんを 食[た]べます。それから、寝[ね]ます。",
+          "meaning": "Makan malam. Setelah itu, tidur.",
+          "is_correct": false,
+          "reason": "Tidak tepat sebagai urutan berurutan langsung, karena setelah makan malam (19:00) masih ada belajar (20:00) dan minum susu/sikat gigi (21:30) sebelum akhirnya tidur (22:00)."
+        },
+        {
+          "index": 3,
+          "text": "みずを　あびます。それから、べんきょうします。",
+          "furigana": "水[みず]を 浴[あ]びます。それから、勉強[べんきょう]します。",
+          "meaning": "Mandi guyur air. Setelah itu, belajar.",
+          "is_correct": false,
+          "reason": "Tidak tepat secara langsung karena setelah mandi jam 18:30, Kaneko makan malam bersama keluarga jam 19:00 sebelum belajar jam 20:00."
+        },
+        {
+          "index": 4,
+          "text": "べんきょうします。それから、ミルクを　のみます。",
+          "furigana": "勉強[べんきょう]します。それから、ミルクを 飲[の]みます。",
+          "meaning": "Belajar. Setelah itu, minum susu.",
+          "is_correct": true,
+          "reason": "Benar! Pada wacana: 'Hachi ji ni benkyoushimasu. Ku ji han ni miruku o nonde...'. Kegiatan belajar jam 20:00 langsung diikuti oleh minum susu pada jam 21:30 secara kronologis beruntun."
+        },
+        {
+          "index": 5,
+          "text": "ミルクを　のみます。それから、ばんごはんを　たべます。",
+          "furigana": "ミルクを 飲[の]みます。それから、晩[ばん]ごはんを 食[た]べます。",
+          "meaning": "Minum susu. Setelah itu, makan malam.",
+          "is_correct": false,
+          "reason": "Salah, urutan terbalik. Makan malam jam 19:00, sedangkan minum susu jam 21:30."
+        }
+      ],
+      "correct_answer": "べんきょうします。それから、ミルクを　のみます。",
+      "user_selected_option": "べんきょうします。それから、ミルクを　のみます。",
+      "user_evaluation": {
+        "is_correct": true,
+        "feedback": "Benar! User memilih opsi ke-4 yang secara tepat mencerminkan urutan kronologis langsung kegiatan malam Kaneko."
+      },
+      "grammar_and_structure_explanation": "Pola kalimat urutan kejadian menggunakan kata penghubung 'それから' (setelah itu). Kalimat 1 + それから + Kalimat 2 menunjukkan bahwa kegiatan pada Kalimat 2 dilakukan setelah kegiatan pada Kalimat 1 selesai. Opsi ke-4 adalah pasangan aktivitas yang berurutan langsung sesuai urutan teks.",
+      "vocabulary_list": [
+        { "kanji": "勉強します", "kana": "べんきょうします", "romaji": "benkyoushimasu", "meaning": "belajar" },
+        { "kanji": "", "kana": "ミルク", "romaji": "miruku", "meaning": "susu" },
+        { "kanji": "飲みます", "kana": "のみます", "romaji": "nomimasu", "meaning": "minum" },
+        { "kanji": "", "kana": "それから", "romaji": "sorekara", "meaning": "setelah itu / kemudian" }
+      ]
+    },
+    {
+      "question_number": 15,
+      "package": "Bahasa Jepang (Paket 2)",
+      "image_filename": "7693851726323092788_15_1791368440.jpeg",
+      "question_type": "Multi-statement True/False (Tabel Benar/Salah)",
+      "passage": {
+        "title": "Hikari san no Yasumi (Liburan Hikari)",
+        "original_text": "Hajimemashite, watashi wa Hikari desu.\nKonshuu wa kinyoubi kara nichiyoubi made yasumi desu.\nKinou, watashi wa eigakan de eiga o mimashita.\nKyouwa doyoubi desu. Doyoubi wa itsumo mooru de kaimono shimasu.\nDemo, mooru de amari hirugohan o tabemasen.\nAshita wa umi de oyogimasu.",
+        "japanese_transcription": "初めまして、私はひかりです。今週は金曜日から日曜日まで休みです。昨日、私は映画館で映画を見ました。今日は土曜日です。土曜日はいつもモールで買い物します。でも、モールで余り昼ご飯を食べません。明日は海で泳ぎます。",
+        "japanese_furigana": "初[はじ]めまして、私[わたし]は ひかりです。今週[こんしゅう]は 金曜日[きんようび]から 日曜日[にちようび]まで 休[やす]みです。昨日[きのう]、私[わたし]は 映画館[えいがかん]で 映画[えいが]を 見[み]ました。今日[きょう]は 土曜日[どようび]です。土曜日[どようび]は いつも モールで 買[か]い物[もの]します。でも、モールで あまり 昼[ひる]ごはんを 食[た]べません。明日[あした]は 海[うみ]で 泳[およ]ぎます。",
+        "indonesian_translation": "Salam kenal, saya Hikari. Minggu ini libur dari hari Jumat sampai hari Minggu. Kemarin, saya menonton film di bioskop. Hari ini adalah hari Sabtu. Pada hari Sabtu biasanya selalu berbelanja di mal. Namun, (saya) jarang makan siang di mal. Besok (saya) akan berenang di laut."
+      },
+      "prompt": "Bagaimana pernyataan terkait wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai dengan wacana!",
+      "statements": [
+        {
+          "statement_number": 1,
+          "statement_id": "Pada hari Jumat, Hikari nonton film di bioskop.",
+          "correct_answer": "Benar",
+          "user_answer": "Benar",
+          "is_user_correct": true,
+          "explanation": "Di wacana disebutkan 'Kyouwa doyoubi desu' (Hari ini hari Sabtu). Kalimat sebelumnya menyebutkan 'Kinou (kemarin), watashi wa eigakan de eiga o mimashita'. Karena hari ini hari Sabtu, maka kemarin adalah hari Jumat. Jadi benar bahwa pada hari Jumat Hikari menonton film di bioskop."
+        },
+        {
+          "statement_number": 2,
+          "statement_id": "Pada hari Sabtu, Hikari selalu makan siang di mall.",
+          "correct_answer": "Salah",
+          "user_answer": "Salah",
+          "is_user_correct": true,
+          "explanation": "Wacana menyebutkan bahwa pada hari Sabtu ia selalu berbelanja di mall ('itsumo mooru de kaimono shimasu'), tetapi untuk makan siang dinyatakan: 'Demo, mooru de amari hirugohan o tabemasen' (Tetapi, jarang/tidak begitu sering makan siang di mal). Kata 'amari' yang diikuti bentuk negatif berarti 'jarang / hampir tidak pernah', sehingga bertolak belakang dengan 'selalu'. Oleh karena itu pernyataan ini SALAH."
+        },
+        {
+          "statement_number": 3,
+          "statement_id": "Pada hari Minggu, Hikari berenang di laut.",
+          "correct_answer": "Benar",
+          "user_answer": "Benar",
+          "is_user_correct": true,
+          "explanation": "Karena hari ini adalah hari Sabtu ('Kyouwa doyoubi desu'), maka besok ('Ashita') adalah hari Minggu. Kalimat terakhir menyatakan 'Ashita wa umi de oyogimasu' (Besok berenang di laut). Maka benar bahwa pada hari Minggu Hikari berenang di laut."
+        }
+      ],
+      "user_overall_evaluation": {
+        "all_correct": true,
+        "score_percentage": 100,
+        "feedback": "Sempurna! Semua pernyataan dievaluasi dengan tepat oleh user (Benar, Salah, Benar)."
+      },
+      "grammar_and_structure_explanation": "Analisis tata bahasa kunci:\n1. Hubungan kronologis hari: Hari ini = Sabtu (土曜日), Kemarin = Jumat (金曜日), Besok = Minggu (日曜日).\n2. Partikel tempat aksi 'で': 映画館で (di bioskop), モールで (di mal), 海で (di laut).\n3. Kata keterangan frekuensi: 'いつも' (selalu) vs 'あまり + bentuk negatif' (jarang/tidak begitu sering). Hikari *selalu* berbelanja, tetapi *jarang* makan siang di mal.",
+      "vocabulary_list": [
+        { "kanji": "初めまして", "kana": "はじめまして", "romaji": "hajimemashite", "meaning": "salam kenal" },
+        { "kanji": "今週", "kana": "こんしゅう", "romaji": "konshuu", "meaning": "minggu ini" },
+        { "kanji": "休み", "kana": "やすみ", "romaji": "yasumi", "meaning": "libur / hari libur" },
+        { "kanji": "〜から〜まで", "kana": "〜から〜まで", "romaji": "~ kara ~ made", "meaning": "dari ~ sampai ~" },
+        { "kanji": "映画館", "kana": "えいがかん", "romaji": "eigakan", "meaning": "bioskop" },
+        { "kanji": "映画", "kana": "えいが", "romaji": "eiga", "meaning": "film" },
+        { "kanji": "いつも", "kana": "いつも", "romaji": "itsumo", "meaning": "selalu" },
+        { "kanji": "買い物します", "kana": "かいものします", "romaji": "kaimono shimasu", "meaning": "berbelanja" },
+        { "kanji": "あまり〜ない", "kana": "あまり〜ない", "romaji": "amari ~ nai", "meaning": "jarang / tidak begitu..." },
+        { "kanji": "海", "kana": "うみ", "romaji": "umi", "meaning": "laut / pantai" },
+        { "kanji": "泳ぎます", "kana": "およぎます", "romaji": "oyogimasu", "meaning": "berenang" }
+      ]
+    }
+  ]
+}

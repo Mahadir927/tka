@@ -1,0 +1,436 @@
+{
+  "batch": 5,
+  "description": "Hasil ekstraksi dan analisis soal TKA Bahasa Jepang Paket 2 (Soal 21 - 25)",
+  "total_questions": 5,
+  "questions": [
+    {
+      "question_number": 21,
+      "image_file": "7693853515265002773_6_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "single_choice",
+      "prompt": "Pilih pernyataan yang sesuai dengan wacana tersebut!",
+      "visual_description": "Ilustrasi lembar memo tempel merah muda bertuliskan 'おしらせ' (Pengumuman) dengan gambar siswi berhijab memegang megafon. Di dalamnya terdapat agenda sekolah beserta rentang tanggal pelaksanaannya: festival olahraga (うんどうかい) tanggal 17-20 Juni, upacara kelulusan (そつぎょうしき) tanggal 24 Juni, dan libur sekolah (やすみ) tanggal 25 Juni hingga 14 Juli.",
+      "japanese_content": {
+        "text": "おしらせ\n・うんどうかい　6月17日～6月20日\n・そつぎょうしき　6月24日\n・やすみ　6月25日～7月14日",
+        "furigana": "お知[し]らせ\n・運動会[うんどうかい]　6月[がつ]17日[じゅうしちにち]～6月[がつ]20日[はつか]\n・卒業式[そつぎょうしき]　6月[がつ]24日[にじゅうよっか]\n・休[やす]み　6月[がつ]25日[にじゅうごにち]～7月[がつ]14日[じゅうよっか]",
+        "romaji": "Oshirase\n• Undoukai 6-gatsu 17-nichi ~ 6-gatsu 20-nichi\n• Sotsugyoushiki 6-gatsu 24-ka\n• Yasumi 6-gatsu 25-nichi ~ 7-gatsu 14-ka"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "Pertandingan olahraga berlangsung selama 1 minggu.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "Pertandingan olahraga diselenggarakan saat libur sekolah.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "Libur sekolah berlangsung selama 1 bulan.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "Upacara kelulusan diselenggarakan sebelum liburan sekolah.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 5,
+          "text": "Sekolah tidak mengadakan kegiatan pertandingan olahraga.",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [4],
+        "selected_texts": ["Upacara kelulusan diselenggarakan sebelum liburan sekolah."],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [4],
+        "texts": ["Upacara kelulusan diselenggarakan sebelum liburan sekolah."]
+      },
+      "translation": {
+        "prompt": "Pilih pernyataan yang sesuai dengan wacana tersebut!",
+        "full_text": "PENGUMUMAN\n• Festival / Pertandingan Olahraga: 17 Juni – 20 Juni\n• Upacara Kelulusan: 24 Juni\n• Libur: 25 Juni – 14 Juli",
+        "correct_sentence": "Upacara kelulusan diselenggarakan sebelum liburan sekolah."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-4: 'Upacara kelulusan diselenggarakan sebelum liburan sekolah.' Pilihan pengguna BENAR.",
+        "detailed_analysis": "Berdasarkan teks pengumuman (おしらせ):\n1. うんどうかい (Undoukai / Festival olahraga) dilaksanakan tanggal 17 Juni s.d. 20 Juni (berlangsung selama 4 hari).\n2. そつぎょうしき (Sotsugyoushiki / Upacara kelulusan) diadakan pada tanggal 24 Juni.\n3. やすみ (Yasumi / Libur sekolah) dimulai dari tanggal 25 Juni sampai 14 Juli (sekitar 20 hari).\nKarena upacara kelulusan dilaksanakan pada tanggal 24 Juni dan liburan baru dimulai tanggal 25 Juni, maka upacara kelulusan diselenggarakan sebelum liburan sekolah dimulai (24 Juni lebih awal daripada 25 Juni). Pernyataan pada pilihan ke-4 sepenuhnya sesuai dengan jadwal.",
+        "distractor_analysis": [
+          "Pertandingan olahraga berlangsung selama 1 minggu: SALAH. Rentang tanggal 17 Juni – 20 Juni hanya berlangsung selama 4 hari, bukan 1 minggu (7 hari).",
+          "Pertandingan olahraga diselenggarakan saat libur sekolah: SALAH. Festival olahraga diadakan 17–20 Juni, sementara liburan baru dimulai 25 Juni.",
+          "Libur sekolah berlangsung selama 1 bulan: SALAH. Libur sekolah dari 25 Juni s.d. 14 Juli adalah 20 hari, kurang dari satu bulan.",
+          "Sekolah tidak mengadakan kegiatan pertandingan olahraga: SALAH. Teks secara jelas mencantumkan jadwal 'うんどうかい' (festival/pertandingan olahraga)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "お知[し]らせ", "romaji": "oshirase", "meaning": "pengumuman / pemberitahuan" },
+        { "japanese": "運動会[うんどうかい]", "romaji": "undoukai", "meaning": "festival olahraga / pekan olahraga sekolah" },
+        { "japanese": "卒業式[そつぎょうしき]", "romaji": "sotsugyoushiki", "meaning": "upacara kelulusan" },
+        { "japanese": "休[やす]み", "romaji": "yasumi", "meaning": "libur / istirahat" },
+        { "japanese": "6月[ろくがつ]", "romaji": "rokugatsu", "meaning": "bulan Juni" },
+        { "japanese": "7月[しちがつ]", "romaji": "shichigatsu", "meaning": "bulan Juli" },
+        { "japanese": "17日[じゅうしちにち]", "romaji": "juushichinichi", "meaning": "tanggal 17" },
+        { "japanese": "20日[はつか]", "romaji": "hatsuka", "meaning": "tanggal 20" },
+        { "japanese": "24日[にじゅうよっか]", "romaji": "nijuuyokka", "meaning": "tanggal 24" },
+        { "japanese": "25日[にじゅうごにち]", "romaji": "nijuugonichi", "meaning": "tanggal 25" },
+        { "japanese": "14日[じゅうよっか]", "romaji": "juuyokka", "meaning": "tanggal 14" }
+      ]
+    },
+    {
+      "question_number": 22,
+      "image_file": "7693853515265002773_7_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "single_choice",
+      "prompt": "アリさんは　いつ　バドミントンを　しますか。",
+      "visual_description": "Tabel jadwal kegiatan mingguan berjudul 'アリさんの スケジュール' (Jadwal Ali). Menampilkan kolom hari dari Senin hingga Minggu (月, 火, 水, 木, 金, 土, 日) dan baris waktu 07:00 hingga 18:00. Pada kolom hari Sabtu (土) pukul 09:00 - 12:00 terdapat gambar raket dan kok bulu tangkis.",
+      "japanese_content": {
+        "text": "アリさんの スケジュール\nアリさんは　いつ　バドミントンを　しますか。",
+        "furigana": "アリさんの スケジュール\nアリさんは いつ バドミントンを しますか。",
+        "romaji": "Ari-san no sukejuuru.\nAri-san wa itsu badominton o shimasu ka?"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "すいようび　です。",
+          "romaji": "Suiyoubi desu.",
+          "meaning": "Hari Rabu.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "もくようび　です。",
+          "romaji": "Mokuyoubi desu.",
+          "meaning": "Hari Kamis.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "きんようび　です。",
+          "romaji": "Kinyoubi desu.",
+          "meaning": "Hari Jumat.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "どようび　です。",
+          "romaji": "Doyoubi desu.",
+          "meaning": "Hari Sabtu.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 5,
+          "text": "にちようび　です。",
+          "romaji": "Nichiyoubi desu.",
+          "meaning": "Hari Minggu.",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [4],
+        "selected_texts": ["どようび　です。"],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [4],
+        "texts": ["どようび　です。"]
+      },
+      "translation": {
+        "prompt": "Kapan Ali bermain bulu tangkis / badminton?",
+        "correct_sentence": "Hari Sabtu."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-4: 「どようび です。」 (Hari Sabtu). Pilihan pengguna BENAR.",
+        "detailed_analysis": "Pertanyaan menanyakan hari pelaksanaan bulu tangkis (バドミントン) oleh Ali menggunakan kata tanya いつ (kapan). Pada tabel jadwal mingguan:\n- 月 (Getsuyoubi / Senin): Sekolah\n- 火 (Kayoubi / Selasa): Sekolah & にほんごクラブ (Klub Bahasa Jepang, 16:00-18:00)\n- 水 (Suiyoubi / Rabu): Sekolah\n- 木 (Mokuyoubi / Kamis): Sekolah\n- 金 (Kinyoubi / Jumat): Sekolah & Basket (15:00-17:00)\n- 土 (Doyoubi / Sabtu): Terdapat ikon raket dan kok badminton pada rentang waktu 09:00 - 12:00, diikuti ゲーム (game) pada 14:00 - 16:00.\n- 日 (Nichiyoubi / Minggu): かいもの (belanja, 11:00 - 13:00).\nIkon badminton berada persis di bawah kolom hari Sabtu (土 = 土曜日 / どようび). Oleh karena itu, Ali bermain badminton pada hari Sabtu (どようび です).",
+        "distractor_analysis": [
+          "すいようび です (Hari Rabu): Di jadwal hari Rabu (水) Ali bersekolah biasa.",
+          "もくようび です (Hari Kamis): Di jadwal hari Kamis (木) Ali bersekolah biasa.",
+          "きんようび です (Hari Jumat): Di jadwal hari Jumat (金) kegiatan olahraganya adalah bola basket, bukan badminton.",
+          "にちようび です (Hari Minggu): Di jadwal hari Minggu (日) kegiatannya adalah berbelanja (かいもの)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "スケジュール", "romaji": "sukejuuru", "meaning": "jadwal (schedule)" },
+        { "japanese": "いつ", "romaji": "itsu", "meaning": "kapan" },
+        { "japanese": "バドミントン", "romaji": "badominton", "meaning": "bulu tangkis / badminton" },
+        { "japanese": "する（します）", "romaji": "suru (shimasu)", "meaning": "melakukan / bermain" },
+        { "japanese": "月曜日[げつようび]", "romaji": "getsuyoubi", "meaning": "Senin" },
+        { "japanese": "火曜日[かようび]", "romaji": "kayoubi", "meaning": "Selasa" },
+        { "japanese": "水曜日[すいようび]", "romaji": "suiyoubi", "meaning": "Rabu" },
+        { "japanese": "木曜日[もくようび]", "romaji": "mokuyoubi", "meaning": "Kamis" },
+        { "japanese": "金曜日[きんようび]", "romaji": "kinyoubi", "meaning": "Jumat" },
+        { "japanese": "土曜日[どようび]", "romaji": "doyoubi", "meaning": "Sabtu" },
+        { "japanese": "日曜日[にちようび]", "romaji": "nichiyoubi", "meaning": "Minggu" }
+      ]
+    },
+    {
+      "question_number": 23,
+      "image_file": "7693853515265002773_8_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "single_choice",
+      "prompt": "アリさんは　なんじから　なんじまで　かいものしますか。",
+      "visual_description": "Tabel jadwal mingguan yang sama bertajuk 'アリさんの スケジュール'. Pada kolom hari Minggu (日), terdapat kotak kegiatan 'かいもの' (belanja) yang menempati blok waktu dari pukul 11:00 hingga 13:00.",
+      "japanese_content": {
+        "text": "アリさんの スケジュール\nアリさんは　なんじから　なんじまで　かいものしますか。",
+        "furigana": "アリさんの スケジュール\nアリさんは 何時[なんじ]から 何時[なんじ]まで 買[か]い物[もの]しますか。",
+        "romaji": "Ari-san no sukejuuru.\nAri-san wa nan-ji kara nan-ji made kaimono shimasu ka?"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "9じから　11じまで　です。",
+          "romaji": "Ku-ji kara juu-ichi-ji made desu.",
+          "meaning": "Dari jam 9 sampai jam 11.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "9じから　12じまで　です。",
+          "romaji": "Ku-ji kara juu-ni-ji made desu.",
+          "meaning": "Dari jam 9 sampai jam 12.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "10じから　12じまで　です。",
+          "romaji": "Juu-ji kara juu-ni-ji made desu.",
+          "meaning": "Dari jam 10 sampai jam 12.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "10じから　11じまで　です。",
+          "romaji": "Juu-ji kara juu-ichi-ji made desu.",
+          "meaning": "Dari jam 10 sampai jam 11.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 5,
+          "text": "11じから　13じまで　です。",
+          "romaji": "Juu-ichi-ji kara juu-san-ji made desu.",
+          "meaning": "Dari jam 11 sampai jam 13.",
+          "user_selected": true,
+          "is_correct": true
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [5],
+        "selected_texts": ["11じから　13じまで　です。"],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [5],
+        "texts": ["11じから　13じまで　です。"]
+      },
+      "translation": {
+        "prompt": "Dari jam berapa sampai jam berapa Ali berbelanja?",
+        "correct_sentence": "Dari jam 11 sampai jam 13."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-5: 「11じから 13じまで です。」 (Dari jam 11 sampai jam 13). Pilihan pengguna BENAR.",
+        "detailed_analysis": "Pertanyaan menanyakan rentang waktu belanja dengan pola tata bahasa 「何時から何時まで」(nan-ji kara nan-ji made = dari jam berapa sampai jam berapa). Berdasarkan kolom hari Minggu (日):\n- Kotak bertuliskan 「かいもの」(kaimono = belanja) berawal pada garis jam 11:00 dan berakhir pada garis jam 13:00 (mencakup 2 jam: pukul 11 hingga 13).\nOleh karena itu, Ali berbelanja dari pukul 11 sampai pukul 13 (11じから 13じまで です).",
+        "distractor_analysis": [
+          "9じから 11じまで です: Tidak ada kegiatan pada jam ini di hari Minggu.",
+          "9じから 12じまで です: Ini adalah jadwal Ali bermain bulu tangkis (badminton) pada hari Sabtu (土曜日), bukan jadwal belanja di hari Minggu.",
+          "10じから 12じまで です: Tidak sesuai dengan letak kotak かいもの pada tabel.",
+          "10じから 11じまで です: Tidak sesuai dengan garis awal kegiatan belanja yang dimulai pukul 11:00."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "何時[なんじ]", "romaji": "nan-ji", "meaning": "jam berapa" },
+        { "japanese": "〜から", "romaji": "~kara", "meaning": "dari ~ (titik awal waktu/tempat)" },
+        { "japanese": "〜まで", "romaji": "~made", "meaning": "sampai ~ (titik batas waktu/tempat)" },
+        { "japanese": "買[か]い物[もの]", "romaji": "kaimono", "meaning": "belanja / berbelanja" },
+        { "japanese": "9時[くじ]", "romaji": "ku-ji", "meaning": "jam 9" },
+        { "japanese": "11時[じゅういちじ]", "romaji": "juu-ichi-ji", "meaning": "jam 11" },
+        { "japanese": "12時[じゅうにじ]", "romaji": "juu-ni-ji", "meaning": "jam 12" },
+        { "japanese": "13時[じゅうさんじ]", "romaji": "juu-san-ji", "meaning": "jam 13 (jam 1 siang)" }
+      ]
+    },
+    {
+      "question_number": 24,
+      "image_file": "7693853515265002773_9_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "multiple_choice",
+      "prompt": "ただしいぶんは　どれですか。\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "visual_description": "Denah susunan meja dan kursi di dalam ruang kelas. Bagian atas terdapat garis panjang papan tulis dan meja guru (せんせい) di sisi kanan depan. Posisi siswa yang duduk menghadap papan tulis terbagi dalam dua baris:\n- Baris depan (dekat papan tulis): ななこ (kiri), けんた (tengah), しのすけ (kanan).\n- Baris belakang: まさお (kiri, tepat di belakang ななこ), かざま (tengah, tepat di belakang けんた), よしなが (kanan, tepat di belakang しのすけ).",
+      "japanese_content": {
+        "text": "ただしいぶんは　どれですか。\nけんたさんは　かざまさんの　まえに　います。\nまさおさんは　よしながさんの　うしろに　います。\nよしながさんは　しのすけさんの　となりに　います。\nななこさんは　まさおさんの　まえに　います。",
+        "furigana": "正[ただ]しい文[ぶん]は どれですか。\nけんたさんは かざまさんの 前[まえ]に います。\nまさおさんは よしながさんの 後[うし]ろに います。\nよしながさんは しのすけさんの 隣[となり]に います。\nななこさんは まさおさんの 前[まえ]に います。",
+        "romaji": "Tadashii bun wa dore desu ka?\nKenta-san wa Kazama-san no mae ni imasu.\nMasao-san wa Yoshinaga-san no ushiro ni imasu.\nYoshinaga-san wa Shinosuke-san no tonari ni imasu.\nNanako-san wa Masao-san no mae ni imasu."
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "けんたさんは　かざまさんの　まえに　います。",
+          "romaji": "Kenta-san wa Kazama-san no mae ni imasu.",
+          "meaning": "Kenta ada di depan Kazama.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 2,
+          "text": "まさおさんは　よしながさんの　うしろに　います。",
+          "romaji": "Masao-san wa Yoshinaga-san no ushiro ni imasu.",
+          "meaning": "Masao ada di belakang Yoshinaga.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 3,
+          "text": "よしながさんは　しのすけさんの　となりに　います。",
+          "romaji": "Yoshinaga-san wa Shinosuke-san no tonari ni imasu.",
+          "meaning": "Yoshinaga ada di samping Shinosuke.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "ななこさんは　まさおさんの　まえに　います。",
+          "romaji": "Nanako-san wa Masao-san no mae ni imasu.",
+          "meaning": "Nanako ada di depan Masao.",
+          "user_selected": true,
+          "is_correct": true
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [1, 4],
+        "selected_texts": [
+          "けんたさんは　かざまさんの　まえに　います。",
+          "ななこさんは　まさおさんの　まえに　います。"
+        ],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [1, 4],
+        "texts": [
+          "けんたさんは　かざまさんの　まえに　います。",
+          "ななこさんは　まさおさんの　まえに　います。"
+        ]
+      },
+      "translation": {
+        "prompt": "Kalimat manakah yang benar?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+        "correct_sentences": [
+          "Kenta ada di depan Kazama.",
+          "Nanako ada di depan Masao."
+        ]
+      },
+      "explanation": {
+        "summary": "Pernyataan yang benar adalah pilihan ke-1 ('けんたさんは かざまさんの まえに います') dan pilihan ke-4 ('ななこさんは まさおさんの まえに います'). Pilihan pengguna BENAR.",
+        "detailed_analysis": "Analisis posisi tata letak tempat duduk berdasarkan arah hadap ke papan tulis:\n1. けんたさんは かざまさんの まえに います (Kenta ada di depan Kazama) -> BENAR. Kenta duduk di baris depan bagian tengah, dan Kazama duduk tepat di belakang Kenta (baris belakang tengah). Menghadap ke papan tulis, Kenta berada di DEPAN (まえ / mae) Kazama.\n2. まさおさんは よしながさんの うしろに います (Masao ada di belakang Yoshinaga) -> SALAH. Masao dan Yoshinaga berada di baris yang sama (baris belakang). Masao berada di sisi kiri Yoshinaga, bukan di belakangnya.\n3. よしながさんは しのすけさんの となりに います (Yoshinaga ada di sebelah Shinosuke) -> SALAH. Shinosuke berada di baris depan kanan, sedangkan Yoshinaga berada di baris belakang kanan (tepat di belakang Shinosuke). Posisi Yoshinaga adalah di BELAKANG (うしろ / ushiro) Shinosuke, bukan di samping/sebelahnya (となり / tonari).\n4. ななこさんは まさおさんの まえに います (Nanako ada di depan Masao) -> BENAR. Nanako duduk di baris depan bagian kiri, tepat di depan kursi Masao (baris belakang kiri). Maka Nanako berada di DEPAN (まえ / mae) Masao.",
+        "distractor_analysis": [
+          "Opsi 2 salah mendefinisikan hubungan horizontal baris yang sama sebagai depan-belakang (うしろ).",
+          "Opsi 3 salah menggunakan kata penunjuk posisi となり (sebelah/samping) untuk posisi vertikal depan-belakang (うしろ)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "正[ただ]しい", "romaji": "tadashii", "meaning": "benar / tepat" },
+        { "japanese": "文[ぶん]", "romaji": "bun", "meaning": "kalimat" },
+        { "japanese": "前[まえ]", "romaji": "mae", "meaning": "depan" },
+        { "japanese": "後[うし]ろ", "romaji": "ushiro", "meaning": "belakang" },
+        { "japanese": "隣[となり]", "romaji": "tonari", "meaning": "sebelah / samping" },
+        { "japanese": "いる（います）", "romaji": "iru (imasu)", "meaning": "ada (keberadaan orang/makhluk hidup)" },
+        { "japanese": "先生[せんせい]", "romaji": "sensei", "meaning": "guru" }
+      ]
+    },
+    {
+      "question_number": 25,
+      "image_file": "7693853515265002773_10_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "matrix_true_false",
+      "prompt": "Bagaimana informasi pernyataan terkait dengan wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi wacana!",
+      "visual_description": "Ilustrasi percakapan antara seorang siswa laki-laki berseragam SMA dan seorang siswi berhijab berseragam SMA. Siswa bertanya mengenai jam pelajaran sejarah hari ini dan dijawab dari jam 10 sampai jam 12. Siswa kemudian bertanya apakah besok juga ada pelajaran sejarah, dan siswi menjawab tidak, melainkan hari ini dan lusa.",
+      "japanese_content": {
+        "text": "きょうは　なんじに　れきしを　べんきょうしますか。\n１０じから　１２じまでです。\nそうですか。あしたも　れきしを　べんきょうしますか。\nいいえ、きょうと　あさってです。",
+        "furigana": "今日[きょう]は 何時[なんじ]に 歴史[れきし]を 勉強[べんきょう]しますか。\n10時[じゅうじ]から 12時[じゅうにじ]までです。\nそうですか。明日[あした]も 歴史[れきし]を 勉強[べんきょう]しますか。\nいいえ、今日[きょう]と 明後日[あさって]です。",
+        "romaji": "Kyou wa nan-ji ni rekishi o benkyou shimasu ka?\nJuu-ji kara juu-ni-ji made desu.\nSou desu ka. Ashita mo rekishi o benkyou shimasu ka?\nIie, kyou to asatte desu."
+      },
+      "statements": [
+        {
+          "index": 1,
+          "statement": "Pelajaran sejarah dipelajari sebanyak dua kali seminggu.",
+          "user_selected": "Benar",
+          "correct_answer": "Benar",
+          "is_correct": true,
+          "analysis": "Siswi menyatakan jadwal pelajaran sejarah diadakan pada 'きょうと あさって' (hari ini dan lusa). Dalam konteks jadwal mingguan pelajaran di sekolah, pola ini menunjukkan mata pelajaran sejarah berlangsung dua hari dalam seminggu (misalnya Senin & Rabu), sehingga frekuensinya adalah dua kali seminggu."
+        },
+        {
+          "index": 2,
+          "statement": "Belajar sejarah selama 2 jam dalam satu kali pertemuan.",
+          "user_selected": "Benar",
+          "correct_answer": "Benar",
+          "is_correct": true,
+          "analysis": "Siswi menyebutkan jadwal pelajaran adalah '10じから 12じまでです' (dari jam 10 sampai jam 12). Durasi antara jam 10:00 hingga 12:00 adalah tepat 2 jam (12 - 10 = 2 jam) dalam sekali pertemuan."
+        },
+        {
+          "index": 3,
+          "statement": "Besok ada pelajaran sejarah.",
+          "user_selected": "Salah",
+          "correct_answer": "Salah",
+          "is_correct": true,
+          "analysis": "Ketika siswa laki-laki bertanya 'あしたも れきしを べんきょうしますか' (Apakah besok juga belajar sejarah?), siswi menjawab dengan tegas 'いいえ、きょうと あさってです' (Tidak, hari ini dan lusa). Kata 'いいえ' membuktikan bahwa besok TIDAK ada pelajaran sejarah, sehingga pernyataan tersebut SALAH."
+        }
+      ],
+      "user_selection": {
+        "selections": [
+          { "statement_index": 1, "value": "Benar" },
+          { "statement_index": 2, "value": "Benar" },
+          { "statement_index": 3, "value": "Salah" }
+        ],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "selections": [
+          { "statement_index": 1, "value": "Benar" },
+          { "statement_index": 2, "value": "Benar" },
+          { "statement_index": 3, "value": "Salah" }
+        ]
+      },
+      "translation": {
+        "prompt": "Bagaimana informasi pernyataan terkait dengan wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi wacana!",
+        "dialogue": [
+          { "speaker": "Siswa", "text": "Hari ini jam berapa kamu belajar sejarah?" },
+          { "speaker": "Siswi", "text": "Dari jam 10 sampai jam 12." },
+          { "speaker": "Siswa", "text": "Begitu ya. Apakah besok juga belajar sejarah?" },
+          { "speaker": "Siswi", "text": "Tidak, (belajarnya) hari ini dan lusa." }
+        ]
+      },
+      "explanation": {
+        "summary": "Pilihan kebenaran pernyataan adalah: (1) Benar, (2) Benar, (3) Salah. Semua pilihan pengguna BENAR (skor 100%).",
+        "detailed_analysis": "Uji kebenaran tiap butir pernyataan terhadap teks percakapan:\n1. 'Pelajaran sejarah dipelajari sebanyak dua kali seminggu' -> BENAR. Kalimat 'いいえ、きょうと あさってです' (Tidak, hari ini dan lusa) merujuk pada jadwal rutin mingguan bahwa dalam satu minggu mereka memiliki 2 hari jadwal pelajaran sejarah (misal hari ini dan selang satu hari berikutnya).\n2. 'Belajar sejarah selama 2 jam dalam satu kali pertemuan' -> BENAR. Pada kalimat '10じから 12じまでです', batas awal pukul 10:00 dan batas akhir pukul 12:00 menghasilkan durasi total 2 jam.\n3. 'Besok ada pelajaran sejarah' -> SALAH. Siswi menyatakan 'いいえ' menolak kemungkinan besok ada pelajaran, dan menegaskan jadwalnya adalah hari ini (きょう) dan lusa (あさって). Maka besok tidak ada pelajaran sejarah.",
+        "distractor_analysis": [
+          "Pernyataan 'Besok ada pelajaran sejarah' bertentangan secara langsung dengan sanggahan siswi 'いいえ' dan kata keterangan waktu 'あさって' (lusa)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "今日[きょう]", "romaji": "kyou", "meaning": "hari ini" },
+        { "japanese": "明日[あした]", "romaji": "ashita", "meaning": "besok" },
+        { "japanese": "明後日[あさって]", "romaji": "asatte", "meaning": "lusa (dua hari lagi)" },
+        { "japanese": "何時[なんじ]", "romaji": "nan-ji", "meaning": "jam berapa" },
+        { "japanese": "歴史[れきし]", "romaji": "rekishi", "meaning": "sejarah" },
+        { "japanese": "勉強[べんきょう]する", "romaji": "benkyou suru", "meaning": "belajar" },
+        { "japanese": "〜から 〜まで", "romaji": "~kara ~made", "meaning": "dari ~ sampai ~" },
+        { "japanese": "そうですか", "romaji": "sou desu ka", "meaning": "begitu ya / oh begitu" },
+        { "japanese": "いいえ", "romaji": "iie", "meaning": "tidak / bukan" },
+        { "japanese": "〜と", "romaji": "~to", "meaning": "dan (partikel penghubung kata benda)" }
+      ]
+    }
+  ]
+}

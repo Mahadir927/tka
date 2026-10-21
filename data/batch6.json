@@ -1,0 +1,418 @@
+{
+  "batch": 6,
+  "description": "Hasil ekstraksi dan analisis soal TKA Bahasa Jepang Paket 2 (Soal 26 - 29)",
+  "total_questions": 4,
+  "questions": [
+    {
+      "question_number": 26,
+      "image_file": "7693853515265002773_11_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "complex_true_false_table",
+      "prompt": "Bagaimana informasi pernyataan terkait dengan tabel tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi tabel!",
+      "visual_description": "Tabel jadwal sepak bola berjudul 「サッカーの スケジュール」 (Jadwal Sepak Bola) dengan kolom nama (なまえ) dan 7 hari dalam seminggu (日 = Minggu, 月 = Senin, 火 = Selasa, 水 = Rabu, 木 = Kamis, 金 = Jumat, 土 = Sabtu). Terdapat baris data untuk tiga orang: ミラ (Mira) dengan tanda centang (V) di semua 7 hari (日〜土); ラマ (Rama) dengan centang hanya pada hari 日 (Minggu); dan マヤ (Maya) dengan centang pada 3 hari: 日 (Minggu), 水 (Rabu), dan 金 (Jumat).",
+      "japanese_content": {
+        "text": "サッカーの スケジュール\nなまえ | 日 | 月 | 火 | 水 | 木 | 金 | 土\nミラ   | V  | V  | V  | V  | V  | V  | V\nラマ   | V  |    |    |    |    |    |  \nマヤ   | V  |    |    | V  |    | V  |  ",
+        "furigana": "サッカーの スケジュール\n名前[なまえ] | 日[にち] | 月[げつ] | 火[か] | 水[すい] | 木[もく] | 金[きん] | 土[ど]\nミラ | V | V | V | V | V | V | V\nラマ | V |   |   |   |   |   |  \nマヤ | V |   |   | V |   | V |  ",
+        "romaji": "Sakkaa no sukejuuru\nNamae | Nichi | Getsu | Ka | Sui | Moku | Kin | Do\nMira | V | V | V | V | V | V | V\nRama | V |   |   |   |   |   |  \nMaya | V |   |   | V |   | V |  "
+      },
+      "statements": [
+        {
+          "index": 1,
+          "statement": "マヤさんは　いつも　サッカーを　します。",
+          "furigana": "マヤさんは いつも サッカーを します。",
+          "romaji": "Maya san wa itsumo sakkaa o shimasu.",
+          "meaning": "Maya selalu bermain sepak bola.",
+          "user_selected": "Salah",
+          "correct_answer": "Salah",
+          "is_user_correct": true,
+          "explanation": "Pada tabel, Maya hanya bermain sepak bola pada 3 hari (Minggu, Rabu, Jumat). Kata keterangan frekuensi 'いつも' (itsumo) berarti 'selalu' (100% dari waktu/setiap hari). Frekuensi 3 kali seminggu seharusnya menggunakan 'ときどき' (tokidoki = kadang-kadang) atau 'いっしゅうかんに さんかい' (3 kali seminggu). Oleh karena itu, pernyataan ini SALAH."
+        },
+        {
+          "index": 2,
+          "statement": "ラマさんは　あまり　サッカーを　しません。",
+          "furigana": "ラマさんは あまり サッカーを しません。",
+          "romaji": "Rama san wa amari sakkaa o shimasen.",
+          "meaning": "Rama jarang bermain sepak bola.",
+          "user_selected": "Benar",
+          "correct_answer": "Benar",
+          "is_user_correct": true,
+          "explanation": "Pada tabel, Rama hanya memiliki tanda centang pada 1 hari dalam seminggu, yaitu hari Minggu (日). Pola tata bahasa 'あまり + bentuk negatif (～ません)' berarti 'jarang / tidak begitu sering'. Karena Rama hanya main 1 kali seminggu, frekuensi tersebut tepat dikategorikan sebagai 'jarang bermain'. Oleh karena itu, pernyataan ini BENAR."
+        },
+        {
+          "index": 3,
+          "statement": "ミラさんは　ときどき　サッカーを　します。",
+          "furigana": "ミラさんは ときどき サッカーを します。",
+          "romaji": "Mira san wa tokidoki sakkaa o shimasu.",
+          "meaning": "Mira kadang-kadang bermain sepak bola.",
+          "user_selected": "Salah",
+          "correct_answer": "Salah",
+          "is_user_correct": true,
+          "explanation": "Pada tabel, Mira bermain sepak bola pada semua hari tanpa kecuali (7 hari dari Minggu sampai Sabtu). Frekuensi setiap hari harus menggunakan 'まいにち' (mainichi = setiap hari) atau 'いつも' (itsumo = selalu), bukan 'ときどき' (tokidoki = kadang-kadang / sekitar 50%). Oleh karena itu, pernyataan ini SALAH."
+        }
+      ],
+      "options": [
+        {
+          "index": 1,
+          "text": "マヤさんは　いつも　サッカーを　します。 -> Salah",
+          "romaji": "Maya san wa itsumo sakkaa o shimasu. -> Salah",
+          "meaning": "Maya selalu bermain sepak bola. (Evaluasi: Salah)",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 2,
+          "text": "ラマさんは　あまり　サッカーを　しません。 -> Benar",
+          "romaji": "Rama san wa amari sakkaa o shimasen. -> Benar",
+          "meaning": "Rama jarang bermain sepak bola. (Evaluasi: Benar)",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 3,
+          "text": "ミラさんは　ときどき　サッカーを　します。 -> Salah",
+          "romaji": "Mira san wa tokidoki sakkaa o shimasu. -> Salah",
+          "meaning": "Mira kadang-kadang bermain sepak bola. (Evaluasi: Salah)",
+          "user_selected": true,
+          "is_correct": true
+        }
+      ],
+      "user_selection": {
+        "statement_1": "Salah",
+        "statement_2": "Benar",
+        "statement_3": "Salah",
+        "is_correct": true
+      },
+      "correct_answer": {
+        "statement_1": "Salah",
+        "statement_2": "Benar",
+        "statement_3": "Salah"
+      },
+      "translation": {
+        "prompt": "Bagaimana informasi pernyataan terkait dengan tabel tersebut? Klik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi tabel!",
+        "table_title": "Jadwal Sepak Bola",
+        "headers": "Nama | Minggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu",
+        "statement_1": "Maya selalu bermain sepak bola.",
+        "statement_2": "Rama jarang bermain sepak bola.",
+        "statement_3": "Mira kadang-kadang bermain sepak bola."
+      },
+      "explanation": {
+        "summary": "Evaluasi yang tepat untuk ketiga pernyataan adalah: 1) Salah, 2) Benar, 3) Salah. Semua jawaban yang dipilih peserta pada gambar sudah 100% tepat.",
+        "detailed_analysis": "Soal ini menguji pemahaman adverbia/kata keterangan penunjuk frekuensi (頻度を表す副詞 - hindo o arawasu fukushi):\n1. いつも (itsumo) = selalu / setiap saat (100%). Sesuai untuk Mira yang bermain 7 hari seminggu. Salah jika dilekatkan ke Maya yang hanya bermain 3 hari (Minggu, Rabu, Jumat).\n2. あまり～ない/ません (amari ~ nai/masen) = jarang / tidak begitu sering (10-20%). Sesuai untuk Rama yang hanya bermain 1 hari (hari Minggu).\n3. ときどき (tokidoki) = kadang-kadang (sekitar 50%). Sesuai untuk Maya yang bermain 3 hari seminggu. Salah jika dilekatkan ke Mira yang bermain setiap hari.",
+        "statement_analysis": [
+          "Pernyataan 1: Salah. Maya bermain 3 hari (日, 水, 金), bukan 'itsumo' (selalu), melainkan 'tokidoki' (kadang-kadang).",
+          "Pernyataan 2: Benar. Rama hanya bermain 1 hari (日), sehingga tergolong 'amari sakkaa o shimasen' (jarang bermain).",
+          "Pernyataan 3: Salah. Mira bermain 7 hari penuh (日〜土), sehingga seharusnya 'itsumo' atau 'mainichi', bukan 'tokidoki'."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "サッカー", "romaji": "sakkaa", "meaning": "sepak bola" },
+        { "japanese": "スケジュール", "romaji": "sukejuuru", "meaning": "jadwal" },
+        { "japanese": "名前[なまえ]", "romaji": "namae", "meaning": "nama" },
+        { "japanese": "日曜日[にちようび]", "romaji": "nichiyoubi", "meaning": "hari Minggu" },
+        { "japanese": "月曜日[げつようび]", "romaji": "getsuyoubi", "meaning": "hari Senin" },
+        { "japanese": "火曜日[かようび]", "romaji": "kayoubi", "meaning": "hari Selasa" },
+        { "japanese": "水曜日[すいようび]", "romaji": "suiyoubi", "meaning": "hari Rabu" },
+        { "japanese": "木曜日[もくようび]", "romaji": "mokuyoubi", "meaning": "hari Kamis" },
+        { "japanese": "金曜日[きんようび]", "romaji": "kinyoubi", "meaning": "hari Jumat" },
+        { "japanese": "土曜日[どようび]", "romaji": "doyoubi", "meaning": "hari Sabtu" },
+        { "japanese": "いつも", "romaji": "itsumo", "meaning": "selalu" },
+        { "japanese": "時々[ときどき]", "romaji": "tokidoki", "meaning": "kadang-kadang" },
+        { "japanese": "余[あま]り～ない", "romaji": "amari ~ nai", "meaning": "jarang / tidak begitu..." },
+        { "japanese": "毎日[まいにち]", "romaji": "mainichi", "meaning": "setiap hari" }
+      ]
+    },
+    {
+      "question_number": 27,
+      "image_file": "7693853515265002773_12_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "multiple_choice_multiple_answers",
+      "prompt": "Apa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "visual_description": "Tabel pengumuman berjudul 「おしらせ」 (Pemberitahuan/Pengumuman). Berisi dua baris informasi tanggal: baris 1 adalah 「テスト」(Ujian) pada rentang tanggal '6月2日 ～ 6月13日', dan baris 2 adalah 「やすみ」(Libur) pada rentang tanggal '6月30日 ～ 7月16日'.",
+      "japanese_content": {
+        "text": "おしらせ\nテスト | 6月2日 ～ 6月13日\nやすみ | 6月30日 ～ 7月16日",
+        "furigana": "お知[し]らせ\nテスト | 6月[ろくがつ]2日[ふつか] ～ 6月[ろくがつ]13日[じゅうさんにち]\n休[やす]み | 6月[ろくがつ]30日[さんじゅうにち] ～ 7月[しちがつ]16日[じゅうろくにち]",
+        "romaji": "Oshirase\nTesuto | Rokugatsu futsuka ~ Rokugatsu juusannichi\nYasumi | Rokugatsu sanjuunichi ~ Shichigatsu juurokunichi"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "やすみは　ろくがつ　じゅうさんにち　から　です。",
+          "furigana": "休[やす]みは 6月[ろくがつ] 13日[じゅうさんにち] から です。",
+          "romaji": "Yasumi wa rokugatsu juusannichi kara desu.",
+          "meaning": "Libur mulai dari tanggal 13 Juni.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "やすみは　ろくがつ　さんじゅうにち　から　です。",
+          "furigana": "休[やす]みは 6月[ろくがつ] 30日[さんじゅうにち] から です。",
+          "romaji": "Yasumi wa rokugatsu sanjuunichi kara desu.",
+          "meaning": "Libur mulai dari tanggal 30 Juni.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 3,
+          "text": "テストは　ろくがつ　じゅうさんにち　まで　です。",
+          "furigana": "テストは 6月[ろくがつ] 13日[じゅうさんにち] まで です。",
+          "romaji": "Tesuto wa rokugatsu juusannichi made desu.",
+          "meaning": "Ujian sampai tanggal 13 Juni.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 4,
+          "text": "テストは　しちがつ　じゅうろくにち　まで　です。",
+          "furigana": "テストは 7月[しちがつ] 16日[じゅうろくにち] まで です。",
+          "romaji": "Tesuto wa shichigatsu juurokunichi made desu.",
+          "meaning": "Ujian sampai tanggal 16 Juli.",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [2, 3],
+        "selected_texts": [
+          "やすみは　ろくがつ　さんじゅうにち　から　です。",
+          "テストは　ろくがつ　じゅうさんにち　まで　です。"
+        ],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [2, 3],
+        "texts": [
+          "やすみは　ろくがつ　さんじゅうにち　から　です。",
+          "テストは　ろくがつ　じゅうさんにち　まで　です。"
+        ]
+      },
+      "translation": {
+        "prompt": "Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+        "table_content": "Pengumuman:\n- Ujian: 2 Juni s.d. 13 Juni\n- Libur: 30 Juni s.d. 16 Juli",
+        "option_1": "Libur mulai dari tanggal 13 Juni.",
+        "option_2": "Libur mulai dari tanggal 30 Juni.",
+        "option_3": "Ujian sampai tanggal 13 Juni.",
+        "option_4": "Ujian sampai tanggal 16 Juli."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-2 dan ke-3. Pilihan user (mencentang pilihan 2 dan 3) adalah 100% tepat.",
+        "detailed_analysis": "Wacana berbentuk tabel pengumuman sederhana memuat informasi rentang tanggal untuk dua kegiatan:\n1. 「テスト」(Ujian): Berlangsung dari 6月2日 sampai 6月13日. Artinya: テストは 6月2日から 6月13日まで です (Ujian dari 2 Juni sampai 13 Juni). Maka kalimat 'テストは ろくがつ じゅうさんにち まで です' (Pilihan 3) BENAR.\n2. 「やすみ」(Libur): Berlangsung dari 6月30日 sampai 7月16日. Artinya: やすみは 6月30日から 7月16日まで です (Libur dari 30 Juni sampai 16 Juli). Maka kalimat 'やすみは ろくがつ さんじゅうにち から です' (Pilihan 2) BENAR.",
+        "distractor_analysis": [
+          "Pilihan 1 (やすみは ろくがつ じゅうさんにち から です): SALAH. Tanggal 13 Juni adalah hari berakhirnya ujian (テストの終わり), bukan awal libur. Libur dimulai pada 30 Juni.",
+          "Pilihan 4 (テストは しちがつ じゅうろくにち まで です): SALAH. Tanggal 16 Juli adalah batas akhir libur (やすみの終わり), bukan akhir ujian."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "お知[し]らせ", "romaji": "oshirase", "meaning": "pengumuman / pemberitahuan" },
+        { "japanese": "テスト", "romaji": "tesuto", "meaning": "tes / ujian" },
+        { "japanese": "休[やす]み", "romaji": "yasumi", "meaning": "libur / istirahat" },
+        { "japanese": "6月[ろくがつ]", "romaji": "rokugatsu", "meaning": "bulan Juni" },
+        { "japanese": "7月[しちがつ]", "romaji": "shichigatsu", "meaning": "bulan Juli" },
+        { "japanese": "2日[ふつか]", "romaji": "futsuka", "meaning": "tanggal 2" },
+        { "japanese": "13日[じゅうさんにち]", "romaji": "juusannichi", "meaning": "tanggal 13" },
+        { "japanese": "30日[さんじゅうにち]", "romaji": "sanjuunichi", "meaning": "tanggal 30" },
+        { "japanese": "16日[じゅうろくにち]", "romaji": "juurokunichi", "meaning": "tanggal 16" },
+        { "japanese": "から", "romaji": "kara", "meaning": "dari / mulai dari" },
+        { "japanese": "まで", "romaji": "made", "meaning": "sampai / hingga" }
+      ]
+    },
+    {
+      "question_number": 28,
+      "image_file": "7693853515265002773_13_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "multiple_choice_multiple_answers",
+      "prompt": "Apa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "visual_description": "Tabel jadwal mata pelajaran sekolah berjudul 「がっこうの スケジュール」 (Jadwal Sekolah). Terdiri atas dua kolom: かもく (Mata pelajaran) dan じかん (Waktu). Baris pertama: 'Pendidikan Jasmani' pukul 08:00～09:30; baris kedua: 'Geografi' pukul 09:30～11:30; baris ketiga: 'Matematika' pukul 12:30～13:00; dan baris keempat: 'Musik' pukul 13:00～14:30.",
+      "japanese_content": {
+        "text": "がっこうの スケジュール\nかもく | じかん\nPendidikan Jasmani | 08:00～09:30\nGeografi | 09:30～11:30\nMatematika | 12:30～13:00\nMusik | 13:00～14:30",
+        "furigana": "学校[がっこう]の スケジュール\n科目[かもく] | 時間[じかん]\n体育[たいいく] (Pendidikan Jasmani) | 08:00～09:30\n地理学[ちりがく] (Geografi) | 09:30～11:30\n数学[すうがく] (Matematika) | 12:30～13:00\n音楽[おんがく] (Musik) | 13:00～14:30",
+        "romaji": "Gakkou no sukejuuru\nKamoku | Jikan\nTaiiku (Pendidikan Jasmani) | 08:00 - 09:30\nChirigaku (Geografi) | 09:30 - 11:30\nSuugaku (Matematika) | 12:30 - 13:00\nOngaku (Musik) | 13:00 - 14:30"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "おんがくは　さいごの　かもく　です。",
+          "furigana": "音楽[おんがく]は 最後[さいご]の 科目[かもく] です。",
+          "romaji": "Ongaku wa saigo no kamoku desu.",
+          "meaning": "Musik adalah mata pelajaran terakhir.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 2,
+          "text": "ちりがくは　にじかん　かかります。",
+          "furigana": "地理学[ちりがく]は 2時間[にじかん] かかります。",
+          "romaji": "Chirigaku wa nijikan kakarimasu.",
+          "meaning": "Geografi memakan waktu 2 jam.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 3,
+          "text": "すうがくは　じゅうじはん　から　です。",
+          "furigana": "数学[すうがく]は 10時半[じゅうじはん] から です。",
+          "romaji": "Suugaku wa juuji han kara desu.",
+          "meaning": "Matematika mulai dari jam 10:30.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 4,
+          "text": "たいいくは　にじかんめの　かもく　です。",
+          "furigana": "体育[たいいく]は 2時間目[にじかんめ]の 科目[かもく] です。",
+          "romaji": "Taiiku wa nijikan-me no kamoku desu.",
+          "meaning": "Pendidikan jasmani adalah mata pelajaran jam pelajaran kedua.",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [1, 2],
+        "selected_texts": [
+          "おんがくは　さいごの　かもく　です。",
+          "ちりがくは　にじかん　かかります。"
+        ],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [1, 2],
+        "texts": [
+          "おんがくは　さいごの　かもく　です。",
+          "ちりがくは　にじかん　かかります。"
+        ]
+      },
+      "translation": {
+        "prompt": "Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+        "table_content": "Jadwal Sekolah:\n- Pendidikan Jasmani (体育): 08:00 - 09:30 (Durasi: 1,5 jam / 1時間半)\n- Geografi (地理学): 09:30 - 11:30 (Durasi: 2 jam / 2時間)\n- Matematika (数学): 12:30 - 13:00 (Durasi: 30 menit / 30分)\n- Musik (音楽): 13:00 - 14:30 (Durasi: 1,5 jam / 1時間半)",
+        "option_1": "Musik adalah mata pelajaran terakhir.",
+        "option_2": "Geografi memakan waktu 2 jam.",
+        "option_3": "Matematika mulai dari jam 10:30.",
+        "option_4": "Pendidikan jasmani adalah mata pelajaran urutan kedua."
+      },
+      "explanation": {
+        "summary": "Jawaban yang tepat adalah pilihan ke-1 dan ke-2. Pilihan user (mencentang pilihan 1 dan 2) adalah 100% tepat.",
+        "detailed_analysis": "Analisis setiap pilihan berdasarkan jadwal pada tabel:\n1. Pilihan 1: 'Musik' (おんがく) berada pada baris keempat / jadwal paling akhir (13:00～14:30). Kata 'さいご' (最後) berarti terakhir. Kalimat ini BENAR.\n2. Pilihan 2: 'Geografi' (ちりがく) berlangsung dari pukul 09:30 hingga 11:30. Durasi rentang waktu tersebut adalah tepat 2 jam (にじかん / 2時間). Kata kerja 'かかります' berarti memerlukan/menghabiskan waktu. Kalimat ini BENAR.\n3. Pilihan 3: 'Matematika' (すうがく) dimulai pukul 12:30 (じゅうにじはん / 12時半), bukan pukul 10:30 (じゅうじはん / 10時半). Pilihan ini mengecoh pendengaran/pembacaan angka antara 10 (じゅう) dan 12 (じゅうに). Kalimat ini SALAH.\n4. Pilihan 4: 'Pendidikan jasmani' (たいいく) adalah mata pelajaran jam pertama (いちじかんめ / 1時間目, 08:00～09:30). Pelajaran jam kedua (にじかんめ) adalah Geografi. Kalimat ini SALAH.",
+        "distractor_analysis": [
+          "すうがくは じゅうじはん から です: SALAH. Jam mulai matematika adalah 12:30 (じゅうにじはん), bukan 10:30 (じゅうじはん).",
+          "たいいくは にじかんめの かもく です: SALAH. Pendidikan jasmani adalah pelajaran pertama (1時間目), bukan kedua (2時間目)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "学校[がっこう]", "romaji": "gakkou", "meaning": "sekolah" },
+        { "japanese": "スケジュール", "romaji": "sukejuuru", "meaning": "jadwal" },
+        { "japanese": "科目[かもく]", "romaji": "kamoku", "meaning": "mata pelajaran" },
+        { "japanese": "時間[じかん]", "romaji": "jikan", "meaning": "waktu / jam (durasi)" },
+        { "japanese": "体育[たいいく]", "romaji": "taiiku", "meaning": "pendidikan jasmani / olahraga" },
+        { "japanese": "地理学[ちりがく]", "romaji": "chirigaku", "meaning": "geografi" },
+        { "japanese": "数学[すうがく]", "romaji": "suugaku", "meaning": "matematika" },
+        { "japanese": "音楽[おんがく]", "romaji": "ongaku", "meaning": "musik" },
+        { "japanese": "最後[さいご]", "romaji": "saigo", "meaning": "terakhir / paling akhir" },
+        { "japanese": "2時間[にじかん]", "romaji": "nijikan", "meaning": "2 jam (durasi)" },
+        { "japanese": "掛[か]かる", "romaji": "kakaru", "meaning": "memerlukan / memakan (waktu/biaya)" },
+        { "japanese": "半[はん]", "romaji": "han", "meaning": "setengah / lewat 30 menit" },
+        { "japanese": "〜時間目[じかんめ]", "romaji": "-jikan-me", "meaning": "jam pelajaran ke-..." }
+      ]
+    },
+    {
+      "question_number": 29,
+      "image_file": "7693853515265002773_14_1791368460.jpeg",
+      "packet": "Bahasa Jepang (Paket 2)",
+      "question_type": "multiple_choice_multiple_answers",
+      "prompt": "Apa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+      "visual_description": "Teks wacana berbentuk surat pribadi (tegami) yang ditulis dalam huruf romaji. Ditujukan kepada 'Dina san e,' dan diakhiri dengan tanggal '5月20日' serta tanda tangan pengirim 'Yukiko'. Teks menceritakan aktivitas sehari-hari Yukiko, jadwal sekolahnya, aktivitas akhir pekannya menonton film, berenang, dan jalan santai, serta bertanya tentang kegiatan senggang Dina.",
+      "japanese_content": {
+        "text": "Dina san e,\nOgenki desuka. Watashi wa mainichi 6 ji goro okimasu. Gakkou wa getsuyoubi kara kinyoubi made desu. Douyoubi ni yoku tomodachi to eiga o mimasu. Tokidoki puuru de oyogimasu. Nichi youbi no asa itsumo sanposhimasu. Yoru uchi de terebi o mimasu. Dina san wa hima na toki nani o shimasuka. Oshietekudasai. Mata tegami o kakimasu.\n\n5月20日\nYukiko",
+        "furigana": "ディナさんへ、\nお元気[げんき]ですか。私[わたし]は 毎日[まいにち] 6時[じ]ごろ 起[お]きます。学校[がっこう]は 月曜日[げつようび]から 金曜日[きんようび]まで です。土曜日[どようび]に よく 友達[ともだち]と 映画[えいが]を 見[み]ます。ときどき プールで 泳[およ]ぎます。日曜日[にちようび]の 朝[あさ] いつも 散歩[さんぽ]します。夜[よる] うちで テレビを 見[み]ます。ディナさんは 暇[ひま]な 時[とき] 何[なに]を しますか。教[おし]えてください。また 手紙[てがみ]を 書[か]きます。\n\n5月[ごがつ]20日[はつか]\nYukiko（ユキコ）",
+        "romaji": "Dina san e,\nOgenki desu ka. Watashi wa mainichi roku-ji goro okimasu. Gakkou wa getsuyoubi kara kinyoubi made desu. Doyoubi ni yoku tomodachi to eiga o mimasu. Tokidoki puuru de oyogimasu. Nichiyoubi no asa itsumo sanposhimasu. Yoru uchi de terebi o mimasu. Dina san wa hima na toki nani o shimasu ka. Oshiete kudasai. Mata tegami o kakimasu.\n\n5-gatsu 20-nichi\nYukiko"
+      },
+      "options": [
+        {
+          "index": 1,
+          "text": "Dina san wa kono tegami o kakimasu.",
+          "furigana": "ディナさんは この 手紙[てがみ]を 書[か]きます。",
+          "romaji": "Dina san wa kono tegami o kakimasu.",
+          "meaning": "Dina yang menulis surat ini.",
+          "user_selected": false,
+          "is_correct": false
+        },
+        {
+          "index": 2,
+          "text": "Yukiko san wa itsukakan gakkou e ikimasu.",
+          "furigana": "ユキコさんは 5日間[いつかかん] 学校[がっこう]へ 行[い]きます。",
+          "romaji": "Yukiko san wa itsukakan gakkou e ikimasu.",
+          "meaning": "Yukiko pergi ke sekolah selama lima hari.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 3,
+          "text": "Yukiko san wa eiga o miru koto ga suki desu.",
+          "furigana": "ユキコさんは 映画[えいが]を 見[み]ることが 好[す]きです。",
+          "romaji": "Yukiko san wa eiga o miru koto ga suki desu.",
+          "meaning": "Yukiko suka menonton film.",
+          "user_selected": true,
+          "is_correct": true
+        },
+        {
+          "index": 4,
+          "text": "Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu.",
+          "furigana": "ディナさんの 学校[がっこう]は 月曜日[げつようび]から 日曜日[にちようび]まで です。",
+          "romaji": "Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu.",
+          "meaning": "Sekolah Dina dari hari Senin sampai hari Minggu.",
+          "user_selected": false,
+          "is_correct": false
+        }
+      ],
+      "user_selection": {
+        "selected_indices": [2, 3],
+        "selected_texts": [
+          "Yukiko san wa itsukakan gakkou e ikimasu.",
+          "Yukiko san wa eiga o miru koto ga suki desu."
+        ],
+        "is_correct": true
+      },
+      "correct_answer": {
+        "indices": [2, 3],
+        "texts": [
+          "Yukiko san wa itsukakan gakkou e ikimasu.",
+          "Yukiko san wa eiga o miru koto ga suki desu."
+        ]
+      },
+      "translation": {
+        "prompt": "Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.",
+        "letter_text": "Kepada Dina,\nApa kabar? Saya bangun sekitar jam 6 setiap hari. Sekolah dari hari Senin sampai Jumat. Pada hari Sabtu, saya sering menonton film bersama teman. Kadang-kadang berenang di kolam renang. Pada hari Minggu pagi selalu jalan-jalan santai. Malam hari menonton TV di rumah. Dina kalau sedang ada waktu luang melakukan apa? Tolong beri tahu ya. Nanti saya akan menulis surat lagi.\n20 Mei\nYukiko",
+        "option_1": "Dina menulis surat ini.",
+        "option_2": "Yukiko pergi ke sekolah selama lima hari.",
+        "option_3": "Yukiko suka menonton film.",
+        "option_4": "Sekolah Dina dari hari Senin sampai hari Minggu."
+      },
+      "explanation": {
+        "summary": "Jawaban yang benar adalah pilihan ke-2 dan ke-3. Pilihan user (mencentang pilihan 2 dan 3) adalah 100% tepat.",
+        "detailed_analysis": "Analisis setiap pilihan berdasarkan isi surat:\n1. Pilihan 2 (Yukiko san wa itsukakan gakkou e ikimasu): BENAR. Teks menyatakan 'Gakkou wa getsuyoubi kara kinyoubi made desu' (Sekolah dari hari Senin sampai Jumat). Rentang hari Senin hingga Jumat mencakup 5 hari (Senin, Selasa, Rabu, Kamis, Jumat). Dalam bahasa Jepang, jangka waktu 5 hari disebut '五日間' (itsukakan). Jadi, Yukiko bersekolah selama 5 hari dalam seminggu.\n2. Pilihan 3 (Yukiko san wa eiga o miru koto ga suki desu): BENAR. Teks menyatakan 'Douyoubi ni yoku tomodachi to eiga o mimasu' (Pada hari Sabtu sering menonton film bersama teman). Kebiasaan melakukan suatu aktivitas secara sering ('よく' / yoku) di waktu luang mengindikasikan bahwa ia menyukai kegiatan menonton film ('映画を見ることが好き' / eiga o miru koto ga suki).\n3. Pilihan 1 (Dina san wa kono tegami o kakimasu): SALAH. Dina adalah pihak penerima surat ('Dina san e' = Kepada Dina), sedangkan penulis surat adalah Yukiko (tertera tanda tangan di akhir surat).\n4. Pilihan 4 (Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu): SALAH. Jadwal sekolah yang diceritakan adalah sekolah Yukiko ('Watashi wa... Gakkou wa...'), dan rentangnya adalah dari hari Senin sampai Jumat (kinyoubi), bukan sampai Minggu (nichiyoubi).",
+        "distractor_analysis": [
+          "Dina san wa kono tegami o kakimasu: SALAH karena pembuat/penulis surat adalah Yukiko, ditujukan kepada Dina.",
+          "Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu: SALAH karena itu jadwal sekolah Yukiko, dan sekolahnya hanya sampai Jumat (kinyoubi), bukan Minggu (nichiyoubi)."
+        ]
+      },
+      "vocabulary_list": [
+        { "japanese": "手紙[てがみ]", "romaji": "tegami", "meaning": "surat" },
+        { "japanese": "書[か]く", "romaji": "kaku", "meaning": "menulis" },
+        { "japanese": "お元気[げんき]ですか", "romaji": "ogenki desu ka", "meaning": "apa kabar" },
+        { "japanese": "毎日[まいにち]", "romaji": "mainichi", "meaning": "setiap hari" },
+        { "japanese": "起[お]きる", "romaji": "okiru", "meaning": "bangun tidur" },
+        { "japanese": "月曜日[げつようび]から金曜日[きんようび]まで", "romaji": "getsuyoubi kara kinyoubi made", "meaning": "dari hari Senin sampai Jumat" },
+        { "japanese": "五日間[いつかかん]", "romaji": "itsukakan", "meaning": "selama 5 hari" },
+        { "japanese": "土曜日[どようび]", "romaji": "doyoubi", "meaning": "hari Sabtu" },
+        { "japanese": "日曜日[にちようび]", "romaji": "nichiyoubi", "meaning": "hari Minggu" },
+        { "japanese": "よく", "romaji": "yoku", "meaning": "sering" },
+        { "japanese": "時々[ときどき]", "romaji": "tokidoki", "meaning": "kadang-kadang" },
+        { "japanese": "友達[ともだち]", "romaji": "tomodachi", "meaning": "teman" },
+        { "japanese": "映画[えいが]", "romaji": "eiga", "meaning": "film" },
+        { "japanese": "見る[みる]", "romaji": "miru", "meaning": "menonton / melihat" },
+        { "japanese": "散歩[さんぽ]する", "romaji": "sanposuru", "meaning": "jalan-jalan santai" },
+        { "japanese": "暇[ひま]な時[とき]", "romaji": "hima na toki", "meaning": "saat senggang / waktu luang" },
+        { "japanese": "教[おし]える", "romaji": "oshieru", "meaning": "memberitahu / mengajar" }
+      ]
+    }
+  ]
+}
