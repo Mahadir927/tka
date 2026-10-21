@@ -217,59 +217,59 @@
     "cards": [
       {
         "id": "gb_1",
-        "front": "Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\n\nPilihan:\n1. こんにちは\n2. こんばんは\n3. いただきます\n4. おやすみなさい\n5. おはようございます",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    4\n  ],\n  \"texts\": [\n    \"おやすみなさい\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\",\"correct_sentence\":\"Selamat beristirahat / Selamat tidur.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 1】\nPerhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\n\nPilihan:\n1. こんにちは\n2. こんばんは\n3. いただきます\n4. おやすみなさい\n5. おはようございます",
+        "back": "✅ Kunci Jawaban:\n• indices: 4\n• texts: おやすみなさい\n\n💡 Pembahasan:\nGambar memperlihatkan suasana kamar tidur pada larut malam (jam meja menunjukkan 02:30 AM dan di luar jendela tampak bulan serta bintang). Anak laki-laki sudah terlelap di tempat tidur, dan sang ibu memberikan salam/ucapan selamat tidur. Dalam tata bahasa dan budaya Jepang, salam perpisahan di malam hari saat seseorang hendak beristirahat/tidur adalah 「おやすみなさい」 (Oyasuminasai) atau bentuk kasualnya 「おやすみ」 (Oyasumi), diturunkan dari kata kerja 休む (yasumu = beristirahat).",
+        "meaning": "correct_sentence: Selamat beristirahat / Selamat tidur.",
+        "furigana": "お休[やす]みなさい",
+        "romaji": "Oyasuminasai",
         "image": "images/soal/soal_1.webp",
-        "example": ""
+        "example": "お休[やす]みなさい: selamat tidur / istirahat | 今[こん]日[にち]は: selamat siang | 今[こん]晩[ばん]は: selamat malam | いただきます: selamat makan | お早[はや]うございます: selamat pagi | 夜[よる]: malam | 寝[ね]る: tidur"
       },
       {
         "id": "gb_2",
-        "front": "Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\n\nPilihan:\n1. インド\n2. ドイツ\n3. イギリス\n4. アメリカ\n5. インドネシア",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    5\n  ],\n  \"texts\": [\n    \"インドネシア\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Perhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\",\"full_text\":\"Halo / Selamat siang. Saya Sari. Saya datang dari Indonesia. Senang berkenalan dengan Anda / Mohon bimbingannya.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 2】\nPerhatikan ilustrasi gambar dan tentukan jawaban yang sesuai!\n\n📖 Wacana / Percakapan:\nこんにちは。\nわたしは サリです。＿＿＿＿＿＿から きました。\nどうぞ よろしく おねがいします。\n\nPilihan:\n1. インド\n2. ドイツ\n3. イギリス\n4. アメリカ\n5. インドネシア",
+        "back": "✅ Kunci Jawaban:\n• indices: 5\n• texts: インドネシア\n\n💡 Pembahasan:\nKalimat perkenalan diri (jikoshoukai) menggunakan pola: `[Nama Negara/Daerah] + から来ました` (~kara kimashita), yang artinya 'datang/berasal dari [negara/daerah]'. Partikel 「から」 berarti 'dari', dan 「来ました」 adalah bentuk lampau sopan dari kata kerja 「来る」 (kuru = datang). Pada gambar, siswi bernama Sari mengenakan seragam SMA Indonesia (putih abu-abu lengkap dengan jilbab) dan memegang bendera nasional Indonesia (Merah Putih). Nama negara Indonesia dalam aksara Katakana adalah 「インドネシア」.",
+        "meaning": "full_text: Halo / Selamat siang. Saya Sari. Saya datang dari Indonesia. Senang berkenalan dengan Anda / Mohon bimbingannya.",
+        "furigana": "今[こん]日[にち]は。\n私[わたし]は サリです。インドネシアから 来[き]ました。\nどうぞ よろしく お願[ねが]いします。",
+        "romaji": "Konnichiwa.\nWatashi wa Sari desu. Indoneshia kara kimashita.\nDouzo yoroshiku onegaishimasu.",
         "image": "images/soal/soal_2.webp",
-        "example": ""
+        "example": "〜から来[き]ました: datang/berasal dari ~ | どうぞよろしくお願[ねが]いします: senang berkenalan dengan Anda / mohon bantuannya | インドネシア: Indonesia | 私[わたし]: saya"
       },
       {
         "id": "gb_3",
-        "front": "Yuki san to Tania san wa himana toki nani o shimasuka?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Yuki\n2. Yuki\n3. Tania\n4. Tania",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    1,\n    4\n  ],\n  \"labels\": [\n    \"Yuki (belanja)\",\n    \"Tania (memasak)\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Apa yang dilakukan Yuki dan Tania saat waktu luang?\\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"full_text\":\"Yuki dan Tania saat waktu senggang sering berbelanja. Kadang-kadang mereka memasak bersama. Tania suka piano, tetapi Yuki suka karate.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 3】\nYuki san to Tania san wa himana toki nani o shimasuka?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\nYuki san to Tania san wa himana toki yoku kaimono shimasu.\nTokidoki isshoni ryouri o shimasu.\nTania san wa piano ga suki desuga Yuki san wa karate ga suki desu.\n\nPilihan:\n1. Yuki\n2. Yuki\n3. Tania\n4. Tania",
+        "back": "✅ Kunci Jawaban:\n• indices: 1,4\n• labels: Yuki (belanja),Tania (memasak)\n\n💡 Pembahasan:\nPertanyaan berfokus pada aktivitas saat waktu luang (himana toki nani o shimasuka):\n1. Teks menyatakan: 'Yuki san to Tania san wa himana toki yoku kaimono shimasu' -> Yuki dan Tania sering berbelanja saat waktu luang. Maka gambar Yuki membawa belanjaan (Opsi 1) BENAR.\n2. Teks menyatakan: 'Tokidoki isshoni ryouri o shimasu' -> Kadang-kadang memasak bersama. Kata 'isshoni' (bersama-sama) berarti baik Yuki maupun Tania melakukan aktivitas memasak. Maka gambar Tania sedang memasak (Opsi 4) BENAR.\n3. Kalimat ketiga: 'Tania san wa piano ga suki desuga Yuki san wa karate ga suki desu' (Tania suka piano, tapi Yuki suka karate). Pilihan 2 memasangkan Yuki dengan piano (salah orang, yang suka piano adalah Tania). Pilihan 3 memasangkan Tania dengan karate (salah orang, yang suka karate adalah Yuki). Selain tertukar orangnya, hobi/kesukaan ini bukan merupakan jawaban langsung atas aktivitas rutin di waktu luang yang dipaparkan dalam paragraf.",
+        "meaning": "full_text: Yuki dan Tania saat waktu senggang sering berbelanja. Kadang-kadang mereka memasak bersama. Tania suka piano, tetapi Yuki suka karate.",
+        "furigana": "由紀[ゆき]さんと タニアさんは 暇[ひま]な時[とき] よく 買[か]い物[もの]します。\n時々[ときどき] 一緒[いっしょ]に 料理[りょうり]を します。\nタニアさんは ピアノが 好[す]きですが、由紀[ゆき]さんは 空手[からて]が 好[す]きです。",
+        "romaji": "Yuki-san to Tania-san wa himana toki yoku kaimono shimasu.\nTokidoki isshoni ryouri o shimasu.\nTania-san wa piano ga suki desuga Yuki-san wa karate ga suki desu.",
         "image": "images/soal/soal_3.webp",
-        "example": ""
+        "example": "暇[ひま]な時[とき]: waktu luang / senggang | よく: sering | 買[か]い物[もの]する: berbelanja | 時々[ときどき]: kadang-kadang | 一緒[いっしょ]に: bersama-sama | 料理[りょうり]をする: memasak | 好[す]き: suka / gemar | 〜ですが: ~, tetapi ~"
       },
       {
         "id": "gb_4",
-        "front": "めぐみさんの　うちは　どう　ですか。\n\nPilihan:\n1. めぐみさんの　うちは　ちいさくて　せまいです。\n2. めぐみさんの　うちは　ちいさいと　せまいです。\n3. めぐみさんの　うちは　ちいさくって　せまいです。\n4. めぐみさんの　うちは　ちいさいで　せまいです。\n5. めぐみさんの　うちは　ちいさいですが　せまいです。",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    1\n  ],\n  \"texts\": [\n    \"めぐみさんの　うちは　ちいさくて　せまいです。\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Bagaimana rumah Megumi?\",\"correct_sentence\":\"Rumah Megumi kecil dan sempit.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 4】\nめぐみさんの　うちは　どう　ですか。\n\n📖 Wacana / Percakapan:\nめぐみさんの うちは どう ですか。\nめぐみさんの うちは ちいさくて せまいです。\n\nPilihan:\n1. めぐみさんの　うちは　ちいさくて　せまいです。\n2. めぐみさんの　うちは　ちいさいと　せまいです。\n3. めぐみさんの　うちは　ちいさくって　せまいです。\n4. めぐみさんの　うちは　ちいさいで　せまいです。\n5. めぐみさんの　うちは　ちいさいですが　せまいです。",
+        "back": "✅ Kunci Jawaban:\n• indices: 1\n• texts: めぐみさんの　うちは　ちいさくて　せまいです。\n\n💡 Pembahasan:\nSoal ini menguji aturan penyambungan dua kata sifat-i (い形容詞の接続・て形):\n- Kata sifat 1: 小さい (chiisai = kecil)\n- Kata sifat 2: 狭い (semai = sempit)\nAturan menyambungkan dua kata sifat-i secara setara yang sifatnya sejalan (positif & positif atau negatif & negatif) adalah dengan menghilangkan akhiran ~い (~i) pada kata sifat pertama, lalu menggantinya dengan ~くて (~kute).\nRumus: `[Kata Sifat-i tanpa い] + くて + [Kata Sifat berikutnya]`\nちいさい (chiisai) -> ちいさくて (chiisakute).\nSehingga menjadi: 「ちいさくて せまいです」(Kecil dan sempit).",
+        "meaning": "correct_sentence: Rumah Megumi kecil dan sempit.",
+        "furigana": "めぐみさんの 家[うち]は どう ですか。\nめぐみさんの 家[うち]は 小[ちい]さくて 狭[せま]いです。",
+        "romaji": "Megumi-san no uchi wa dou desu ka?\nMegumi-san no uchi wa chiisakute semai desu.",
         "image": "images/soal/soal_4.webp",
-        "example": ""
+        "example": "家[うち]: rumah | どうですか: bagaimana? / seperti apa? | 小[ちい]さい: kecil | 狭[せま]い: sempit | 〜くて: dan (penyambung kata sifat-i)"
       },
       {
         "id": "gb_5",
-        "front": "Pilihlah pernyataan yang sesuai dengan teks!\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Saya setiap hari berolahraga.\n2. Saya seminggu sekali bermain badminton.\n3. Saya sering bermain sepak bola.\n4. Saya memiliki minat di bidang olahraga.",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    1,\n    3,\n    4\n  ],\n  \"texts\": [\n    \"Saya setiap hari berolahraga.\",\n    \"Saya sering bermain sepak bola.\",\n    \"Saya memiliki minat di bidang olahraga.\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Pilihlah pernyataan yang sesuai dengan teks!\\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"full_text\":\"Saya suka olahraga. Saya bisa sepak bola dan badminton. Setiap hari saya bermain sepak bola. Selain itu, sekitar dua kali seminggu, saya bermain badminton bersama teman.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 5】\nPilihlah pernyataan yang sesuai dengan teks!\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\nWatashi wa supootsu ga suki desu.\nSakkaa to badominton ga dekimasu.\nMainichi sakkaa o shimasu.\nSore ni, isshuukan ni nikai gurai, tomodachi to badominton o shimasu.\n\nPilihan:\n1. Saya setiap hari berolahraga.\n2. Saya seminggu sekali bermain badminton.\n3. Saya sering bermain sepak bola.\n4. Saya memiliki minat di bidang olahraga.",
+        "back": "✅ Kunci Jawaban:\n• indices: 1,3,4\n• texts: Saya setiap hari berolahraga.,Saya sering bermain sepak bola.,Saya memiliki minat di bidang olahraga.\n\n💡 Pembahasan:\nUji kebenaran tiap pernyataan terhadap isi teks:\n1. 'Saya setiap hari berolahraga' -> BENAR. Kalimat 'Mainichi sakkaa o shimasu' menyatakan bahwa ia setiap hari bermain sepak bola. Karena bermain sepak bola adalah berolahraga, maka ia berolahraga setiap hari.\n2. 'Saya seminggu sekali bermain badminton' -> SALAH. Teks secara eksplisit menyebutkan 'isshuukan ni nikai gurai' (一週間に二回ぐらい = sekitar dua kali dalam satu minggu). Seminggu sekali dalam bahasa Jepang adalah 'isshuukan ni ikkai' (一回).\n3. 'Saya sering bermain sepak bola' -> BENAR. Karena dilakukan setiap hari ('mainichi'), intensitas bermain sepak bola tersebut masuk ke dalam kategori sangat sering/sering.\n4. 'Saya memiliki minat di bidang olahraga' -> BENAR. Kalimat pertama menyatakan 'Watashi wa supootsu ga suki desu' (Saya suka olahraga). Rasa suka mencerminkan adanya minat dan kegemaran yang jelas terhadap olahraga.",
+        "meaning": "full_text: Saya suka olahraga. Saya bisa sepak bola dan badminton. Setiap hari saya bermain sepak bola. Selain itu, sekitar dua kali seminggu, saya bermain badminton bersama teman.",
+        "furigana": "私[わたし]は スポーツが 好[す]きです。\nサッカーと バドミントンが できます。\n毎日[まいにち] サッカーを します。\nそれに、一週間[いっしゅうかん]に 二回[にかい]ぐらい、友達[ともだち]と バドミントンを します。",
+        "romaji": "Watashi wa supootsu ga suki desu.\nSakkaa to badominton ga dekimasu.\nMainichi sakkaa o shimasu.\nSore ni, isshuukan ni nikai gurai, tomodachi to badominton o shimasu.",
         "image": "images/soal/soal_5.webp",
-        "example": ""
+        "example": "スポーツ: olahraga (sports) | 好[す]き: suka / gemar / minat | できる: bisa / mampu | 毎日[まいにち]: setiap hari | サッカー: sepak bola | バドミントン: bulu tangkis / badminton | それに: selain itu / di samping itu | 一週間[いっしゅうかん]: satu minggu | 二回[にかい]: dua kali | 〜ぐらい: kira-kira / sekitar ~ | 友達[ともだち]: teman / kawan"
       },
       {
         "id": "gb_6",
-        "front": "Perhatikan gambar berikut lalu pilihlah pernyataan yang sesuai!\n\nPilihan:\n1. このへやに　せんぷうきが　あります。\n2. この　へやは　きたないです。\n3. このへやに　テレビは　ありません。\n4. このへやに　ソファが　あります。\n5. このへやは　ふるいです。",
+        "front": "【Soal Nomor 6】\nPerhatikan gambar berikut lalu pilihlah pernyataan yang sesuai!\n\nPilihan:\n1. このへやに　せんぷうきが　あります。\n2. この　へやは　きたないです。\n3. このへやに　テレビは　ありません。\n4. このへやに　ソファが　あります。\n5. このへやは　ふるいです。",
         "back": "✅ Kunci Jawaban:\n• このへやに　ソファが　あります。\n\n💡 Pembahasan:\nPada gambar terlihat jelas ruangan yang bersih dengan sofa berwarna hijau di samping meja televisi. Analisis pilihan:\n1. 'このへやに せんぷうきが あります' salah karena tidak ada kipas angin (扇風機/せんぷうき).\n2. 'この へやは きたないです' salah karena ruangan tampak bersih dan rapi, bukan kotor (汚い/きたない).\n3. 'このへやに テレビは ありません' salah karena di atas meja jelas terdapat televisi.\n4. 'このへやに ソファが あります' BENAR, karena di dalam kamar memang terdapat sofa (ソファ).\n5. 'このへやは ふるいです' salah karena ruangan tersebut tampak modern dan tidak ada indikasi sudah tua/kuno (古い/ふるい).\nOleh karena itu, pernyataan yang sesuai adalah opsi ke-4.",
-        "meaning": "{\"prompt\":\"Perhatikan gambar berikut lalu pilihlah pernyataan yang sesuai!\",\"passage\":null}",
+        "meaning": "passage: null",
         "furigana": "",
         "romaji": "",
         "image": "images/soal/soal_6.webp",
@@ -277,7 +277,7 @@
       },
       {
         "id": "gb_7",
-        "front": "ちちは　なにが　すきですか。\n\nPilihan:\n1. おんがくです。\n2. おかしです。\n3. おかねです。\n4. おさけです。\n5. おにぎりです。",
+        "front": "【Soal Nomor 7】\nちちは　なにが　すきですか。\n\nPilihan:\n1. おんがくです。\n2. おかしです。\n3. おかねです。\n4. おさけです。\n5. おにぎりです。",
         "back": "✅ Kunci Jawaban:\n• おんがくです。\n\n💡 Pembahasan:\nPada teks disebutkan bahwa hobi ayah adalah mendengarkan musik ('ちちの しゅみは おんがくを きく ことです') dan sering mendengarkan musik rock ('よく ロックを ききます'). Berdasarkan hobi tersebut, pertanyaan 'ちちは なにが すきですか' (Ayah suka apa?) dijawab dengan tepat oleh 'おんがくです' (Musik). Opsi lainnya (おかし/kue, おかね/uang, おさけ/sake, おにぎり/nasi kepal) merupakan kata benda umum berawalan 'お' sebagai pengecoh bunyi dan tidak relevan dengan bacaan.",
         "meaning": "Hobi ayah saya adalah mendengarkan musik. (Ayah) sering mendengarkan musik rock. Ayah suka apa?",
         "furigana": "",
@@ -287,7 +287,7 @@
       },
       {
         "id": "gb_8",
-        "front": "Manakah pernyataan yang sesuai dengan teks? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Hari ini tanggal 15 Mei.\n2. Ibu Rika suka memasak.\n3. Ayah Rika tidak suka bunga.\n4. Adik perempuan Rika tidak melakukan bersih-bersih.",
+        "front": "【Soal Nomor 8】\nManakah pernyataan yang sesuai dengan teks? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Hari ini tanggal 15 Mei.\n2. Ibu Rika suka memasak.\n3. Ayah Rika tidak suka bunga.\n4. Adik perempuan Rika tidak melakukan bersih-bersih.",
         "back": "✅ Kunci Jawaban:\n• Ibu Rika suka memasak.\n• Adik perempuan Rika tidak melakukan bersih-bersih.\n\n💡 Pembahasan:\nAnalisis setiap pernyataan terhadap isi bacaan:\n1. 'Hari ini tanggal 15 Mei': SALAH. Teks berbunyi 'Asatte wa haha no tanjoubi desu. 5 gatsu 15 nichi desu.' (Lusa adalah ulang tahun ibu. Tanggal 15 Mei). Kata 'asatte' berarti lusa, sehingga tanggal 15 Mei adalah lusa, bukan hari ini.\n2. 'Ibu Rika suka memasak': BENAR. Teks menyatakan 'Haha wa itsumo oishii tabemono o tsukurimasu' (Ibu selalu membuat makanan enak), yang mendeskripsikan aktivitas memasak hidangan enak oleh ibu.\n3. 'Ayah Rika tidak suka bunga': SALAH. Teks secara jelas menyatakan 'Chichi wa hana ga suki desu' (Ayah suka bunga).\n4. 'Adik perempuan Rika tidak melakukan bersih-bersih': BENAR. Teks menyatakan bahwa Rika yang sering bersih-bersih ('Watashi wa yoku souji wo shimasu'), sedangkan adiknya masih 4 tahun sehingga belum membantu apa pun ('Imouto wa mada 4 sai desu kara, nani mo tetsudaimasen').\nJadi, jawaban benar ada dua: 'Ibu Rika suka memasak.' dan 'Adik perempuan Rika tidak melakukan bersih-bersih.'",
         "meaning": "Keluargaku\n\nPerkenalkan, saya Rika. Keluarga saya berjumlah 4 orang.\nAyah, ibu, adik perempuan, dan saya.\nAyah suka bunga. Ibu selalu membuat makanan yang enak.\nLusa adalah hari ulang tahun ibu. Tanggal 15 Mei. Pada hari itu, ibu tidak melakukan apa-apa.\nSaya sering bersih-bersih. Karena adik perempuan masih berumur 4 tahun, dia tidak membantu apa-apa.",
         "furigana": "",
@@ -297,7 +297,7 @@
       },
       {
         "id": "gb_9",
-        "front": "きのうは____________。\n\nPilihan:\n1. じゅうににちです\n2. じゅうににちでした\n3. じゅうさんにちでした\n4. じゅうよんにちです\n5. じゅうごにちです",
+        "front": "【Soal Nomor 9】\nきのうは____________。\n\nPilihan:\n1. じゅうににちです\n2. じゅうににちでした\n3. じゅうさんにちでした\n4. じゅうよんにちです\n5. じゅうごにちです",
         "back": "✅ Kunci Jawaban:\n• じゅうににちでした\n\n💡 Pembahasan:\nAnalisis Perhitungan Tanggal & Tata Bahasa:\n1. Di teks disebutkan: 'Asatte wa haha no tanjoubi desu. 5 gatsu 15 nichi desu.' (Lusa adalah hari ulang tahun ibu. Tanggal 15 Mei).\n- Asatte (明後日 / Lusa) = Tanggal 15 Mei.\n- Ashita (明日 / Besok) = Tanggal 14 Mei.\n- Kyou (今日 / Hari ini) = Tanggal 13 Mei.\n- Kinou (昨日 / Kemarin) = Tanggal 12 Mei.\n2. Soal menanyakan waktu kemarin: 'きのうは____________。'.\n- Karena subjek waktunya adalah 'きのう' (kemarin / masa lalu), predikatnya wajib menggunakan bentuk lampau (past tense) yaitu 'でした' (deshita), BUKAN 'です' (desu).\n- Opsi 'じゅうににちです' salah karena berakhiran 'です' (non-lampau).\n- Opsi 'じゅうさんにちでした' salah tanggal (13 adalah hari ini).\n- Opsi 'じゅうよんにちです' dan 'じゅうごにちです' salah tanggal dan tenses.\nOleh sebab itu, jawaban yang paling tepat secara tanggal dan tata bahasa adalah 'じゅうににちでした'.",
         "meaning": "Keluargaku\n\nPerkenalkan, saya Rika. Keluarga saya berjumlah 4 orang.\nAyah, ibu, adik perempuan, dan saya.\nAyah suka bunga. Ibu selalu membuat makanan yang enak.\nLusa adalah hari ulang tahun ibu. Tanggal 15 Mei. Pada hari itu, ibu tidak melakukan apa-apa.\nSaya sering bersih-bersih. Karena adik perempuan masih berumur 4 tahun, dia tidak membantu apa-apa.",
         "furigana": "",
@@ -307,7 +307,7 @@
       },
       {
         "id": "gb_10",
-        "front": "Hari apa perkemahan diadakan? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. きんようび\n2. どようび\n3. もくようび\n4. すいようび",
+        "front": "【Soal Nomor 10】\nHari apa perkemahan diadakan? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. きんようび\n2. どようび\n3. もくようび\n4. すいようび",
         "back": "✅ Kunci Jawaban:\n• きんようび\n• どようび\n\n💡 Pembahasan:\nPada kalender Mei 2025, perkemahan ditulis dalam bentuk katakana 'キャンプ' (kyanpu / camp). Kegiatan 'キャンプ' dijadwalkan pada:\n- Tanggal 9 yang berada di kolom 'きんようび' (Jumat).\n- Tanggal 10 yang berada di kolom 'どようび' (Sabtu).\nOleh karena itu, hari diadakannya perkemahan adalah 'きんようび' (Jumat) dan 'どようび' (Sabtu). Pilihan 'もくようび' (Kamis) dan 'すいようび' (Rabu) tidak terdapat agenda perkemahan.",
         "meaning": "Kalender Mei 2025\nMinggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu\nTanggal 9: Kemping / Perkemahan\nTanggal 10: Kemping / Perkemahan\nTanggal 12-16: Ujian\nTanggal 29-31: Berwisata / Liburan",
         "furigana": "",
@@ -317,58 +317,58 @@
       },
       {
         "id": "gb_11",
-        "front": "Klik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai dengan wacana!\n\n📖 Wacana / Teks:\n[object Object]",
+        "front": "【Soal Nomor 11】\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai dengan wacana!\n\n📖 Wacana / Percakapan:\n[object Object]\n\nPernyataan (Benar / Salah):\n1. {\"statement_number\":1,\"statement_jp\":\"きのうは　にちようび　でした。\",\"statement_furigana\":\"昨日[きのう]は 日曜日[にちようび]でした。\",\"statement_id\":\"Kemarin adalah hari Minggu.\",\"correct_answer\":\"Benar\",\"user_answer\":\"Benar\",\"is_user_correct\":true,\"explanation\":\"Hari ini tanggal 5 (五日 - いつか) jatuh pada hari Senin (げつようび). Berarti kemarin (きのう) adalah tanggal 4 (よっか) yang jatuh pada hari Minggu (にちようび). Oleh karena itu pernyataan ini BENAR.\"}\n2. {\"statement_number\":2,\"statement_jp\":\"あさっては　きんようび　でした。\",\"statement_furigana\":\"あさっては 金曜日[きんようび]でした。\",\"statement_id\":\"Lusa adalah hari Jumat.\",\"correct_answer\":\"Salah\",\"user_answer\":\"Salah\",\"is_user_correct\":true,\"explanation\":\"Hari ini adalah hari Senin tanggal 5. Lusa (あさって / 2 hari ke depan) adalah tanggal 7 (なのか), yaitu hari Rabu (すいようび), bukan hari Jumat (きんようび). Selain itu 'でした' adalah bentuk lampau sementara 'あさって' adalah waktu mendatang. Pernyataan ini SALAH.\"}\n3. {\"statement_number\":3,\"statement_jp\":\"おとといは　みっか　でした。\",\"statement_furigana\":\"一昨日[おととい]は 三日[みっか]でした。\",\"statement_id\":\"Kemarin lusa adalah tanggal 3.\",\"correct_answer\":\"Benar\",\"user_answer\":\"Benar\",\"is_user_correct\":true,\"explanation\":\"Hari ini tanggal 5 (いつか). Kemarin lusa (おととい / 2 hari yang lalu) adalah tanggal 3 (みっか / jatuh pada hari Sabtu どようび). Pernyataan ini BENAR.\"}",
         "back": "✅ Kunci Jawaban:",
         "meaning": "",
         "furigana": "",
         "romaji": "",
         "image": "images/soal/soal_11.webp",
-        "example": ""
+        "example": "undefined: hari ini | undefined: kemarin | undefined: kemarin lusa | undefined: besok | undefined: lusa | undefined: tanggal 5 | undefined: tanggal 3 | undefined: tanggal 4 | undefined: hari Minggu | undefined: hari Senin | undefined: hari Jumat | undefined: hari Sabtu | undefined: ujian | undefined: bepergian / wisata"
       },
       {
         "id": "gb_12",
-        "front": "Pilihlah pernyataan dengan urutan waktu dan kegiatan yang runtut dan tepat sesuai dengan tabel!\n\n📖 Wacana / Teks:\n[object Object]\n\nPilihan:\n1. ろくじ　に　あさごはん　を　たべます。それから、がっこうへいきます。\n2. しちじ　に　がっこう　へ　いきます。そして　あさごはんを　たべます。\n3. じゅうじに　がっこうへ　いきます。それから、にじに　うちへ　かえります。\n4. はちじに　あさごはんを　たべます。それから、にじに　うちへ　かえります。\n5. ろくじ　に　おきます。それから、はちじに　がっこう　へ　いきます。",
+        "front": "【Soal Nomor 12】\nPilihlah pernyataan dengan urutan waktu dan kegiatan yang runtut dan tepat sesuai dengan tabel!\n\n📖 Wacana / Percakapan:\n[object Object]\n\nPilihan:\n1. ろくじ　に　あさごはん　を　たべます。それから、がっこうへいきます。\n2. しちじ　に　がっこう　へ　いきます。そして　あさごはんを　たべます。\n3. じゅうじに　がっこうへ　いきます。それから、にじに　うちへ　かえります。\n4. はちじに　あさごはんを　たべます。それから、にじに　うちへ　かえります。\n5. ろくじ　に　おきます。それから、はちじに　がっこう　へ　いきます。",
         "back": "✅ Kunci Jawaban:\nろくじ　に　おきます。それから、はちじに　がっこう　へ　いきます。",
         "meaning": "",
         "furigana": "",
         "romaji": "",
         "image": "images/soal/soal_12.webp",
-        "example": ""
+        "example": "undefined: kehidupan / rutinitas | undefined: bangun tidur | undefined: makan pagi / sarapan | undefined: sekolah | undefined: makan siang | undefined: rumah | undefined: pulang | undefined: tidur | undefined: setelah itu / kemudian"
       },
       {
         "id": "gb_13",
-        "front": "かねこさんは ______________。\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Teks:\n[object Object]\n\nPilihan:\n1. ろくじに　みずを　あびます\n2. しちじに　ばんごはんを　たべます\n3. くじに　ミルクを　のみます\n4. じゅうじに　ねます",
+        "front": "【Soal Nomor 13】\nかねこさんは ______________。\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\n[object Object]\n\nPilihan:\n1. ろくじに　みずを　あびます\n2. しちじに　ばんごはんを　たべます\n3. くじに　ミルクを　のみます\n4. じゅうじに　ねます",
         "back": "✅ Kunci Jawaban:",
         "meaning": "",
         "furigana": "",
         "romaji": "",
         "image": "images/soal/soal_13.webp",
-        "example": ""
+        "example": "undefined: setiap malam | undefined: PM / petang - malam | undefined: air | undefined: mandi guyur / menyiram tubuh | undefined: keluarga | undefined: makan malam | undefined: belajar | undefined: menggosok gigi | undefined: setengah (30 menit)"
       },
       {
         "id": "gb_14",
-        "front": "Lengkapilah kalimat berikut sesuai dengan susunan kalimat yang benar berdasarkan wacana!\nかねこさんは　まいばん　___________\n\n📖 Wacana / Teks:\n[object Object]\n\nPilihan:\n1. ねます。それから、みずを　あびます。\n2. ばんごはんを　たべます。それから、ねます。\n3. みずを　あびます。それから、べんきょうします。\n4. べんきょうします。それから、ミルクを　のみます。\n5. ミルクを　のみます。それから、ばんごはんを　たべます。",
+        "front": "【Soal Nomor 14】\nLengkapilah kalimat berikut sesuai dengan susunan kalimat yang benar berdasarkan wacana!\nかねこさんは　まいばん　___________\n\n📖 Wacana / Percakapan:\n[object Object]\n\nPilihan:\n1. ねます。それから、みずを　あびます。\n2. ばんごはんを　たべます。それから、ねます。\n3. みずを　あびます。それから、べんきょうします。\n4. べんきょうします。それから、ミルクを　のみます。\n5. ミルクを　のみます。それから、ばんごはんを　たべます。",
         "back": "✅ Kunci Jawaban:\nべんきょうします。それから、ミルクを　のみます。",
         "meaning": "",
         "furigana": "",
         "romaji": "",
         "image": "images/soal/soal_14.webp",
-        "example": ""
+        "example": "undefined: belajar | undefined: susu | undefined: minum | undefined: setelah itu / kemudian"
       },
       {
         "id": "gb_15",
-        "front": "Bagaimana pernyataan terkait wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai dengan wacana!\n\n📖 Wacana / Teks:\n[object Object]",
+        "front": "【Soal Nomor 15】\nBagaimana pernyataan terkait wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai dengan wacana!\n\n📖 Wacana / Percakapan:\n[object Object]\n\nPernyataan (Benar / Salah):\n1. {\"statement_number\":1,\"statement_id\":\"Pada hari Jumat, Hikari nonton film di bioskop.\",\"correct_answer\":\"Benar\",\"user_answer\":\"Benar\",\"is_user_correct\":true,\"explanation\":\"Di wacana disebutkan 'Kyouwa doyoubi desu' (Hari ini hari Sabtu). Kalimat sebelumnya menyebutkan 'Kinou (kemarin), watashi wa eigakan de eiga o mimashita'. Karena hari ini hari Sabtu, maka kemarin adalah hari Jumat. Jadi benar bahwa pada hari Jumat Hikari menonton film di bioskop.\"}\n2. {\"statement_number\":2,\"statement_id\":\"Pada hari Sabtu, Hikari selalu makan siang di mall.\",\"correct_answer\":\"Salah\",\"user_answer\":\"Salah\",\"is_user_correct\":true,\"explanation\":\"Wacana menyebutkan bahwa pada hari Sabtu ia selalu berbelanja di mall ('itsumo mooru de kaimono shimasu'), tetapi untuk makan siang dinyatakan: 'Demo, mooru de amari hirugohan o tabemasen' (Tetapi, jarang/tidak begitu sering makan siang di mal). Kata 'amari' yang diikuti bentuk negatif berarti 'jarang / hampir tidak pernah', sehingga bertolak belakang dengan 'selalu'. Oleh karena itu pernyataan ini SALAH.\"}\n3. {\"statement_number\":3,\"statement_id\":\"Pada hari Minggu, Hikari berenang di laut.\",\"correct_answer\":\"Benar\",\"user_answer\":\"Benar\",\"is_user_correct\":true,\"explanation\":\"Karena hari ini adalah hari Sabtu ('Kyouwa doyoubi desu'), maka besok ('Ashita') adalah hari Minggu. Kalimat terakhir menyatakan 'Ashita wa umi de oyogimasu' (Besok berenang di laut). Maka benar bahwa pada hari Minggu Hikari berenang di laut.\"}",
         "back": "✅ Kunci Jawaban:",
         "meaning": "",
         "furigana": "",
         "romaji": "",
         "image": "images/soal/soal_15.webp",
-        "example": ""
+        "example": "undefined: salam kenal | undefined: minggu ini | undefined: libur / hari libur | undefined: dari ~ sampai ~ | undefined: bioskop | undefined: film | undefined: selalu | undefined: berbelanja | undefined: jarang / tidak begitu... | undefined: laut / pantai | undefined: berenang"
       },
       {
         "id": "gb_16",
-        "front": "Manakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. しけんは　らいしゅうの　もくようびからです。\n2. らいしゅうは　しけんが　あります。\n3. こんしゅうの　きんようびは　やすみです。\n4. がっこうの　しけんは　らいしゅうからです。",
-        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n[object Object]",
+        "front": "【Soal Nomor 16】\nManakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. しけんは　らいしゅうの　もくようびからです。\n2. らいしゅうは　しけんが　あります。\n3. こんしゅうの　きんようびは　やすみです。\n4. がっこうの　しけんは　らいしゅうからです。",
+        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n1. Analisis Opsi A (Salah): Di wacana tertulis 「らいしゅうの げつようび から、がっこうで しけん が はじまります」 yang berarti ujian dimulai pada hari Senin (げつようび), bukan hari Kamis (もくようび).\n2. Analisis Opsi B (Benar): Kalimat wacana menyebutkan ujian dimulai hari Senin minggu depan, yang berarti pada minggu depan ada ujian (らいしゅうは しけんが あります).\n3. Analisis Opsi C (Benar): Kalimat kedua wacana menyatakan 「こんしゅうの もくようびと きんようびは やすみです」, yang secara eksplisit memvalidasi bahwa hari Jumat minggu ini libur (こんしゅうの きんようびは やすみです).\n4. Analisis Opsi D (Benar): Wacana menyatakan bahwa ujian di sekolah akan dimulai minggu depan (らいしゅうの げつようび から), sehingga kalimat 「がっこうの しけんは らいしゅうからです」 adalah pernyataan yang benar dan sesuai.",
         "meaning": "",
         "furigana": "",
         "romaji": "",
@@ -377,8 +377,8 @@
       },
       {
         "id": "gb_17",
-        "front": "Lengkapilah dialog rumpang berikut:\n\nPilihan:\n1. みます\n2. みません\n3. みました\n4. みませんでした\n5. みましたか",
-        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n[object Object]",
+        "front": "【Soal Nomor 17】\nLengkapilah dialog rumpang berikut:\n\nPilihan:\n1. みます\n2. みません\n3. みました\n4. みませんでした\n5. みましたか",
+        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n1. Penanda Waktu Lampau: Pertanyaan Aji menggunakan keterangan waktu 「せんしゅう」(minggu lalu) dan predikat bentuk lampau tanya 「みましたか」 (apakah sudah menonton?).\n2. Konteks Dialog: Pertanyaan berfokus pada waktu 「なんじに」(jam berapa). Respons Rere menyebutkan titik waktu spesifik 「ごご 3じに」(pada jam 3 sore), yang mengindikasikan bahwa Rere memang menonton film tersebut pada waktu tersebut. Bentuk yang sesuai untuk menyatakan tindakan lampau positif adalah 「みました」.\n3. Mengapa pilihan lain salah:\n- 'みます' (A) dan 'みません' (B) merupakan bentuk waktu non-lampau (present/future), tidak cocok dengan penanda waktu 'せんしゅう'.\n- 'みませんでした' (D) adalah bentuk lampau negatif. Jika Rere tidak menonton film, tidak masuk akal menyertakan waktu pelaksanaan 'ごご 3じに'.\n- 'みましたか' (E) adalah bentuk kalimat tanya (ada partikel ka), sedangkan kalimat Rere adalah kalimat deklaratif/jawaban yang berakhiran tanda titik.",
         "meaning": "",
         "furigana": "",
         "romaji": "",
@@ -387,8 +387,8 @@
       },
       {
         "id": "gb_18",
-        "front": "Manakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Suugaku to Nihongo wa getsuyoubi desu.\n2. Suugaku wa getsuyoubi no asa desu.\n3. Nihongo wa suiyoubi no asa desu.\n4. Nihongo wa isshuukan ni nikai desu.",
-        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n[object Object]",
+        "front": "【Soal Nomor 18】\nManakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Suugaku to Nihongo wa getsuyoubi desu.\n2. Suugaku wa getsuyoubi no asa desu.\n3. Nihongo wa suiyoubi no asa desu.\n4. Nihongo wa isshuukan ni nikai desu.",
+        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n1. Analisis Opsi A (Benar): Pelajaran Bahasa Jepang diadakan pada 'getsuyoubi no gogo 1-ji' dan Matematika pada 'getsuyoubi no gogo 3-ji'. Keduanya sama-sama ada di hari Senin (getsuyoubi).\n2. Analisis Opsi B (Salah): Di teks tertulis 'Suugaku wa getsuyoubi no gogo 3-ji' (jam 3 sore/siang). Kata 'asa' berarti pagi hari, sedangkan jadwal pagi untuk Matematika adalah hari Selasa (kayoubi no gozen 10-ji).\n3. Analisis Opsi C (Benar): Di teks tertulis Bahasa Jepang dipelajari pada 'suiyoubi no gozen 10-ji'. Kata 'gozen' (a.m.) menunjukkan rentang waktu pagi hari ('asa'), sehingga 'Nihongo wa suiyoubi no asa desu' adalah benar.\n4. Analisis Opsi D (Benar): Bahasa Jepang dipelajari pada hari Senin dan hari Rabu, yang berarti berlangsung 2 kali seminggu ('isshuukan ni nikai').",
         "meaning": "",
         "furigana": "",
         "romaji": "",
@@ -397,8 +397,8 @@
       },
       {
         "id": "gb_19",
-        "front": "Manakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. このひとは　こうこうせいです。\n2. このひとは　さんにん　きょうだいです。\n3. いもうとさんと　おねえさんが　いません。\n4. おかあさんと　おとうさんの　しごとは　おなじです。",
-        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n[object Object]",
+        "front": "【Soal Nomor 19】\nManakah pernyataan yang sesuai dengan wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. このひとは　こうこうせいです。\n2. このひとは　さんにん　きょうだいです。\n3. いもうとさんと　おねえさんが　いません。\n4. おかあさんと　おとうさんの　しごとは　おなじです。",
+        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n1. Analisis Opsi A (Benar): Di teks tertulis 「わたしは じゅうねんせいです」 (Saya kelas 10). Jenjang kelas 10 (10年生) di Indonesia setara dengan tingkat SMA kelas 1 (高校生 - koukousei).\n2. Analisis Opsi B (Benar): Anggota saudara yang disebutkan adalah pembicara sendiri (わたし), seorang kakak perempuan (あね), dan seorang adik perempuan (いもうと). Jadi total mereka adalah 3 orang bersaudara (さんにん きょうだい).\n3. Analisis Opsi C (Salah): Wacana dengan jelas menyebutkan bahwa pembicara memiliki 'あね' (17 tahun) dan 'いもうと' (5 tahun), sehingga pernyataan 'tidak memiliki adik dan kakak perempuan' bertolak belakang dengan isi teks.\n4. Analisis Opsi D (Benar): Di wacana tertulis 「ちちは いしゃです。ははも いしゃです」 (Ayah dokter. Ibu juga dokter). Keduanya berprofesi sebagai dokter, yang berarti jenis pekerjaannya sama (しごとは おなじです).",
         "meaning": "",
         "furigana": "",
         "romaji": "",
@@ -407,8 +407,8 @@
       },
       {
         "id": "gb_20",
-        "front": "Susunlah kosakata berikut menjadi kalimat padu!\nは / べんきょう / わたし / まいにち / 7 じ / に / します\n\nPilihan:\n1. わたしは　まいにちに　７じ　べんきょう　します。\n2. わたしは　７じ　べんきょうに　まいにち　します。\n3. わたしは　まいにち　７じに　べんきょう　します。\n4. わたしに　まいにち　べんきょうは　７じ　します。\n5. わたしは　７じに　べんきょう　まいにち　します。",
-        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n[object Object]",
+        "front": "【Soal Nomor 20】\nSusunlah kosakata berikut menjadi kalimat padu!\nは / べんきょう / わたし / まいにち / 7 じ / に / します\n\nPilihan:\n1. わたしは　まいにちに　７じ　べんきょう　します。\n2. わたしは　７じ　べんきょうに　まいにち　します。\n3. わたしは　まいにち　７じに　べんきょう　します。\n4. わたしに　まいにち　べんきょうは　７じ　します。\n5. わたしは　７じに　べんきょう　まいにち　します。",
+        "back": "✅ Kunci Jawaban:\n\n\n💡 Pembahasan:\n1. Partikel Topik 「は」 diletakkan setelah kata ganti orang pertama 「わたし」 membentuk subjek topik: 「わたしは」 (Saya...).\n2. Kata keterangan frekuensi / waktu relatif 「まいにち」 (setiap hari) tidak boleh diikuti partikel 「に」 (aturan tata bahasa Jepang: kata waktu relatif seperti kyou, ashita, kinou, mainichi, konshuu tidak memakai partikel 'ni'). Oleh karena itu, opsi yang menempatkan 'まいにちに' (opsi A) dipastikan salah.\n3. Titik waktu yang spesifik dan memakai angka jam 「７じ」 (jam 7) harus diikuti partikel penanda waktu 「に」 menjadi 「７じに」 (pada jam 7).\n4. Kata benda aktivitas 「べんきょう」 digabungkan dengan kata kerja bantu 「します」 membentuk predikat 「べんきょう します」 (belajar).\n5. Dengan demikian, struktur utuh yang baku dan tepat adalah: 「わたしは　まいにち　７じに　べんきょう　します。」 (Opsi C).",
         "meaning": "",
         "furigana": "",
         "romaji": "",
@@ -417,93 +417,93 @@
       },
       {
         "id": "gb_21",
-        "front": "Pilih pernyataan yang sesuai dengan wacana tersebut!\n\nPilihan:\n1. Pertandingan olahraga berlangsung selama 1 minggu.\n2. Pertandingan olahraga diselenggarakan saat libur sekolah.\n3. Libur sekolah berlangsung selama 1 bulan.\n4. Upacara kelulusan diselenggarakan sebelum liburan sekolah.\n5. Sekolah tidak mengadakan kegiatan pertandingan olahraga.",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    4\n  ],\n  \"texts\": [\n    \"Upacara kelulusan diselenggarakan sebelum liburan sekolah.\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Pilih pernyataan yang sesuai dengan wacana tersebut!\",\"full_text\":\"PENGUMUMAN\\n• Festival / Pertandingan Olahraga: 17 Juni – 20 Juni\\n• Upacara Kelulusan: 24 Juni\\n• Libur: 25 Juni – 14 Juli\",\"correct_sentence\":\"Upacara kelulusan diselenggarakan sebelum liburan sekolah.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 21】\nPilih pernyataan yang sesuai dengan wacana tersebut!\n\n📖 Wacana / Percakapan:\nおしらせ\n・うんどうかい　6月17日～6月20日\n・そつぎょうしき　6月24日\n・やすみ　6月25日～7月14日\n\nPilihan:\n1. Pertandingan olahraga berlangsung selama 1 minggu.\n2. Pertandingan olahraga diselenggarakan saat libur sekolah.\n3. Libur sekolah berlangsung selama 1 bulan.\n4. Upacara kelulusan diselenggarakan sebelum liburan sekolah.\n5. Sekolah tidak mengadakan kegiatan pertandingan olahraga.",
+        "back": "✅ Kunci Jawaban:\n• indices: 4\n• texts: Upacara kelulusan diselenggarakan sebelum liburan sekolah.\n\n💡 Pembahasan:\nBerdasarkan teks pengumuman (おしらせ):\n1. うんどうかい (Undoukai / Festival olahraga) dilaksanakan tanggal 17 Juni s.d. 20 Juni (berlangsung selama 4 hari).\n2. そつぎょうしき (Sotsugyoushiki / Upacara kelulusan) diadakan pada tanggal 24 Juni.\n3. やすみ (Yasumi / Libur sekolah) dimulai dari tanggal 25 Juni sampai 14 Juli (sekitar 20 hari).\nKarena upacara kelulusan dilaksanakan pada tanggal 24 Juni dan liburan baru dimulai tanggal 25 Juni, maka upacara kelulusan diselenggarakan sebelum liburan sekolah dimulai (24 Juni lebih awal daripada 25 Juni). Pernyataan pada pilihan ke-4 sepenuhnya sesuai dengan jadwal.",
+        "meaning": "full_text: PENGUMUMAN\n• Festival / Pertandingan Olahraga: 17 Juni – 20 Juni\n• Upacara Kelulusan: 24 Juni\n• Libur: 25 Juni – 14 Juli\ncorrect_sentence: Upacara kelulusan diselenggarakan sebelum liburan sekolah.",
+        "furigana": "お知[し]らせ\n・運動会[うんどうかい]　6月[がつ]17日[じゅうしちにち]～6月[がつ]20日[はつか]\n・卒業式[そつぎょうしき]　6月[がつ]24日[にじゅうよっか]\n・休[やす]み　6月[がつ]25日[にじゅうごにち]～7月[がつ]14日[じゅうよっか]",
+        "romaji": "Oshirase\n• Undoukai 6-gatsu 17-nichi ~ 6-gatsu 20-nichi\n• Sotsugyoushiki 6-gatsu 24-ka\n• Yasumi 6-gatsu 25-nichi ~ 7-gatsu 14-ka",
         "image": "images/soal/soal_21.webp",
-        "example": ""
+        "example": "お知[し]らせ: pengumuman / pemberitahuan | 運動会[うんどうかい]: festival olahraga / pekan olahraga sekolah | 卒業式[そつぎょうしき]: upacara kelulusan | 休[やす]み: libur / istirahat | 6月[ろくがつ]: bulan Juni | 7月[しちがつ]: bulan Juli | 17日[じゅうしちにち]: tanggal 17 | 20日[はつか]: tanggal 20 | 24日[にじゅうよっか]: tanggal 24 | 25日[にじゅうごにち]: tanggal 25 | 14日[じゅうよっか]: tanggal 14"
       },
       {
         "id": "gb_22",
-        "front": "アリさんは　いつ　バドミントンを　しますか。\n\nPilihan:\n1. すいようび　です。\n2. もくようび　です。\n3. きんようび　です。\n4. どようび　です。\n5. にちようび　です。",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    4\n  ],\n  \"texts\": [\n    \"どようび　です。\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Kapan Ali bermain bulu tangkis / badminton?\",\"correct_sentence\":\"Hari Sabtu.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 22】\nアリさんは　いつ　バドミントンを　しますか。\n\n📖 Wacana / Percakapan:\nアリさんの スケジュール\nアリさんは　いつ　バドミントンを　しますか。\n\nPilihan:\n1. すいようび　です。\n2. もくようび　です。\n3. きんようび　です。\n4. どようび　です。\n5. にちようび　です。",
+        "back": "✅ Kunci Jawaban:\n• indices: 4\n• texts: どようび　です。\n\n💡 Pembahasan:\nPertanyaan menanyakan hari pelaksanaan bulu tangkis (バドミントン) oleh Ali menggunakan kata tanya いつ (kapan). Pada tabel jadwal mingguan:\n- 月 (Getsuyoubi / Senin): Sekolah\n- 火 (Kayoubi / Selasa): Sekolah & にほんごクラブ (Klub Bahasa Jepang, 16:00-18:00)\n- 水 (Suiyoubi / Rabu): Sekolah\n- 木 (Mokuyoubi / Kamis): Sekolah\n- 金 (Kinyoubi / Jumat): Sekolah & Basket (15:00-17:00)\n- 土 (Doyoubi / Sabtu): Terdapat ikon raket dan kok badminton pada rentang waktu 09:00 - 12:00, diikuti ゲーム (game) pada 14:00 - 16:00.\n- 日 (Nichiyoubi / Minggu): かいもの (belanja, 11:00 - 13:00).\nIkon badminton berada persis di bawah kolom hari Sabtu (土 = 土曜日 / どようび). Oleh karena itu, Ali bermain badminton pada hari Sabtu (どようび です).",
+        "meaning": "correct_sentence: Hari Sabtu.",
+        "furigana": "アリさんの スケジュール\nアリさんは いつ バドミントンを しますか。",
+        "romaji": "Ari-san no sukejuuru.\nAri-san wa itsu badominton o shimasu ka?",
         "image": "images/soal/soal_22.webp",
-        "example": ""
+        "example": "スケジュール: jadwal (schedule) | いつ: kapan | バドミントン: bulu tangkis / badminton | する（します）: melakukan / bermain | 月曜日[げつようび]: Senin | 火曜日[かようび]: Selasa | 水曜日[すいようび]: Rabu | 木曜日[もくようび]: Kamis | 金曜日[きんようび]: Jumat | 土曜日[どようび]: Sabtu | 日曜日[にちようび]: Minggu"
       },
       {
         "id": "gb_23",
-        "front": "アリさんは　なんじから　なんじまで　かいものしますか。\n\nPilihan:\n1. 9じから　11じまで　です。\n2. 9じから　12じまで　です。\n3. 10じから　12じまで　です。\n4. 10じから　11じまで　です。\n5. 11じから　13じまで　です。",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    5\n  ],\n  \"texts\": [\n    \"11じから　13じまで　です。\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Dari jam berapa sampai jam berapa Ali berbelanja?\",\"correct_sentence\":\"Dari jam 11 sampai jam 13.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 23】\nアリさんは　なんじから　なんじまで　かいものしますか。\n\n📖 Wacana / Percakapan:\nアリさんの スケジュール\nアリさんは　なんじから　なんじまで　かいものしますか。\n\nPilihan:\n1. 9じから　11じまで　です。\n2. 9じから　12じまで　です。\n3. 10じから　12じまで　です。\n4. 10じから　11じまで　です。\n5. 11じから　13じまで　です。",
+        "back": "✅ Kunci Jawaban:\n• indices: 5\n• texts: 11じから　13じまで　です。\n\n💡 Pembahasan:\nPertanyaan menanyakan rentang waktu belanja dengan pola tata bahasa 「何時から何時まで」(nan-ji kara nan-ji made = dari jam berapa sampai jam berapa). Berdasarkan kolom hari Minggu (日):\n- Kotak bertuliskan 「かいもの」(kaimono = belanja) berawal pada garis jam 11:00 dan berakhir pada garis jam 13:00 (mencakup 2 jam: pukul 11 hingga 13).\nOleh karena itu, Ali berbelanja dari pukul 11 sampai pukul 13 (11じから 13じまで です).",
+        "meaning": "correct_sentence: Dari jam 11 sampai jam 13.",
+        "furigana": "アリさんの スケジュール\nアリさんは 何時[なんじ]から 何時[なんじ]まで 買[か]い物[もの]しますか。",
+        "romaji": "Ari-san no sukejuuru.\nAri-san wa nan-ji kara nan-ji made kaimono shimasu ka?",
         "image": "images/soal/soal_23.webp",
-        "example": ""
+        "example": "何時[なんじ]: jam berapa | 〜から: dari ~ (titik awal waktu/tempat) | 〜まで: sampai ~ (titik batas waktu/tempat) | 買[か]い物[もの]: belanja / berbelanja | 9時[くじ]: jam 9 | 11時[じゅういちじ]: jam 11 | 12時[じゅうにじ]: jam 12 | 13時[じゅうさんじ]: jam 13 (jam 1 siang)"
       },
       {
         "id": "gb_24",
-        "front": "ただしいぶんは　どれですか。\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. けんたさんは　かざまさんの　まえに　います。\n2. まさおさんは　よしながさんの　うしろに　います。\n3. よしながさんは　しのすけさんの　となりに　います。\n4. ななこさんは　まさおさんの　まえに　います。",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    1,\n    4\n  ],\n  \"texts\": [\n    \"けんたさんは　かざまさんの　まえに　います。\",\n    \"ななこさんは　まさおさんの　まえに　います。\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Kalimat manakah yang benar?\\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"correct_sentences\":[\"Kenta ada di depan Kazama.\",\"Nanako ada di depan Masao.\"]}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 24】\nただしいぶんは　どれですか。\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\nただしいぶんは　どれですか。\nけんたさんは　かざまさんの　まえに　います。\nまさおさんは　よしながさんの　うしろに　います。\nよしながさんは　しのすけさんの　となりに　います。\nななこさんは　まさおさんの　まえに　います。\n\nPilihan:\n1. けんたさんは　かざまさんの　まえに　います。\n2. まさおさんは　よしながさんの　うしろに　います。\n3. よしながさんは　しのすけさんの　となりに　います。\n4. ななこさんは　まさおさんの　まえに　います。",
+        "back": "✅ Kunci Jawaban:\n• indices: 1,4\n• texts: けんたさんは　かざまさんの　まえに　います。,ななこさんは　まさおさんの　まえに　います。\n\n💡 Pembahasan:\nAnalisis posisi tata letak tempat duduk berdasarkan arah hadap ke papan tulis:\n1. けんたさんは かざまさんの まえに います (Kenta ada di depan Kazama) -> BENAR. Kenta duduk di baris depan bagian tengah, dan Kazama duduk tepat di belakang Kenta (baris belakang tengah). Menghadap ke papan tulis, Kenta berada di DEPAN (まえ / mae) Kazama.\n2. まさおさんは よしながさんの うしろに います (Masao ada di belakang Yoshinaga) -> SALAH. Masao dan Yoshinaga berada di baris yang sama (baris belakang). Masao berada di sisi kiri Yoshinaga, bukan di belakangnya.\n3. よしながさんは しのすけさんの となりに います (Yoshinaga ada di sebelah Shinosuke) -> SALAH. Shinosuke berada di baris depan kanan, sedangkan Yoshinaga berada di baris belakang kanan (tepat di belakang Shinosuke). Posisi Yoshinaga adalah di BELAKANG (うしろ / ushiro) Shinosuke, bukan di samping/sebelahnya (となり / tonari).\n4. ななこさんは まさおさんの まえに います (Nanako ada di depan Masao) -> BENAR. Nanako duduk di baris depan bagian kiri, tepat di depan kursi Masao (baris belakang kiri). Maka Nanako berada di DEPAN (まえ / mae) Masao.",
+        "meaning": "correct_sentences: [\"Kenta ada di depan Kazama.\",\"Nanako ada di depan Masao.\"]",
+        "furigana": "正[ただ]しい文[ぶん]は どれですか。\nけんたさんは かざまさんの 前[まえ]に います。\nまさおさんは よしながさんの 後[うし]ろに います。\nよしながさんは しのすけさんの 隣[となり]に います。\nななこさんは まさおさんの 前[まえ]に います。",
+        "romaji": "Tadashii bun wa dore desu ka?\nKenta-san wa Kazama-san no mae ni imasu.\nMasao-san wa Yoshinaga-san no ushiro ni imasu.\nYoshinaga-san wa Shinosuke-san no tonari ni imasu.\nNanako-san wa Masao-san no mae ni imasu.",
         "image": "images/soal/soal_24.webp",
-        "example": ""
+        "example": "正[ただ]しい: benar / tepat | 文[ぶん]: kalimat | 前[まえ]: depan | 後[うし]ろ: belakang | 隣[となり]: sebelah / samping | いる（います）: ada (keberadaan orang/makhluk hidup) | 先生[せんせい]: guru"
       },
       {
         "id": "gb_25",
-        "front": "Bagaimana informasi pernyataan terkait dengan wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi wacana!",
-        "back": "✅ Kunci Jawaban:\n{\n  \"selections\": [\n    {\n      \"statement_index\": 1,\n      \"value\": \"Benar\"\n    },\n    {\n      \"statement_index\": 2,\n      \"value\": \"Benar\"\n    },\n    {\n      \"statement_index\": 3,\n      \"value\": \"Salah\"\n    }\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Bagaimana informasi pernyataan terkait dengan wacana tersebut?\\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi wacana!\",\"dialogue\":[{\"speaker\":\"Siswa\",\"text\":\"Hari ini jam berapa kamu belajar sejarah?\"},{\"speaker\":\"Siswi\",\"text\":\"Dari jam 10 sampai jam 12.\"},{\"speaker\":\"Siswa\",\"text\":\"Begitu ya. Apakah besok juga belajar sejarah?\"},{\"speaker\":\"Siswi\",\"text\":\"Tidak, (belajarnya) hari ini dan lusa.\"}]}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 25】\nBagaimana informasi pernyataan terkait dengan wacana tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi wacana!\n\n📖 Wacana / Percakapan:\nきょうは　なんじに　れきしを　べんきょうしますか。\n１０じから　１２じまでです。\nそうですか。あしたも　れきしを　べんきょうしますか。\nいいえ、きょうと　あさってです。\n\nPernyataan (Benar / Salah):\n1. Pelajaran sejarah dipelajari sebanyak dua kali seminggu.\n2. Belajar sejarah selama 2 jam dalam satu kali pertemuan.\n3. Besok ada pelajaran sejarah.",
+        "back": "✅ Kunci Jawaban:\n• Pernyataan 1: [Benar]\n• Pernyataan 2: [Benar]\n• Pernyataan 3: [Salah]\n\n💡 Pembahasan:\nUji kebenaran tiap butir pernyataan terhadap teks percakapan:\n1. 'Pelajaran sejarah dipelajari sebanyak dua kali seminggu' -> BENAR. Kalimat 'いいえ、きょうと あさってです' (Tidak, hari ini dan lusa) merujuk pada jadwal rutin mingguan bahwa dalam satu minggu mereka memiliki 2 hari jadwal pelajaran sejarah (misal hari ini dan selang satu hari berikutnya).\n2. 'Belajar sejarah selama 2 jam dalam satu kali pertemuan' -> BENAR. Pada kalimat '10じから 12じまでです', batas awal pukul 10:00 dan batas akhir pukul 12:00 menghasilkan durasi total 2 jam.\n3. 'Besok ada pelajaran sejarah' -> SALAH. Siswi menyatakan 'いいえ' menolak kemungkinan besok ada pelajaran, dan menegaskan jadwalnya adalah hari ini (きょう) dan lusa (あさって). Maka besok tidak ada pelajaran sejarah.",
+        "meaning": "Siswa: \"Hari ini jam berapa kamu belajar sejarah?\" | Siswi: \"Dari jam 10 sampai jam 12.\" | Siswa: \"Begitu ya. Apakah besok juga belajar sejarah?\" | Siswi: \"Tidak, (belajarnya) hari ini dan lusa.\"",
+        "furigana": "今日[きょう]は 何時[なんじ]に 歴史[れきし]を 勉強[べんきょう]しますか。\n10時[じゅうじ]から 12時[じゅうにじ]までです。\nそうですか。明日[あした]も 歴史[れきし]を 勉強[べんきょう]しますか。\nいいえ、今日[きょう]と 明後日[あさって]です。",
+        "romaji": "Kyou wa nan-ji ni rekishi o benkyou shimasu ka?\nJuu-ji kara juu-ni-ji made desu.\nSou desu ka. Ashita mo rekishi o benkyou shimasu ka?\nIie, kyou to asatte desu.",
         "image": "images/soal/soal_25.webp",
-        "example": ""
+        "example": "今日[きょう]: hari ini | 明日[あした]: besok | 明後日[あさって]: lusa (dua hari lagi) | 何時[なんじ]: jam berapa | 歴史[れきし]: sejarah | 勉強[べんきょう]する: belajar | 〜から 〜まで: dari ~ sampai ~ | そうですか: begitu ya / oh begitu | いいえ: tidak / bukan | 〜と: dan (partikel penghubung kata benda)"
       },
       {
         "id": "gb_26",
-        "front": "Bagaimana informasi pernyataan terkait dengan tabel tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi tabel!\n\nPilihan:\n1. マヤさんは　いつも　サッカーを　します。 -> Salah\n2. ラマさんは　あまり　サッカーを　しません。 -> Benar\n3. ミラさんは　ときどき　サッカーを　します。 -> Salah",
-        "back": "✅ Kunci Jawaban:\n{\n  \"statement_1\": \"Salah\",\n  \"statement_2\": \"Benar\",\n  \"statement_3\": \"Salah\"\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Bagaimana informasi pernyataan terkait dengan tabel tersebut? Klik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi tabel!\",\"table_title\":\"Jadwal Sepak Bola\",\"headers\":\"Nama | Minggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu\",\"statement_1\":\"Maya selalu bermain sepak bola.\",\"statement_2\":\"Rama jarang bermain sepak bola.\",\"statement_3\":\"Mira kadang-kadang bermain sepak bola.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 26】\nBagaimana informasi pernyataan terkait dengan tabel tersebut?\nKlik pada pilihan Benar atau Salah untuk setiap pernyataan sesuai isi tabel!\n\n📖 Wacana / Percakapan:\nサッカーの スケジュール\nなまえ | 日 | 月 | 火 | 水 | 木 | 金 | 土\nミラ   | V  | V  | V  | V  | V  | V  | V\nラマ   | V  |    |    |    |    |    |  \nマヤ   | V  |    |    | V  |    | V  |  \n\nPilihan:\n1. マヤさんは　いつも　サッカーを　します。 -> Salah\n2. ラマさんは　あまり　サッカーを　しません。 -> Benar\n3. ミラさんは　ときどき　サッカーを　します。 -> Salah",
+        "back": "✅ Kunci Jawaban:\n• statement_1: Salah\n• statement_2: Benar\n• statement_3: Salah\n\n💡 Pembahasan:\nSoal ini menguji pemahaman adverbia/kata keterangan penunjuk frekuensi (頻度を表す副詞 - hindo o arawasu fukushi):\n1. いつも (itsumo) = selalu / setiap saat (100%). Sesuai untuk Mira yang bermain 7 hari seminggu. Salah jika dilekatkan ke Maya yang hanya bermain 3 hari (Minggu, Rabu, Jumat).\n2. あまり～ない/ません (amari ~ nai/masen) = jarang / tidak begitu sering (10-20%). Sesuai untuk Rama yang hanya bermain 1 hari (hari Minggu).\n3. ときどき (tokidoki) = kadang-kadang (sekitar 50%). Sesuai untuk Maya yang bermain 3 hari seminggu. Salah jika dilekatkan ke Mira yang bermain setiap hari.",
+        "meaning": "table_title: Jadwal Sepak Bola\nheaders: Nama | Minggu | Senin | Selasa | Rabu | Kamis | Jumat | Sabtu\nstatement_1: Maya selalu bermain sepak bola.\nstatement_2: Rama jarang bermain sepak bola.\nstatement_3: Mira kadang-kadang bermain sepak bola.",
+        "furigana": "サッカーの スケジュール\n名前[なまえ] | 日[にち] | 月[げつ] | 火[か] | 水[すい] | 木[もく] | 金[きん] | 土[ど]\nミラ | V | V | V | V | V | V | V\nラマ | V |   |   |   |   |   |  \nマヤ | V |   |   | V |   | V |  ",
+        "romaji": "Sakkaa no sukejuuru\nNamae | Nichi | Getsu | Ka | Sui | Moku | Kin | Do\nMira | V | V | V | V | V | V | V\nRama | V |   |   |   |   |   |  \nMaya | V |   |   | V |   | V |  ",
         "image": "images/soal/soal_26.webp",
-        "example": ""
+        "example": "サッカー: sepak bola | スケジュール: jadwal | 名前[なまえ]: nama | 日曜日[にちようび]: hari Minggu | 月曜日[げつようび]: hari Senin | 火曜日[かようび]: hari Selasa | 水曜日[すいようび]: hari Rabu | 木曜日[もくようび]: hari Kamis | 金曜日[きんようび]: hari Jumat | 土曜日[どようび]: hari Sabtu | いつも: selalu | 時々[ときどき]: kadang-kadang | 余[あま]り～ない: jarang / tidak begitu... | 毎日[まいにち]: setiap hari"
       },
       {
         "id": "gb_27",
-        "front": "Apa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. やすみは　ろくがつ　じゅうさんにち　から　です。\n2. やすみは　ろくがつ　さんじゅうにち　から　です。\n3. テストは　ろくがつ　じゅうさんにち　まで　です。\n4. テストは　しちがつ　じゅうろくにち　まで　です。",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    2,\n    3\n  ],\n  \"texts\": [\n    \"やすみは　ろくがつ　さんじゅうにち　から　です。\",\n    \"テストは　ろくがつ　じゅうさんにち　まで　です。\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"table_content\":\"Pengumuman:\\n- Ujian: 2 Juni s.d. 13 Juni\\n- Libur: 30 Juni s.d. 16 Juli\",\"option_1\":\"Libur mulai dari tanggal 13 Juni.\",\"option_2\":\"Libur mulai dari tanggal 30 Juni.\",\"option_3\":\"Ujian sampai tanggal 13 Juni.\",\"option_4\":\"Ujian sampai tanggal 16 Juli.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 27】\nApa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\nおしらせ\nテスト | 6月2日 ～ 6月13日\nやすみ | 6月30日 ～ 7月16日\n\nPilihan:\n1. やすみは　ろくがつ　じゅうさんにち　から　です。\n2. やすみは　ろくがつ　さんじゅうにち　から　です。\n3. テストは　ろくがつ　じゅうさんにち　まで　です。\n4. テストは　しちがつ　じゅうろくにち　まで　です。",
+        "back": "✅ Kunci Jawaban:\n• indices: 2,3\n• texts: やすみは　ろくがつ　さんじゅうにち　から　です。,テストは　ろくがつ　じゅうさんにち　まで　です。\n\n💡 Pembahasan:\nWacana berbentuk tabel pengumuman sederhana memuat informasi rentang tanggal untuk dua kegiatan:\n1. 「テスト」(Ujian): Berlangsung dari 6月2日 sampai 6月13日. Artinya: テストは 6月2日から 6月13日まで です (Ujian dari 2 Juni sampai 13 Juni). Maka kalimat 'テストは ろくがつ じゅうさんにち まで です' (Pilihan 3) BENAR.\n2. 「やすみ」(Libur): Berlangsung dari 6月30日 sampai 7月16日. Artinya: やすみは 6月30日から 7月16日まで です (Libur dari 30 Juni sampai 16 Juli). Maka kalimat 'やすみは ろくがつ さんじゅうにち から です' (Pilihan 2) BENAR.",
+        "meaning": "table_content: Pengumuman:\n- Ujian: 2 Juni s.d. 13 Juni\n- Libur: 30 Juni s.d. 16 Juli\noption_1: Libur mulai dari tanggal 13 Juni.\noption_2: Libur mulai dari tanggal 30 Juni.\noption_3: Ujian sampai tanggal 13 Juni.\noption_4: Ujian sampai tanggal 16 Juli.",
+        "furigana": "お知[し]らせ\nテスト | 6月[ろくがつ]2日[ふつか] ～ 6月[ろくがつ]13日[じゅうさんにち]\n休[やす]み | 6月[ろくがつ]30日[さんじゅうにち] ～ 7月[しちがつ]16日[じゅうろくにち]",
+        "romaji": "Oshirase\nTesuto | Rokugatsu futsuka ~ Rokugatsu juusannichi\nYasumi | Rokugatsu sanjuunichi ~ Shichigatsu juurokunichi",
         "image": "images/soal/soal_27.webp",
-        "example": ""
+        "example": "お知[し]らせ: pengumuman / pemberitahuan | テスト: tes / ujian | 休[やす]み: libur / istirahat | 6月[ろくがつ]: bulan Juni | 7月[しちがつ]: bulan Juli | 2日[ふつか]: tanggal 2 | 13日[じゅうさんにち]: tanggal 13 | 30日[さんじゅうにち]: tanggal 30 | 16日[じゅうろくにち]: tanggal 16 | から: dari / mulai dari | まで: sampai / hingga"
       },
       {
         "id": "gb_28",
-        "front": "Apa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. おんがくは　さいごの　かもく　です。\n2. ちりがくは　にじかん　かかります。\n3. すうがくは　じゅうじはん　から　です。\n4. たいいくは　にじかんめの　かもく　です。",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    1,\n    2\n  ],\n  \"texts\": [\n    \"おんがくは　さいごの　かもく　です。\",\n    \"ちりがくは　にじかん　かかります。\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"table_content\":\"Jadwal Sekolah:\\n- Pendidikan Jasmani (体育): 08:00 - 09:30 (Durasi: 1,5 jam / 1時間半)\\n- Geografi (地理学): 09:30 - 11:30 (Durasi: 2 jam / 2時間)\\n- Matematika (数学): 12:30 - 13:00 (Durasi: 30 menit / 30分)\\n- Musik (音楽): 13:00 - 14:30 (Durasi: 1,5 jam / 1時間半)\",\"option_1\":\"Musik adalah mata pelajaran terakhir.\",\"option_2\":\"Geografi memakan waktu 2 jam.\",\"option_3\":\"Matematika mulai dari jam 10:30.\",\"option_4\":\"Pendidikan jasmani adalah mata pelajaran urutan kedua.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 28】\nApa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\nがっこうの スケジュール\nかもく | じかん\nPendidikan Jasmani | 08:00～09:30\nGeografi | 09:30～11:30\nMatematika | 12:30～13:00\nMusik | 13:00～14:30\n\nPilihan:\n1. おんがくは　さいごの　かもく　です。\n2. ちりがくは　にじかん　かかります。\n3. すうがくは　じゅうじはん　から　です。\n4. たいいくは　にじかんめの　かもく　です。",
+        "back": "✅ Kunci Jawaban:\n• indices: 1,2\n• texts: おんがくは　さいごの　かもく　です。,ちりがくは　にじかん　かかります。\n\n💡 Pembahasan:\nAnalisis setiap pilihan berdasarkan jadwal pada tabel:\n1. Pilihan 1: 'Musik' (おんがく) berada pada baris keempat / jadwal paling akhir (13:00～14:30). Kata 'さいご' (最後) berarti terakhir. Kalimat ini BENAR.\n2. Pilihan 2: 'Geografi' (ちりがく) berlangsung dari pukul 09:30 hingga 11:30. Durasi rentang waktu tersebut adalah tepat 2 jam (にじかん / 2時間). Kata kerja 'かかります' berarti memerlukan/menghabiskan waktu. Kalimat ini BENAR.\n3. Pilihan 3: 'Matematika' (すうがく) dimulai pukul 12:30 (じゅうにじはん / 12時半), bukan pukul 10:30 (じゅうじはん / 10時半). Pilihan ini mengecoh pendengaran/pembacaan angka antara 10 (じゅう) dan 12 (じゅうに). Kalimat ini SALAH.\n4. Pilihan 4: 'Pendidikan jasmani' (たいいく) adalah mata pelajaran jam pertama (いちじかんめ / 1時間目, 08:00～09:30). Pelajaran jam kedua (にじかんめ) adalah Geografi. Kalimat ini SALAH.",
+        "meaning": "table_content: Jadwal Sekolah:\n- Pendidikan Jasmani (体育): 08:00 - 09:30 (Durasi: 1,5 jam / 1時間半)\n- Geografi (地理学): 09:30 - 11:30 (Durasi: 2 jam / 2時間)\n- Matematika (数学): 12:30 - 13:00 (Durasi: 30 menit / 30分)\n- Musik (音楽): 13:00 - 14:30 (Durasi: 1,5 jam / 1時間半)\noption_1: Musik adalah mata pelajaran terakhir.\noption_2: Geografi memakan waktu 2 jam.\noption_3: Matematika mulai dari jam 10:30.\noption_4: Pendidikan jasmani adalah mata pelajaran urutan kedua.",
+        "furigana": "学校[がっこう]の スケジュール\n科目[かもく] | 時間[じかん]\n体育[たいいく] (Pendidikan Jasmani) | 08:00～09:30\n地理学[ちりがく] (Geografi) | 09:30～11:30\n数学[すうがく] (Matematika) | 12:30～13:00\n音楽[おんがく] (Musik) | 13:00～14:30",
+        "romaji": "Gakkou no sukejuuru\nKamoku | Jikan\nTaiiku (Pendidikan Jasmani) | 08:00 - 09:30\nChirigaku (Geografi) | 09:30 - 11:30\nSuugaku (Matematika) | 12:30 - 13:00\nOngaku (Musik) | 13:00 - 14:30",
         "image": "images/soal/soal_28.webp",
-        "example": ""
+        "example": "学校[がっこう]: sekolah | スケジュール: jadwal | 科目[かもく]: mata pelajaran | 時間[じかん]: waktu / jam (durasi) | 体育[たいいく]: pendidikan jasmani / olahraga | 地理学[ちりがく]: geografi | 数学[すうがく]: matematika | 音楽[おんがく]: musik | 最後[さいご]: terakhir / paling akhir | 2時間[にじかん]: 2 jam (durasi) | 掛[か]かる: memerlukan / memakan (waktu/biaya) | 半[はん]: setengah / lewat 30 menit | 〜時間目[じかんめ]: jam pelajaran ke-..."
       },
       {
         "id": "gb_29",
-        "front": "Apa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\nPilihan:\n1. Dina san wa kono tegami o kakimasu.\n2. Yukiko san wa itsukakan gakkou e ikimasu.\n3. Yukiko san wa eiga o miru koto ga suki desu.\n4. Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu.",
-        "back": "✅ Kunci Jawaban:\n{\n  \"indices\": [\n    2,\n    3\n  ],\n  \"texts\": [\n    \"Yukiko san wa itsukakan gakkou e ikimasu.\",\n    \"Yukiko san wa eiga o miru koto ga suki desu.\"\n  ]\n}\n\n💡 Pembahasan:\n[object Object]",
-        "meaning": "{\"prompt\":\"Apa saja informasi yang tepat terkait wacana tersebut? Klik pada setiap jawaban benar! Jawaban benar lebih dari satu.\",\"letter_text\":\"Kepada Dina,\\nApa kabar? Saya bangun sekitar jam 6 setiap hari. Sekolah dari hari Senin sampai Jumat. Pada hari Sabtu, saya sering menonton film bersama teman. Kadang-kadang berenang di kolam renang. Pada hari Minggu pagi selalu jalan-jalan santai. Malam hari menonton TV di rumah. Dina kalau sedang ada waktu luang melakukan apa? Tolong beri tahu ya. Nanti saya akan menulis surat lagi.\\n20 Mei\\nYukiko\",\"option_1\":\"Dina menulis surat ini.\",\"option_2\":\"Yukiko pergi ke sekolah selama lima hari.\",\"option_3\":\"Yukiko suka menonton film.\",\"option_4\":\"Sekolah Dina dari hari Senin sampai hari Minggu.\"}",
-        "furigana": "",
-        "romaji": "",
+        "front": "【Soal Nomor 29】\nApa saja informasi yang tepat terkait wacana tersebut?\nKlik pada setiap jawaban benar! Jawaban benar lebih dari satu.\n\n📖 Wacana / Percakapan:\nDina san e,\nOgenki desuka. Watashi wa mainichi 6 ji goro okimasu. Gakkou wa getsuyoubi kara kinyoubi made desu. Douyoubi ni yoku tomodachi to eiga o mimasu. Tokidoki puuru de oyogimasu. Nichi youbi no asa itsumo sanposhimasu. Yoru uchi de terebi o mimasu. Dina san wa hima na toki nani o shimasuka. Oshietekudasai. Mata tegami o kakimasu.\n\n5月20日\nYukiko\n\nPilihan:\n1. Dina san wa kono tegami o kakimasu.\n2. Yukiko san wa itsukakan gakkou e ikimasu.\n3. Yukiko san wa eiga o miru koto ga suki desu.\n4. Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu.",
+        "back": "✅ Kunci Jawaban:\n• indices: 2,3\n• texts: Yukiko san wa itsukakan gakkou e ikimasu.,Yukiko san wa eiga o miru koto ga suki desu.\n\n💡 Pembahasan:\nAnalisis setiap pilihan berdasarkan isi surat:\n1. Pilihan 2 (Yukiko san wa itsukakan gakkou e ikimasu): BENAR. Teks menyatakan 'Gakkou wa getsuyoubi kara kinyoubi made desu' (Sekolah dari hari Senin sampai Jumat). Rentang hari Senin hingga Jumat mencakup 5 hari (Senin, Selasa, Rabu, Kamis, Jumat). Dalam bahasa Jepang, jangka waktu 5 hari disebut '五日間' (itsukakan). Jadi, Yukiko bersekolah selama 5 hari dalam seminggu.\n2. Pilihan 3 (Yukiko san wa eiga o miru koto ga suki desu): BENAR. Teks menyatakan 'Douyoubi ni yoku tomodachi to eiga o mimasu' (Pada hari Sabtu sering menonton film bersama teman). Kebiasaan melakukan suatu aktivitas secara sering ('よく' / yoku) di waktu luang mengindikasikan bahwa ia menyukai kegiatan menonton film ('映画を見ることが好き' / eiga o miru koto ga suki).\n3. Pilihan 1 (Dina san wa kono tegami o kakimasu): SALAH. Dina adalah pihak penerima surat ('Dina san e' = Kepada Dina), sedangkan penulis surat adalah Yukiko (tertera tanda tangan di akhir surat).\n4. Pilihan 4 (Dina san no gakkou wa getsuyoubi kara nichiyoubi made desu): SALAH. Jadwal sekolah yang diceritakan adalah sekolah Yukiko ('Watashi wa... Gakkou wa...'), dan rentangnya adalah dari hari Senin sampai Jumat (kinyoubi), bukan sampai Minggu (nichiyoubi).",
+        "meaning": "letter_text: Kepada Dina,\nApa kabar? Saya bangun sekitar jam 6 setiap hari. Sekolah dari hari Senin sampai Jumat. Pada hari Sabtu, saya sering menonton film bersama teman. Kadang-kadang berenang di kolam renang. Pada hari Minggu pagi selalu jalan-jalan santai. Malam hari menonton TV di rumah. Dina kalau sedang ada waktu luang melakukan apa? Tolong beri tahu ya. Nanti saya akan menulis surat lagi.\n20 Mei\nYukiko\noption_1: Dina menulis surat ini.\noption_2: Yukiko pergi ke sekolah selama lima hari.\noption_3: Yukiko suka menonton film.\noption_4: Sekolah Dina dari hari Senin sampai hari Minggu.",
+        "furigana": "ディナさんへ、\nお元気[げんき]ですか。私[わたし]は 毎日[まいにち] 6時[じ]ごろ 起[お]きます。学校[がっこう]は 月曜日[げつようび]から 金曜日[きんようび]まで です。土曜日[どようび]に よく 友達[ともだち]と 映画[えいが]を 見[み]ます。ときどき プールで 泳[およ]ぎます。日曜日[にちようび]の 朝[あさ] いつも 散歩[さんぽ]します。夜[よる] うちで テレビを 見[み]ます。ディナさんは 暇[ひま]な 時[とき] 何[なに]を しますか。教[おし]えてください。また 手紙[てがみ]を 書[か]きます。\n\n5月[ごがつ]20日[はつか]\nYukiko（ユキコ）",
+        "romaji": "Dina san e,\nOgenki desu ka. Watashi wa mainichi roku-ji goro okimasu. Gakkou wa getsuyoubi kara kinyoubi made desu. Doyoubi ni yoku tomodachi to eiga o mimasu. Tokidoki puuru de oyogimasu. Nichiyoubi no asa itsumo sanposhimasu. Yoru uchi de terebi o mimasu. Dina san wa hima na toki nani o shimasu ka. Oshiete kudasai. Mata tegami o kakimasu.\n\n5-gatsu 20-nichi\nYukiko",
         "image": "images/soal/soal_29.webp",
-        "example": ""
+        "example": "手紙[てがみ]: surat | 書[か]く: menulis | お元気[げんき]ですか: apa kabar | 毎日[まいにち]: setiap hari | 起[お]きる: bangun tidur | 月曜日[げつようび]から金曜日[きんようび]まで: dari hari Senin sampai Jumat | 五日間[いつかかん]: selama 5 hari | 土曜日[どようび]: hari Sabtu | 日曜日[にちようび]: hari Minggu | よく: sering | 時々[ときどき]: kadang-kadang | 友達[ともだち]: teman | 映画[えいが]: film | 見る[みる]: menonton / melihat | 散歩[さんぽ]する: jalan-jalan santai | 暇[ひま]な時[とき]: saat senggang / waktu luang | 教[おし]える: memberitahu / mengajar"
       }
     ]
   }
