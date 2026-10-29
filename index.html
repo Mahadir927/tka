@@ -282,7 +282,7 @@
     </section>
 
     <!-- VIEW 4: BEDAH SOAL TKA (Mode Belajar Khusus Gambar + Penjelasan Langsung) -->
-    <section id="view-bedah" class="hidden max-w-4xl mx-auto space-y-6 py-2">
+    <section id="view-bedah" class="hidden max-w-5xl mx-auto space-y-6 py-2">
       <!-- Top Bar Navigation -->
       <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80 backdrop-blur">
         <div class="flex items-center gap-3">
@@ -307,7 +307,7 @@
       </div>
 
       <!-- Main Study Panel -->
-      <div class="bg-slate-800 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+      <div class="bg-slate-800 border border-slate-700/80 rounded-3xl p-4 sm:p-8 space-y-6 shadow-2xl">
         <!-- Soal Header / Title -->
         <div class="flex items-center justify-between border-b border-slate-700/60 pb-4">
           <div class="flex items-center gap-2">
@@ -316,18 +316,26 @@
             </span>
             <span class="text-xs text-slate-400">Gladi Bersih TKA Bahasa Jepang</span>
           </div>
-          <button onclick="app.speakJapaneseBedah()" class="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-indigo-300 hover:text-white transition text-xs flex items-center gap-1.5" title="Dengarkan Pelafalan Bahasa Jepang">
-            <i class="fa-solid fa-volume-high text-sm"></i> <span>Dengar Suara</span>
-          </button>
+          <div class="flex items-center gap-2">
+            <button onclick="app.toggleImageZoom()" class="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-amber-300 hover:text-white transition text-xs flex items-center gap-1.5" title="Perbesar / Perkecil Gambar">
+              <i class="fa-solid fa-magnifying-glass-plus text-sm"></i> <span id="btn-zoom-label">Perbesar Gambar</span>
+            </button>
+            <button onclick="app.speakJapaneseBedah()" class="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-indigo-300 hover:text-white transition text-xs flex items-center gap-1.5" title="Dengarkan Pelafalan Bahasa Jepang">
+              <i class="fa-solid fa-volume-high text-sm"></i> <span>Dengar Suara</span>
+            </button>
+          </div>
         </div>
 
-        <!-- Bagian 1: GAMBAR ASLI SOAL -->
+        <!-- Bagian 1: GAMBAR ASLI SOAL (Besar, Jelas, & Bisa Diklik untuk Fullscreen) -->
         <div class="space-y-2">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-            <i class="fa-solid fa-image text-indigo-400"></i> Gambar / Ilustrasi Asli Soal
-          </h3>
-          <div class="bg-slate-950/70 border border-slate-700/80 rounded-2xl p-3 flex justify-center items-center min-h-[220px]">
-            <img id="bedah-image" src="" alt="Soal TKA" class="rounded-xl max-h-[460px] w-auto object-contain shadow-lg">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-image text-indigo-400"></i> Gambar / Ilustrasi Asli Soal
+            </h3>
+            <span class="text-[11px] text-slate-400 italic">Klik gambar untuk melihat resolusi penuh</span>
+          </div>
+          <div class="bg-slate-950/80 border border-slate-700/80 rounded-2xl p-2 sm:p-4 flex justify-center items-center overflow-hidden">
+            <img id="bedah-image" src="" alt="Soal TKA" onclick="app.openImageModal()" class="rounded-xl w-full max-w-2xl max-h-[85vh] sm:max-h-[750px] object-contain shadow-2xl cursor-zoom-in hover:opacity-95 transition-all">
           </div>
         </div>
 
@@ -420,6 +428,17 @@
         </div>
       </form>
     </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL: FULL RESOLUTION IMAGE PREVIEW -->
+  <div id="modal-image-preview" onclick="app.closeImageModal()" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex flex-col items-center justify-center p-2 sm:p-6 cursor-zoom-out">
+    <div class="absolute top-4 right-4 flex items-center gap-2">
+      <span class="text-xs text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-full">Klik di mana saja / Esc untuk menutup</span>
+      <button onclick="app.closeImageModal()" class="p-2 rounded-full bg-slate-800 text-white hover:bg-rose-600 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+    <img id="modal-image-element" src="" alt="Soal Penuh" class="max-w-full max-h-[92vh] object-contain rounded-2xl shadow-2xl border border-slate-700/80">
   </div>
 
   <!-- Scripts -->

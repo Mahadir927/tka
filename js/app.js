@@ -17,6 +17,7 @@ class AnkiApp {
     // Bedah Soal mode state (khusus 29 soal TKA langsung gambar + penjelasan)
     this.bedahIndex = 0;
     this.bedahCards = [];
+    this.isImageZoomed = false;
 
     this.init();
   }
@@ -440,6 +441,11 @@ class AnkiApp {
   // Keyboard Shortcuts (Space = Flip, 1/2/3/4 = Rate)
   bindKeyboardShortcuts() {
     window.addEventListener('keydown', (e) => {
+      // Escape untuk tutup modal gambar besar jika terbuka
+      if (e.key === 'Escape') {
+        this.closeImageModal();
+      }
+
       // Jangan trigger saat sedang mengetik di textarea / input modal
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
 
@@ -639,6 +645,41 @@ class AnkiApp {
       vocabBox.classList.remove('hidden');
     } else {
       vocabBox.classList.add('hidden');
+    }
+  }
+
+  toggleImageZoom() {
+    this.isImageZoomed = !this.isImageZoomed;
+    const imgEl = document.getElementById('bedah-image');
+    const labelEl = document.getElementById('btn-zoom-label');
+    if (imgEl) {
+      if (this.isImageZoomed) {
+        imgEl.className = 'rounded-xl w-full max-w-4xl max-h-none object-contain shadow-2xl cursor-zoom-out transition-all';
+        if (labelEl) labelEl.innerText = 'Kecilkan Gambar';
+      } else {
+        imgEl.className = 'rounded-xl w-full max-w-2xl max-h-[85vh] sm:max-h-[750px] object-contain shadow-2xl cursor-zoom-in hover:opacity-95 transition-all';
+        if (labelEl) labelEl.innerText = 'Perbesar Gambar';
+      }
+    }
+  }
+
+  openImageModal() {
+    if (!this.bedahCards || !this.bedahCards[this.bedahIndex]) return;
+    const card = this.bedahCards[this.bedahIndex];
+    const modal = document.getElementById('modal-image-preview');
+    const modalImg = document.getElementById('modal-image-element');
+    if (modal && modalImg) {
+      modalImg.src = card.image || `images/soal/soal_${this.bedahIndex + 1}.webp`;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  closeImageModal() {
+    const modal = document.getElementById('modal-image-preview');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
     }
   }
 
