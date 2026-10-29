@@ -67,6 +67,9 @@
         <button onclick="app.showHome()" class="px-3 py-1.5 rounded-lg text-sm bg-slate-800 hover:bg-slate-700 text-slate-200 transition flex items-center gap-2">
           <i class="fa-solid fa-layer-group"></i> <span class="hidden sm:inline">Daftar Deck</span>
         </button>
+        <button onclick="app.startBedahSoal(0)" class="px-3 py-1.5 rounded-lg text-sm bg-amber-600 hover:bg-amber-500 text-white transition flex items-center gap-2 font-medium shadow-md shadow-amber-600/30">
+          <i class="fa-solid fa-book-open-reader"></i> <span class="hidden sm:inline">Bedah Soal TKA (29)</span>
+        </button>
         <button onclick="app.openNewCardModal()" class="px-3 py-1.5 rounded-lg text-sm bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-2 font-medium shadow-md shadow-indigo-600/30">
           <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">Tambah Kartu</span>
         </button>
@@ -275,6 +278,96 @@
         <button onclick="app.showHome()" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition shadow-lg shadow-indigo-600/30 text-sm">
           Kembali ke Daftar Deck
         </button>
+      </div>
+    </section>
+
+    <!-- VIEW 4: BEDAH SOAL TKA (Mode Belajar Khusus Gambar + Penjelasan Langsung) -->
+    <section id="view-bedah" class="hidden max-w-4xl mx-auto space-y-6 py-2">
+      <!-- Top Bar Navigation -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80 backdrop-blur">
+        <div class="flex items-center gap-3">
+          <button onclick="app.showHome()" class="px-3 py-1.5 rounded-xl text-xs bg-slate-700 hover:bg-slate-600 text-slate-200 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-arrow-left"></i> Menu Utama
+          </button>
+          <div>
+            <h2 class="font-bold text-white text-base flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-amber-400"></i> Mode Bedah Soal TKA
+            </h2>
+            <p class="text-xs text-slate-400">Gambar Soal Asli + Penjelasan & Kunci Langsung</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Quick Question Selector -->
+          <label for="bedah-select" class="text-xs text-slate-400 font-medium">Lompat ke:</label>
+          <select id="bedah-select" onchange="app.goToBedahSoal(this.value)" class="bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-amber-500 font-mono">
+            <!-- options generated dynamically -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Main Study Panel -->
+      <div class="bg-slate-800 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+        <!-- Soal Header / Title -->
+        <div class="flex items-center justify-between border-b border-slate-700/60 pb-4">
+          <div class="flex items-center gap-2">
+            <span id="bedah-number-badge" class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold text-sm border border-amber-500/30">
+              Soal #1
+            </span>
+            <span class="text-xs text-slate-400">Gladi Bersih TKA Bahasa Jepang</span>
+          </div>
+          <button onclick="app.speakJapaneseBedah()" class="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-indigo-300 hover:text-white transition text-xs flex items-center gap-1.5" title="Dengarkan Pelafalan Bahasa Jepang">
+            <i class="fa-solid fa-volume-high text-sm"></i> <span>Dengar Suara</span>
+          </button>
+        </div>
+
+        <!-- Bagian 1: GAMBAR ASLI SOAL -->
+        <div class="space-y-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-image text-indigo-400"></i> Gambar / Ilustrasi Asli Soal
+          </h3>
+          <div class="bg-slate-950/70 border border-slate-700/80 rounded-2xl p-3 flex justify-center items-center min-h-[220px]">
+            <img id="bedah-image" src="" alt="Soal TKA" class="rounded-xl max-h-[460px] w-auto object-contain shadow-lg">
+          </div>
+        </div>
+
+        <!-- Bagian 2: TEKS BACAAN / TRANSLASI -->
+        <div id="bedah-meaning-box" class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 space-y-1">
+          <h4 class="text-xs font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-language text-sm"></i> Arti / Terjemahan Bahasa Indonesia
+          </h4>
+          <p id="bedah-meaning-text" class="text-sm text-emerald-100 leading-relaxed font-medium"></p>
+        </div>
+
+        <!-- Bagian 3: KUNCI JAWABAN -->
+        <div class="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 space-y-2">
+          <h4 class="text-xs font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-check text-sm"></i> Kunci Jawaban yang Benar
+          </h4>
+          <div id="bedah-answer-text" class="text-sm sm:text-base text-white font-semibold whitespace-pre-line leading-relaxed"></div>
+        </div>
+
+        <!-- Bagian 4: PEMBAHASAN & TATA BAHASA -->
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-700/80 space-y-3">
+          <h4 class="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-lightbulb text-sm"></i> Pembahasan & Analisis Tata Bahasa
+          </h4>
+          <div id="bedah-explanation-text" class="text-sm text-slate-300 whitespace-pre-line leading-relaxed"></div>
+          <div id="bedah-vocab-box" class="pt-3 border-t border-slate-800 text-xs text-slate-400 leading-relaxed hidden">
+            <strong class="text-indigo-400">Kosakata Penting:</strong> <span id="bedah-vocab-text"></span>
+          </div>
+        </div>
+
+        <!-- Bottom Navigation Buttons (Prev / Next) -->
+        <div class="flex items-center justify-between pt-4 border-t border-slate-700/60">
+          <button id="btn-bedah-prev" onclick="app.prevBedahSoal()" class="px-5 py-2.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-medium transition text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-chevron-left"></i> Soal Sebelumnya
+          </button>
+          <span id="bedah-counter-text" class="text-xs font-mono text-slate-400">1 / 29</span>
+          <button id="btn-bedah-next" onclick="app.nextBedahSoal()" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium transition text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-amber-600/30">
+            Soal Berikutnya <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </section>
 

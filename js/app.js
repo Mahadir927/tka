@@ -14,6 +14,10 @@ class AnkiApp {
     this.isCardFlipped = false;
     this.furiganaEnabled = true;
 
+    // Bedah Soal mode state (khusus 29 soal TKA langsung gambar + penjelasan)
+    this.bedahIndex = 0;
+    this.bedahCards = [];
+
     this.init();
   }
 
@@ -163,6 +167,8 @@ class AnkiApp {
     document.getElementById('view-home').classList.remove('hidden');
     document.getElementById('view-study').classList.add('hidden');
     document.getElementById('view-complete').classList.add('hidden');
+    const bedahEl = document.getElementById('view-bedah');
+    if (bedahEl) bedahEl.classList.add('hidden');
 
     let totalDue = 0;
     let totalCards = 0;
@@ -196,6 +202,7 @@ class AnkiApp {
                          deck.category === 'Kosakata' ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 
                          'text-amber-400 bg-amber-500/10 border-amber-500/20';
 
+      const isGladi = deck.id === 'deck-gladi-bersih';
       cardEl.innerHTML = `
         <div class="space-y-3">
           <div class="flex items-center justify-between">
@@ -208,16 +215,23 @@ class AnkiApp {
           </div>
         </div>
 
-        <div class="mt-5 pt-4 border-t border-slate-700/60 flex items-center justify-between">
+        <div class="mt-5 pt-4 border-t border-slate-700/60 flex items-center justify-between flex-wrap gap-2">
           <div class="flex items-center gap-2 text-xs">
             <span class="text-blue-400 font-semibold" title="Kartu Baru">${deckNew} Baru</span>
             <span class="text-slate-600">•</span>
             <span class="text-amber-400 font-semibold" title="Perlu Diulang">${deckDue} Due</span>
           </div>
 
-          <button onclick="app.startStudy('${deck.id}')" class="px-4 py-2 rounded-xl text-xs font-semibold ${deckDue > 0 ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/30' : 'bg-slate-700 hover:bg-slate-600 text-slate-300'} transition flex items-center gap-1.5">
-            <i class="fa-solid fa-play text-[10px]"></i> ${deckDue > 0 ? 'Mulai Belajar' : 'Review Ulang'}
-          </button>
+          <div class="flex items-center gap-2">
+            ${isGladi ? `
+              <button onclick="app.startBedahSoal(0)" class="px-3 py-2 rounded-xl text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white shadow-md shadow-amber-600/30 transition flex items-center gap-1.5" title="Lihat gambar langsung dengan penjelasan di bawah">
+                <i class="fa-solid fa-book-open-reader text-[10px]"></i> Bedah Soal
+              </button>
+            ` : ''}
+            <button onclick="app.startStudy('${deck.id}')" class="px-3 py-2 rounded-xl text-xs font-semibold ${deckDue > 0 ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/30' : 'bg-slate-700 hover:bg-slate-600 text-slate-300'} transition flex items-center gap-1.5">
+              <i class="fa-solid fa-play text-[10px]"></i> ${deckDue > 0 ? 'Flashcard' : 'Review'}
+            </button>
+          </div>
         </div>
       `;
       container.appendChild(cardEl);
@@ -266,6 +280,8 @@ class AnkiApp {
     // Switch view
     document.getElementById('view-home').classList.add('hidden');
     document.getElementById('view-complete').classList.add('hidden');
+    const bedahEl = document.getElementById('view-bedah');
+    if (bedahEl) bedahEl.classList.add('hidden');
     document.getElementById('view-study').classList.remove('hidden');
 
     document.getElementById('study-deck-title').innerText = deck.name;
@@ -427,6 +443,19 @@ class AnkiApp {
       // Jangan trigger saat sedang mengetik di textarea / input modal
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
 
+      // Navigasi Keyboard untuk Mode Bedah Soal (Panah Kiri & Kanan)
+      const bedahView = document.getElementById('view-bedah');
+      if (bedahView && !bedahView.classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          this.prevBedahSoal();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          this.nextBedahSoal();
+        }
+        return;
+      }
+
       const studyView = document.getElementById('view-study');
       if (studyView.classList.contains('hidden')) return;
 
@@ -487,6 +516,137 @@ class AnkiApp {
       this.renderHome();
       alert('Kartu baru berhasil ditambahkan!');
     }
+  }
+
+  // ==========================================
+  // FITUR KHUSUS: BEDAH SOAL TKA (29 SOAL)
+  // Langsung tampilkan gambar soal + penjelasan di bawahnya
+  // Tanpa flip kartu dan tanpa sistem hafalan tebak-tebakan
+  // ==========================================
+  startBedahSoal(targetIndex = 0) {
+    const gladiDeck = this.decks.find(d => d.id === 'deck-gladi-bersih');
+    if (!gladiDeck || !gladiDeck.cards || gladiDeck.cards.length === 0) {
+      alert('Deck Gladi Bersih TKA belum tersedia. Silakan klik tombol Reset (putar) di kanan atas untuk memuat!');
+      return;
+    }
+
+    this.bedahCards = gladiDeck.cards;
+    this.bedahIndex = Math.max(0, Math.min(targetIndex, this.bedahCards.length - 1));
+
+    // Siapkan dropdown lompat soal
+    const select = document.getElementById('bedah-select');
+    if (select) {
+      select.innerHTML = '';
+      this.bedahCards.forEach((c, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.innerText = `Soal #${i + 1}`;
+        if (i === this.bedahIndex) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    // Tampilkan View Bedah Soal
+    document.getElementById('view-home').classList.add('hidden');
+    document.getElementById('view-study').classList.add('hidden');
+    document.getElementById('view-complete').classList.add('hidden');
+    document.getElementById('view-bedah').classList.remove('hidden');
+
+    this.renderBedahCard();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goToBedahSoal(index) {
+    this.bedahIndex = parseInt(index, 10) || 0;
+    this.renderBedahCard();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  prevBedahSoal() {
+    if (this.bedahIndex > 0) {
+      this.bedahIndex--;
+      this.renderBedahCard();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  nextBedahSoal() {
+    if (this.bedahIndex < this.bedahCards.length - 1) {
+      this.bedahIndex++;
+      this.renderBedahCard();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  renderBedahCard() {
+    if (!this.bedahCards || this.bedahCards.length === 0) return;
+    const card = this.bedahCards[this.bedahIndex];
+    const total = this.bedahCards.length;
+
+    // Update Counter & Badge
+    document.getElementById('bedah-number-badge').innerText = `Soal #${this.bedahIndex + 1}`;
+    document.getElementById('bedah-counter-text').innerText = `${this.bedahIndex + 1} / ${total}`;
+
+    const select = document.getElementById('bedah-select');
+    if (select) select.value = this.bedahIndex;
+
+    // Disable / Enable Prev & Next buttons
+    const btnPrev = document.getElementById('btn-bedah-prev');
+    const btnNext = document.getElementById('btn-bedah-next');
+    if (btnPrev) btnPrev.disabled = this.bedahIndex === 0;
+    if (btnNext) btnNext.disabled = this.bedahIndex === total - 1;
+
+    // Gambar Soal
+    const imgEl = document.getElementById('bedah-image');
+    if (imgEl) {
+      imgEl.src = card.image || `images/soal/soal_${this.bedahIndex + 1}.webp`;
+    }
+
+    // Terjemahan / Meaning
+    const meaningBox = document.getElementById('bedah-meaning-box');
+    const meaningText = document.getElementById('bedah-meaning-text');
+    if (card.meaning && card.meaning.trim() !== '') {
+      meaningText.innerText = card.meaning;
+      meaningBox.classList.remove('hidden');
+    } else {
+      meaningBox.classList.add('hidden');
+    }
+
+    // Kunci Jawaban & Pembahasan
+    // card.back biasanya berisi format: "✅ Kunci Jawaban:\n...\n\n💡 Pembahasan:\n..."
+    const rawBack = card.back || '';
+    let answerPart = '';
+    let explanationPart = '';
+
+    if (rawBack.includes('💡 Pembahasan:')) {
+      const parts = rawBack.split('💡 Pembahasan:');
+      answerPart = parts[0].replace('✅ Kunci Jawaban:', '').trim();
+      explanationPart = parts[1].trim();
+    } else if (rawBack.includes('✅ Kunci Jawaban:')) {
+      answerPart = rawBack.replace('✅ Kunci Jawaban:', '').trim();
+    } else {
+      explanationPart = rawBack;
+    }
+
+    document.getElementById('bedah-answer-text').innerText = answerPart || 'Lihat pembahasan di bawah.';
+    document.getElementById('bedah-explanation-text').innerText = explanationPart || 'Tidak ada pembahasan tambahan.';
+
+    // Kosakata
+    const vocabBox = document.getElementById('bedah-vocab-box');
+    const vocabText = document.getElementById('bedah-vocab-text');
+    if (card.example && card.example.trim() !== '') {
+      vocabText.innerText = card.example;
+      vocabBox.classList.remove('hidden');
+    } else {
+      vocabBox.classList.add('hidden');
+    }
+  }
+
+  speakJapaneseBedah() {
+    if (!this.bedahCards || !this.bedahCards[this.bedahIndex]) return;
+    const card = this.bedahCards[this.bedahIndex];
+    const text = card.furigana || card.front;
+    this.speakJapanese(text);
   }
 
   async resetAllProgress() {
