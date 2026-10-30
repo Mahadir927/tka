@@ -33,7 +33,7 @@ class AnkiApp {
     } else {
       await this.syncDefaultDecksUpdate();
     }
-    // Jika karena suatu hal deck masih kosong, coba muat ulang paksa
+    // Jika deck kosong atau korup, paksa muat ulang default_decks.json
     if (!this.decks || this.decks.length === 0) {
       await this.loadDefaultDecks();
     }
@@ -47,7 +47,11 @@ class AnkiApp {
     try {
       const savedDecks = localStorage.getItem('anki_tka_decks');
       if (savedDecks) {
-        this.decks = JSON.parse(savedDecks);
+        const parsed = JSON.parse(savedDecks);
+        // Validasi: hanya pakai jika ada isinya
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          this.decks = parsed;
+        }
       }
       const savedStats = localStorage.getItem('anki_tka_stats');
       if (savedStats) {
@@ -73,7 +77,7 @@ class AnkiApp {
         if (!this.decks || this.decks.length === 0) {
           this.decks = latestDecks;
         } else {
-          // Merge pembaruan field seperti meaning, back, example ke deck lokal
+          // Pastikan deck gladi bersih dan deck bawaan masuk jika belum ada di cache
           latestDecks.forEach(newDeck => {
             const existingDeck = this.decks.find(d => d.id === newDeck.id);
             if (existingDeck) {
@@ -83,6 +87,7 @@ class AnkiApp {
                   existingCard.meaning = newCard.meaning || existingCard.meaning;
                   existingCard.back = newCard.back || existingCard.back;
                   existingCard.furigana = newCard.furigana || existingCard.furigana;
+                  existingCard.image = newCard.image || existingCard.image;
                 } else {
                   existingDeck.cards.push(newCard);
                 }
@@ -101,7 +106,9 @@ class AnkiApp {
 
   saveState() {
     try {
-      localStorage.setItem('anki_tka_decks', JSON.stringify(this.decks));
+      if (this.decks && this.decks.length > 0) {
+        localStorage.setItem('anki_tka_decks', JSON.stringify(this.decks));
+      }
       localStorage.setItem('anki_tka_stats', JSON.stringify(this.cardStats));
       localStorage.setItem('anki_tka_daily', JSON.stringify({
         date: this.lastStudiedDate,
