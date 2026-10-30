@@ -197,39 +197,42 @@ class AnkiApp {
       });
 
       const cardEl = document.createElement('div');
-      cardEl.className = 'bg-slate-800 border border-slate-700/80 hover:border-slate-600 rounded-2xl p-5 flex flex-col justify-between transition-all hover:shadow-xl hover:shadow-indigo-500/5 group';
+      cardEl.className = 'bg-slate-900 border-2 border-yellow-500/30 hover:border-yellow-400 rounded-3xl p-5 flex flex-col justify-between transition-all hover:shadow-xl hover:shadow-yellow-500/10 group relative overflow-hidden';
       
-      const badgeColor = deck.category === 'Bunpou' ? 'text-indigo-400 bg-indigo-500/10 border-indigo-500/20' : 
-                         deck.category === 'Kosakata' ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 
-                         'text-amber-400 bg-amber-500/10 border-amber-500/20';
+      const badgeColor = deck.category === 'Bunpou' ? 'text-blue-300 bg-blue-500/20 border-blue-400/40' : 
+                         deck.category === 'Kosakata' ? 'text-emerald-300 bg-emerald-500/20 border-emerald-400/40' : 
+                         'text-yellow-300 bg-yellow-500/20 border-yellow-400/40';
 
       const isGladi = deck.id === 'deck-gladi-bersih';
       cardEl.innerHTML = `
         <div class="space-y-3">
           <div class="flex items-center justify-between">
-            <span class="text-xs px-2.5 py-0.5 rounded-full border ${badgeColor} font-medium">${deck.category || 'Materi'}</span>
-            <span class="text-xs text-slate-400">${deck.cards.length} kartu</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full border ${badgeColor} font-bold tracking-wide">${deck.category || 'Materi'}</span>
+            <span class="text-xs text-yellow-400 font-mono font-bold">${deck.cards.length} kartu</span>
           </div>
           <div>
-            <h4 class="font-bold text-white text-lg group-hover:text-indigo-300 transition">${deck.name}</h4>
-            <p class="text-xs text-slate-400 line-clamp-2 mt-1">${deck.description}</p>
+            <h4 class="font-black text-white text-lg group-hover:text-yellow-300 transition flex items-center gap-2">
+              ${isGladi ? '<i class="fa-solid fa-fire text-red-500"></i>' : '<i class="fa-solid fa-circle-dot text-yellow-400 text-xs"></i>'}
+              ${deck.name}
+            </h4>
+            <p class="text-xs text-slate-300 line-clamp-2 mt-1 leading-relaxed">${deck.description}</p>
           </div>
         </div>
 
-        <div class="mt-5 pt-4 border-t border-slate-700/60 flex items-center justify-between flex-wrap gap-2">
-          <div class="flex items-center gap-2 text-xs">
-            <span class="text-blue-400 font-semibold" title="Kartu Baru">${deckNew} Baru</span>
+        <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2 text-xs font-bold font-mono">
+            <span class="text-cyan-400" title="Kartu Baru">${deckNew} Baru</span>
             <span class="text-slate-600">•</span>
-            <span class="text-amber-400 font-semibold" title="Perlu Diulang">${deckDue} Due</span>
+            <span class="text-yellow-400" title="Perlu Diulang">${deckDue} Due</span>
           </div>
 
           <div class="flex items-center gap-2">
             ${isGladi ? `
-              <button onclick="app.startBedahSoal(0)" class="px-3 py-2 rounded-xl text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white shadow-md shadow-amber-600/30 transition flex items-center gap-1.5" title="Lihat gambar langsung dengan penjelasan di bawah">
-                <i class="fa-solid fa-book-open-reader text-[10px]"></i> Bedah Soal
+              <button onclick="app.startBedahSoal(0)" class="px-3.5 py-2 rounded-xl text-xs font-black bg-gradient-to-r from-red-600 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white shadow-md shadow-red-600/30 transition flex items-center gap-1.5 border border-yellow-400/50" title="Lihat gambar langsung dengan penjelasan di bawah">
+                <i class="fa-solid fa-book-open-reader text-[11px]"></i> Bedah Soal
               </button>
             ` : ''}
-            <button onclick="app.startStudy('${deck.id}')" class="px-3 py-2 rounded-xl text-xs font-semibold ${deckDue > 0 ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/30' : 'bg-slate-700 hover:bg-slate-600 text-slate-300'} transition flex items-center gap-1.5">
+            <button onclick="app.startStudy('${deck.id}')" class="px-3.5 py-2 rounded-xl text-xs font-bold ${deckDue > 0 ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/30 border border-blue-400/40' : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700'} transition flex items-center gap-1.5">
               <i class="fa-solid fa-play text-[10px]"></i> ${deckDue > 0 ? 'Flashcard' : 'Review'}
             </button>
           </div>

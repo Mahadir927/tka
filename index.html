@@ -3,20 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anki TKA Bahasa Jepang - Aplikasi Latihan Pribadi</title>
+  <title>PokéAnki TKA - Bahasa Jepang Trainer</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0b132b;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(239, 68, 68, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(234, 179, 8, 0.10) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
     }
     .japanese-text {
       font-family: 'Noto Sans JP', sans-serif;
+    }
+    /* Pokeball Icon / Decorator */
+    .pokeball-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .pokeball-btn::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      pointer-events: none;
     }
     /* 3D Flip Card Effect */
     .perspective-1000 {
@@ -37,43 +59,58 @@
     }
     rt {
       font-size: 0.55em;
-      color: #3b82f6;
-      font-weight: 500;
+      color: #fbbf24;
+      font-weight: 600;
       user-select: none;
     }
     .hide-furigana rt {
       visibility: hidden;
     }
+    /* Custom Pokemon card borders */
+    .poke-border {
+      border: 2px solid rgba(234, 179, 8, 0.35);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(234, 179, 8, 0.15);
+    }
+    .poke-border:hover {
+      border-color: rgba(234, 179, 8, 0.7);
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(234, 179, 8, 0.3);
+    }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+<body class="text-slate-100 min-h-screen flex flex-col">
 
-  <!-- Header / Navigation -->
-  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+  <!-- Header / Navigation (Pokemon Center & Pokedex Aesthetic) -->
+  <header class="border-b border-red-500/30 bg-slate-900/95 backdrop-blur sticky top-0 z-50 shadow-lg shadow-red-950/20">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center space-x-3 cursor-pointer" onclick="app.showHome()">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-rose-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 font-bold text-xl">
-          単
+      <div class="flex items-center space-x-3 cursor-pointer group" onclick="app.showHome()">
+        <!-- Pokeball Logo -->
+        <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-gradient-to-b from-red-600 via-red-500 to-white flex items-center justify-center shadow-lg shadow-red-500/30 relative overflow-hidden group-hover:rotate-180 transition-transform duration-500">
+          <div class="absolute w-full h-[3px] bg-slate-900 top-1/2 -translate-y-1/2"></div>
+          <div class="w-3.5 h-3.5 rounded-full bg-white border-2 border-slate-900 z-10 flex items-center justify-center">
+            <div class="w-1 h-1 rounded-full bg-slate-700"></div>
+          </div>
         </div>
         <div>
-          <h1 class="font-bold text-lg leading-tight flex items-center gap-2">
-            Anki TKA <span class="text-xs px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 font-medium">日本語</span>
+          <h1 class="font-extrabold text-lg leading-tight flex items-center gap-2 text-white">
+            PokéAnki <span class="text-xs px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/40 font-bold tracking-wide">TKA 日本語</span>
           </h1>
-          <p class="text-xs text-slate-400">Spaced Repetition System untuk TKA Bahasa Jepang</p>
+          <p class="text-xs text-yellow-400/90 font-medium flex items-center gap-1.5">
+            <i class="fa-solid fa-bolt text-yellow-400 text-[10px]"></i> Pokémon Style Japanese Trainer
+          </p>
         </div>
       </div>
 
       <div class="flex items-center space-x-2">
-        <button onclick="app.showHome()" class="px-3 py-1.5 rounded-lg text-sm bg-slate-800 hover:bg-slate-700 text-slate-200 transition flex items-center gap-2">
-          <i class="fa-solid fa-layer-group"></i> <span class="hidden sm:inline">Daftar Deck</span>
+        <button onclick="app.showHome()" class="px-3 py-1.5 rounded-xl text-xs sm:text-sm bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 transition flex items-center gap-2 font-medium">
+          <i class="fa-solid fa-layer-group text-blue-400"></i> <span class="hidden sm:inline">Daftar Deck</span>
         </button>
-        <button onclick="app.startBedahSoal(0)" class="px-3 py-1.5 rounded-lg text-sm bg-amber-600 hover:bg-amber-500 text-white transition flex items-center gap-2 font-medium shadow-md shadow-amber-600/30">
-          <i class="fa-solid fa-book-open-reader"></i> <span class="hidden sm:inline">Bedah Soal TKA (29)</span>
+        <button onclick="app.startBedahSoal(0)" class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm bg-gradient-to-r from-red-600 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white transition flex items-center gap-2 font-bold shadow-md shadow-red-600/30 border border-yellow-400/40 pokeball-btn">
+          <i class="fa-solid fa-book-open-reader"></i> <span>Bedah Soal (29)</span>
         </button>
-        <button onclick="app.openNewCardModal()" class="px-3 py-1.5 rounded-lg text-sm bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-2 font-medium shadow-md shadow-indigo-600/30">
-          <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">Tambah Kartu</span>
+        <button onclick="app.openNewCardModal()" class="px-3 py-1.5 rounded-xl text-xs sm:text-sm bg-blue-600 hover:bg-blue-500 text-white transition flex items-center gap-2 font-medium shadow-md shadow-blue-600/30 border border-blue-400/30">
+          <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">Tambah</span>
         </button>
-        <button onclick="app.resetAllProgress()" title="Reset Statistik Pembelajaran" class="p-2 rounded-lg text-sm bg-slate-800 hover:bg-rose-900/40 text-slate-400 hover:text-rose-300 transition">
+        <button onclick="app.resetAllProgress()" title="Reset / Reload Data Deck" class="p-2 rounded-xl text-xs sm:text-sm bg-slate-800 hover:bg-red-900/50 border border-slate-700 text-slate-300 hover:text-red-400 transition">
           <i class="fa-solid fa-rotate-right"></i>
         </button>
       </div>
@@ -86,38 +123,58 @@
     <!-- VIEW 1: HOME (Deck List & Stats Overview) -->
     <section id="view-home" class="space-y-6">
       
-      <!-- Banner / Motivation -->
-      <div class="p-6 rounded-2xl bg-gradient-to-r from-indigo-950 via-slate-800 to-slate-900 border border-indigo-500/20 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="space-y-1">
-          <h2 class="text-xl font-bold text-white flex items-center gap-2">
-            <span>ようこそ！ Selamat Berlatih TKA</span>
+      <!-- Trainer Banner (Pokemon Center Theme) -->
+      <div class="p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-red-950/70 to-slate-900 border-2 border-red-500/30 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-5">
+        <div class="space-y-1.5 z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-xs font-bold border border-yellow-500/40 mb-1">
+            <i class="fa-solid fa-award"></i> TKA Pokémon Training Center
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+            <span>ようこそ！ Ayo Latihan TKA Jepang</span>
           </h2>
-          <p class="text-sm text-slate-300 max-w-xl">
-            Sistem pengulangan berkala (SRS SM-2) akan otomatis menghitung waktu terbaik bagi otak kamu untuk mereview kartu sebelum lupa.
+          <p class="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
+            Taklukkan materi ujian TKA Bahasa Jepang dengan ritme pengulangan Spaced Repetition layaknya melatih tim Pokémon kamu!
           </p>
         </div>
-        <div class="flex items-center gap-4 bg-slate-900/80 p-3 rounded-xl border border-slate-700/60">
+
+        <!-- Trainer Stats Box (Pokedex / HP Bar Style) -->
+        <div class="flex items-center gap-4 bg-slate-950/80 p-4 rounded-2xl border-2 border-yellow-500/30 shadow-inner z-10">
           <div class="text-center px-2">
-            <p class="text-xs text-slate-400 font-medium">Perlu Review</p>
-            <p id="total-due-count" class="text-2xl font-bold text-amber-400">0</p>
+            <p class="text-[11px] text-yellow-400 font-bold uppercase tracking-wider flex items-center gap-1 justify-center">
+              <i class="fa-solid fa-hourglass-half"></i> Perlu Review
+            </p>
+            <p id="total-due-count" class="text-2xl font-black text-yellow-400">0</p>
           </div>
-          <div class="w-px h-8 bg-slate-700"></div>
+          <div class="w-px h-10 bg-slate-800"></div>
           <div class="text-center px-2">
-            <p class="text-xs text-slate-400 font-medium">Total Kartu</p>
-            <p id="total-cards-count" class="text-2xl font-bold text-indigo-400">0</p>
+            <p class="text-[11px] text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-1 justify-center">
+              <i class="fa-solid fa-clone"></i> Total Kartu
+            </p>
+            <p id="total-cards-count" class="text-2xl font-black text-cyan-400">0</p>
           </div>
-          <div class="w-px h-8 bg-slate-700"></div>
+          <div class="w-px h-10 bg-slate-800"></div>
           <div class="text-center px-2">
-            <p class="text-xs text-slate-400 font-medium">Selesai Hari Ini</p>
-            <p id="total-studied-today" class="text-2xl font-bold text-emerald-400">0</p>
+            <p class="text-[11px] text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1 justify-center">
+              <i class="fa-solid fa-circle-check"></i> Exp Hari Ini
+            </p>
+            <p id="total-studied-today" class="text-2xl font-black text-emerald-400">0</p>
           </div>
         </div>
       </div>
 
       <!-- Quick Action Deck Filter -->
       <div class="flex items-center justify-between">
-        <h3 class="font-bold text-slate-200 text-lg flex items-center gap-2">
-          <i class="fa-solid fa-book-bookmark text-indigo-400"></i> Pilihan Deck Materi TKA
+        <h3 class="font-extrabold text-white text-lg flex items-center gap-2">
+          <i class="fa-solid fa-cubes-stacked text-yellow-400"></i> Pilihan Deck Latihan Trainer
+        </h3>
+        <span class="text-xs text-slate-400">Pilih deck atau tekan Bedah Soal untuk belajar instan</span>
+      </div>
+
+      <!-- Deck Cards Grid -->
+      <div id="deck-list-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Decks will be rendered here dynamically -->
+      </div>
+    </section>
         </h3>
         <span class="text-xs text-slate-400">Klik 'Mulai Belajar' pada deck yang diinginkan</span>
       </div>
@@ -136,35 +193,39 @@
         <button onclick="app.showHome()" class="text-xs text-slate-400 hover:text-white flex items-center gap-1.5 transition">
           <i class="fa-solid fa-arrow-left"></i> Kembali ke Menu
         </button>
-        <span id="study-deck-title" class="text-sm font-semibold text-indigo-300 truncate max-w-xs"></span>
+        <span id="study-deck-title" class="text-sm font-bold text-yellow-300 truncate max-w-xs flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-red-500"></i> <span></span>
+        </span>
         <div class="flex items-center gap-2">
           <!-- Furigana Toggle -->
-          <button id="btn-toggle-furigana" onclick="app.toggleFurigana()" class="px-2.5 py-1 text-xs rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition" title="Sembunyikan/Tampilkan Furigana">
-            <i class="fa-solid fa-eye text-indigo-400 mr-1"></i> Furigana: <span id="furigana-status">ON</span>
+          <button id="btn-toggle-furigana" onclick="app.toggleFurigana()" class="px-2.5 py-1 text-xs rounded-xl border border-yellow-500/40 bg-slate-800 text-yellow-300 hover:bg-slate-700 transition font-medium" title="Sembunyikan/Tampilkan Furigana">
+            <i class="fa-solid fa-eye text-yellow-400 mr-1"></i> Furigana: <span id="furigana-status">ON</span>
           </button>
-          <span id="study-progress-badge" class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-300 rounded border border-slate-700">
+          <span id="study-progress-badge" class="text-xs font-mono px-2 py-1 bg-slate-950 text-cyan-400 rounded-xl border border-cyan-500/30">
             0 / 0
           </span>
         </div>
       </div>
 
-      <!-- Progress Bar -->
-      <div class="w-full bg-slate-800 h-1.5 rounded-full mb-6 overflow-hidden">
-        <div id="study-progress-bar" class="bg-indigo-500 h-full w-0 transition-all duration-300"></div>
+      <!-- Progress Bar (Pokemon HP Bar Style) -->
+      <div class="w-full bg-slate-950 h-2.5 rounded-full mb-6 overflow-hidden border border-slate-700/80 p-[1px]">
+        <div id="study-progress-bar" class="bg-gradient-to-r from-red-500 via-amber-400 to-emerald-400 h-full w-0 rounded-full transition-all duration-300 shadow-sm shadow-emerald-500/50"></div>
       </div>
 
-      <!-- Flashcard Element -->
+      <!-- Flashcard Element (Pokemon Trading Card Style) -->
       <div class="w-full perspective-1000 min-h-[380px] flex items-stretch">
-        <div id="flashcard" onclick="app.flipCard()" class="w-full bg-slate-800 border-2 border-slate-700 hover:border-indigo-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl cursor-pointer select-none transition-all duration-300 relative">
+        <div id="flashcard" onclick="app.flipCard()" class="w-full bg-slate-900 border-2 border-yellow-500/50 hover:border-yellow-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl shadow-yellow-500/10 cursor-pointer select-none transition-all duration-300 relative group">
           
           <!-- Card Header Info -->
-          <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-700/50 pb-3">
-            <span id="card-status-badge" class="px-2 py-0.5 rounded-full bg-slate-700 text-indigo-300 font-medium">New</span>
+          <div class="flex items-center justify-between text-xs text-slate-400 border-b border-yellow-500/20 pb-3">
+            <span id="card-status-badge" class="px-2.5 py-0.5 rounded-full bg-red-600/20 text-red-300 font-bold border border-red-500/30 flex items-center gap-1">
+              <i class="fa-solid fa-circle-dot text-[9px] text-red-400"></i> New
+            </span>
             <div class="flex items-center gap-2">
-              <button onclick="event.stopPropagation(); app.speakJapanese();" class="p-1.5 hover:text-indigo-400 hover:bg-slate-700/60 rounded-md transition" title="Dengarkan Pelafalan (Audio)">
+              <button onclick="event.stopPropagation(); app.speakJapanese();" class="p-1.5 hover:text-yellow-400 hover:bg-slate-800 rounded-lg text-slate-300 transition" title="Dengarkan Pelafalan (Audio)">
                 <i class="fa-solid fa-volume-high text-base"></i>
               </button>
-              <span class="text-slate-500">Klik kartu / Spasi untuk membalik</span>
+              <span class="text-slate-400 text-[11px]">Klik kartu / Spasi untuk Flip</span>
             </div>
           </div>
 
@@ -173,36 +234,36 @@
             
             <!-- Optional Question Image -->
             <div id="card-image-container" class="hidden mb-4 max-w-md mx-auto">
-              <img id="card-image-element" src="" alt="Ilustrasi Soal" class="rounded-xl border border-slate-700 shadow-md max-h-72 object-contain mx-auto bg-slate-900/50">
+              <img id="card-image-element" src="" alt="Ilustrasi Soal" class="rounded-2xl border-2 border-yellow-500/30 shadow-lg max-h-72 object-contain mx-auto bg-slate-950">
             </div>
 
             <!-- Question / Front -->
-            <div id="card-front-content" class="text-xl sm:text-2xl font-semibold text-white japanese-text leading-relaxed whitespace-pre-line">
+            <div id="card-front-content" class="text-xl sm:text-2xl font-bold text-white japanese-text leading-relaxed whitespace-pre-line">
               <!-- Front Content -->
             </div>
 
             <!-- Meaning / Translation (Arti Kalimat Lengkap) -->
-            <div id="card-meaning-content" class="hidden text-sm sm:text-base font-semibold text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 rounded-xl px-4 py-2 inline-flex items-center gap-2 max-w-lg mx-auto shadow-md">
+            <div id="card-meaning-content" class="hidden text-sm sm:text-base font-bold text-emerald-300 bg-emerald-950/70 border-2 border-emerald-500/40 rounded-2xl px-4 py-2 inline-flex items-center gap-2 max-w-lg mx-auto shadow-md">
               <!-- Meaning text -->
             </div>
 
             <!-- Divider (Shown when flipped) -->
-            <div id="card-answer-divider" class="hidden w-24 mx-auto border-t-2 border-indigo-500/40 my-3"></div>
+            <div id="card-answer-divider" class="hidden w-28 mx-auto border-t-2 border-yellow-400/40 my-3"></div>
 
             <!-- Answer / Back -->
-            <div id="card-back-content" class="hidden text-base sm:text-lg text-indigo-200 japanese-text leading-relaxed whitespace-pre-line">
+            <div id="card-back-content" class="hidden text-base sm:text-lg text-yellow-100 japanese-text leading-relaxed whitespace-pre-line font-medium">
               <!-- Back Content -->
             </div>
 
             <!-- Extra Notes / Example -->
-            <div id="card-example-content" class="hidden mt-3 p-3 rounded-xl bg-slate-900/60 border border-slate-700/50 text-xs sm:text-sm text-slate-300 text-left">
+            <div id="card-example-content" class="hidden mt-3 p-3 rounded-2xl bg-slate-950/80 border border-slate-700/80 text-xs sm:text-sm text-slate-300 text-left">
               <!-- Example & Grammar notes -->
             </div>
           </div>
 
           <!-- Card Footer Hint -->
-          <div class="text-center text-xs text-slate-500 pt-2 border-t border-slate-700/30">
-            <span id="card-tip-label">💡 Coba tebak atau ucapkan sebelum melihat jawaban</span>
+          <div class="text-center text-xs text-slate-400 pt-2 border-t border-slate-800">
+            <span id="card-tip-label">⚡ Coba tebak atau ucapkan sebelum melihat jurus/jawaban!</span>
           </div>
 
         </div>
@@ -212,35 +273,49 @@
       <div class="w-full mt-6">
         <!-- Before Flip (Show Answer Button) -->
         <div id="controls-front" class="flex justify-center">
-          <button onclick="app.flipCard()" class="w-full sm:w-2/3 py-3.5 px-6 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2 text-base">
-            <i class="fa-solid fa-eye"></i> Tampilkan Jawaban (Spasi)
+          <button onclick="app.flipCard()" class="w-full sm:w-2/3 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white font-extrabold shadow-lg shadow-red-600/30 transition flex items-center justify-center gap-2 text-base border border-yellow-400/50 pokeball-btn">
+            <i class="fa-solid fa-eye"></i> Buka Jurus / Jawaban (Spasi)
           </button>
         </div>
 
-        <!-- After Flip (4 Anki Buttons) -->
+        <!-- After Flip (4 Anki Buttons / Pokemon Move Elements) -->
         <div id="controls-back" class="hidden grid grid-cols-4 gap-2 sm:gap-3">
-          <!-- Again -->
-          <button onclick="app.rateCard(1)" class="p-3 rounded-xl bg-rose-950/40 hover:bg-rose-900/60 border border-rose-800/60 text-rose-300 transition flex flex-col items-center gap-1 group">
-            <span class="text-xs font-semibold uppercase tracking-wider text-rose-400">Again (1)</span>
-            <span class="text-xs text-rose-300/80" id="interval-again">&lt; 10m</span>
+          <!-- Again (Fire / Red) -->
+          <button onclick="app.rateCard(1)" class="p-3 rounded-2xl bg-gradient-to-b from-red-950/80 to-slate-900 hover:border-red-400 border-2 border-red-800 text-red-300 transition flex flex-col items-center gap-1 group shadow-md shadow-red-950/50">
+            <span class="text-xs font-black uppercase tracking-wider text-red-400 flex items-center gap-1">
+              <i class="fa-solid fa-fire text-[10px]"></i> Again (1)
+            </span>
+            <span class="text-xs text-red-200" id="interval-again">&lt; 10m</span>
             <span class="text-[10px] text-slate-400 group-hover:text-slate-200">Lupa</span>
           </button>
 
-          <!-- Hard -->
-          <button onclick="app.rateCard(2)" class="p-3 rounded-xl bg-amber-950/40 hover:bg-amber-900/60 border border-amber-800/60 text-amber-300 transition flex flex-col items-center gap-1 group">
-            <span class="text-xs font-semibold uppercase tracking-wider text-amber-400">Hard (2)</span>
-            <span class="text-xs text-amber-300/80" id="interval-hard">1h</span>
+          <!-- Hard (Rock / Amber) -->
+          <button onclick="app.rateCard(2)" class="p-3 rounded-2xl bg-gradient-to-b from-amber-950/80 to-slate-900 hover:border-amber-400 border-2 border-amber-800 text-amber-300 transition flex flex-col items-center gap-1 group shadow-md shadow-amber-950/50">
+            <span class="text-xs font-black uppercase tracking-wider text-amber-400 flex items-center gap-1">
+              <i class="fa-solid fa-mountain text-[10px]"></i> Hard (2)
+            </span>
+            <span class="text-xs text-amber-200" id="interval-hard">1h</span>
             <span class="text-[10px] text-slate-400 group-hover:text-slate-200">Sulit</span>
           </button>
 
-          <!-- Good -->
-          <button onclick="app.rateCard(3)" class="p-3 rounded-xl bg-sky-950/40 hover:bg-sky-900/60 border border-sky-800/60 text-sky-300 transition flex flex-col items-center gap-1 group">
-            <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Good (3)</span>
-            <span class="text-xs text-sky-300/80" id="interval-good">1h</span>
+          <!-- Good (Water / Blue) -->
+          <button onclick="app.rateCard(3)" class="p-3 rounded-2xl bg-gradient-to-b from-blue-950/80 to-slate-900 hover:border-blue-400 border-2 border-blue-800 text-blue-300 transition flex flex-col items-center gap-1 group shadow-md shadow-blue-950/50">
+            <span class="text-xs font-black uppercase tracking-wider text-blue-400 flex items-center gap-1">
+              <i class="fa-solid fa-water text-[10px]"></i> Good (3)
+            </span>
+            <span class="text-xs text-blue-200" id="interval-good">1h</span>
             <span class="text-[10px] text-slate-400 group-hover:text-slate-200">Ingat</span>
           </button>
 
-          <!-- Easy -->
+          <!-- Easy (Electric / Yellow) -->
+          <button onclick="app.rateCard(4)" class="p-3 rounded-2xl bg-gradient-to-b from-yellow-950/80 to-slate-900 hover:border-yellow-400 border-2 border-yellow-600 text-yellow-300 transition flex flex-col items-center gap-1 group shadow-md shadow-yellow-950/50">
+            <span class="text-xs font-black uppercase tracking-wider text-yellow-400 flex items-center gap-1">
+              <i class="fa-solid fa-bolt text-[10px]"></i> Easy (4)
+            </span>
+            <span class="text-xs text-yellow-200" id="interval-easy">4h</span>
+            <span class="text-[10px] text-slate-400 group-hover:text-slate-200">Mudah</span>
+          </button>
+        </div>
           <button onclick="app.rateCard(4)" class="p-3 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-800/60 text-emerald-300 transition flex flex-col items-center gap-1 group">
             <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Easy (4)</span>
             <span class="text-xs text-emerald-300/80" id="interval-easy">4h</span>
@@ -252,107 +327,131 @@
 
     </section>
 
-    <!-- VIEW 3: SESSION COMPLETED -->
+    <!-- VIEW 3: SESSION COMPLETED (Pokemon Victory Screen) -->
     <section id="view-complete" class="hidden text-center py-16 max-w-md mx-auto space-y-6">
-      <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center justify-center mx-auto text-3xl shadow-xl shadow-emerald-500/10">
+      <div class="w-24 h-24 bg-gradient-to-tr from-yellow-500 to-amber-300 text-slate-950 border-4 border-yellow-200 rounded-full flex items-center justify-center mx-auto text-4xl shadow-2xl shadow-yellow-500/30">
         <i class="fa-solid fa-trophy"></i>
       </div>
       <div>
-        <h2 class="text-2xl font-bold text-white mb-2">お疲れ様でした！ (Otsukaresama!)</h2>
-        <p class="text-slate-400 text-sm">
-          Semua kartu dalam sesi ini sudah selesai dipelajari. Jadwal Spaced Repetition telah diperbarui secara otomatis.
+        <span class="px-3 py-1 rounded-full bg-red-600/20 text-red-400 font-extrabold text-xs uppercase tracking-widest border border-red-500/40">Battle Victory</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-2 mb-2">お疲れ様でした！ (Otsukaresama!)</h2>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Semua kartu dalam sesi latihan ini sudah kamu taklukkan! Jadwal memori Pokémon Trainer telah otomatis tersimpan.
         </p>
       </div>
-      <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700/60 flex justify-around text-center">
+      <div class="p-4 rounded-2xl bg-slate-900 border-2 border-yellow-500/40 flex justify-around text-center shadow-lg">
         <div>
-          <p class="text-xs text-slate-400">Kartu Dipelajari</p>
-          <p id="summary-studied-count" class="text-xl font-bold text-indigo-400">0</p>
+          <p class="text-[11px] text-yellow-400 font-bold uppercase tracking-wider">Kartu Selesai</p>
+          <p id="summary-studied-count" class="text-2xl font-black text-white">0</p>
         </div>
-        <div class="w-px h-8 bg-slate-700"></div>
+        <div class="w-px h-10 bg-slate-800"></div>
         <div>
-          <p class="text-xs text-slate-400">Efisiensi Recall</p>
-          <p class="text-xl font-bold text-emerald-400">100%</p>
+          <p class="text-[11px] text-emerald-400 font-bold uppercase tracking-wider">Recall Accuracy</p>
+          <p class="text-2xl font-black text-emerald-400">100%</p>
         </div>
       </div>
       <div class="flex gap-3 justify-center">
-        <button onclick="app.showHome()" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition shadow-lg shadow-indigo-600/30 text-sm">
-          Kembali ke Daftar Deck
+        <button onclick="app.showHome()" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white font-extrabold transition shadow-lg shadow-red-600/30 text-sm border border-yellow-400/40 pokeball-btn">
+          Kembali ke Arena Deck
         </button>
       </div>
     </section>
 
-    <!-- VIEW 4: BEDAH SOAL TKA (Mode Belajar Khusus Gambar + Penjelasan Langsung) -->
+    <!-- VIEW 4: BEDAH SOAL TKA (Mode Belajar Khusus Pokedex / Trainer Style) -->
     <section id="view-bedah" class="hidden max-w-5xl mx-auto space-y-6 py-2">
       <!-- Top Bar Navigation -->
-      <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-800/80 p-4 rounded-2xl border border-slate-700/80 backdrop-blur">
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 p-4 rounded-3xl border-2 border-yellow-500/40 shadow-xl backdrop-blur">
         <div class="flex items-center gap-3">
-          <button onclick="app.showHome()" class="px-3 py-1.5 rounded-xl text-xs bg-slate-700 hover:bg-slate-600 text-slate-200 transition flex items-center gap-1.5">
+          <button onclick="app.showHome()" class="px-3.5 py-1.5 rounded-xl text-xs bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 transition flex items-center gap-1.5 font-bold">
             <i class="fa-solid fa-arrow-left"></i> Menu Utama
           </button>
           <div>
-            <h2 class="font-bold text-white text-base flex items-center gap-2">
-              <i class="fa-solid fa-book-open-reader text-amber-400"></i> Mode Bedah Soal TKA
+            <h2 class="font-black text-white text-base sm:text-lg flex items-center gap-2">
+              <i class="fa-solid fa-gamepad text-yellow-400"></i> Mode Bedah Soal TKA
             </h2>
-            <p class="text-xs text-slate-400">Gambar Soal Asli + Penjelasan & Kunci Langsung</p>
+            <p class="text-xs text-yellow-300/80 font-medium">Visual Soal Asli + Kunci & Penjelasan Lengkap</p>
           </div>
         </div>
 
         <div class="flex items-center gap-2">
           <!-- Quick Question Selector -->
-          <label for="bedah-select" class="text-xs text-slate-400 font-medium">Lompat ke:</label>
-          <select id="bedah-select" onchange="app.goToBedahSoal(this.value)" class="bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-amber-500 font-mono">
+          <label for="bedah-select" class="text-xs text-slate-300 font-bold">Lompat Soal:</label>
+          <select id="bedah-select" onchange="app.goToBedahSoal(this.value)" class="bg-slate-950 border-2 border-yellow-500/50 rounded-xl px-3 py-1.5 text-xs text-yellow-300 focus:outline-none focus:border-yellow-400 font-mono font-bold shadow-inner">
             <!-- options generated dynamically -->
           </select>
         </div>
       </div>
 
       <!-- Main Study Panel -->
-      <div class="bg-slate-800 border border-slate-700/80 rounded-3xl p-4 sm:p-8 space-y-6 shadow-2xl">
+      <div class="bg-slate-900 border-2 border-yellow-500/40 rounded-3xl p-4 sm:p-8 space-y-6 shadow-2xl">
         <!-- Soal Header / Title -->
-        <div class="flex items-center justify-between border-b border-slate-700/60 pb-4">
+        <div class="flex items-center justify-between border-b border-yellow-500/20 pb-4">
           <div class="flex items-center gap-2">
-            <span id="bedah-number-badge" class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold text-sm border border-amber-500/30">
+            <span id="bedah-number-badge" class="px-3.5 py-1 rounded-full bg-gradient-to-r from-red-600 to-amber-500 text-white font-black text-xs sm:text-sm border border-yellow-400/50 shadow-md shadow-red-950/40">
               Soal #1
             </span>
-            <span class="text-xs text-slate-400">Gladi Bersih TKA Bahasa Jepang</span>
+            <span class="text-xs text-slate-300 font-semibold hidden sm:inline">Gladi Bersih TKA Bahasa Jepang</span>
           </div>
           <div class="flex items-center gap-2">
-            <button onclick="app.toggleImageZoom()" class="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-amber-300 hover:text-white transition text-xs flex items-center gap-1.5" title="Perbesar / Perkecil Gambar">
-              <i class="fa-solid fa-magnifying-glass-plus text-sm"></i> <span id="btn-zoom-label">Perbesar Gambar</span>
+            <button onclick="app.toggleImageZoom()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-yellow-500/40 text-yellow-300 hover:text-white transition text-xs flex items-center gap-1.5 font-bold" title="Perbesar / Perkecil Gambar">
+              <i class="fa-solid fa-magnifying-glass-plus text-sm"></i> <span id="btn-zoom-label">Perbesar</span>
             </button>
-            <button onclick="app.speakJapaneseBedah()" class="px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-indigo-300 hover:text-white transition text-xs flex items-center gap-1.5" title="Dengarkan Pelafalan Bahasa Jepang">
+            <button onclick="app.speakJapaneseBedah()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-cyan-500/40 text-cyan-300 hover:text-white transition text-xs flex items-center gap-1.5 font-bold" title="Dengarkan Pelafalan Bahasa Jepang">
               <i class="fa-solid fa-volume-high text-sm"></i> <span>Dengar Suara</span>
             </button>
           </div>
         </div>
 
-        <!-- Bagian 1: GAMBAR ASLI SOAL (Besar, Jelas, & Bisa Diklik untuk Fullscreen) -->
+        <!-- Bagian 1: GAMBAR ASLI SOAL -->
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-              <i class="fa-solid fa-image text-indigo-400"></i> Gambar / Ilustrasi Asli Soal
+            <h3 class="text-xs font-black uppercase tracking-wider text-yellow-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-image"></i> Gambar / Ilustrasi Asli Soal
             </h3>
-            <span class="text-[11px] text-slate-400 italic">Klik gambar untuk melihat resolusi penuh</span>
+            <span class="text-[11px] text-slate-400 italic">Klik gambar untuk Fullscreen</span>
           </div>
-          <div class="bg-slate-950/80 border border-slate-700/80 rounded-2xl p-2 sm:p-4 flex justify-center items-center overflow-hidden">
+          <div class="bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 sm:p-4 flex justify-center items-center overflow-hidden shadow-inner">
             <img id="bedah-image" src="" alt="Soal TKA" onclick="app.openImageModal()" class="rounded-xl w-full max-w-2xl max-h-[85vh] sm:max-h-[750px] object-contain shadow-2xl cursor-zoom-in hover:opacity-95 transition-all">
           </div>
         </div>
 
         <!-- Bagian 2: TEKS BACAAN / TRANSLASI -->
-        <div id="bedah-meaning-box" class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 space-y-1">
-          <h4 class="text-xs font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-1.5">
+        <div id="bedah-meaning-box" class="p-4 rounded-2xl bg-emerald-950/60 border-2 border-emerald-500/40 space-y-1 shadow-md">
+          <h4 class="text-xs font-black text-emerald-300 uppercase tracking-wider flex items-center gap-1.5">
             <i class="fa-solid fa-language text-sm"></i> Arti / Terjemahan Bahasa Indonesia
           </h4>
-          <p id="bedah-meaning-text" class="text-sm text-emerald-100 leading-relaxed font-medium"></p>
+          <p id="bedah-meaning-text" class="text-sm text-emerald-100 leading-relaxed font-semibold"></p>
         </div>
 
         <!-- Bagian 3: KUNCI JAWABAN -->
-        <div class="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 space-y-2">
-          <h4 class="text-xs font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+        <div class="p-4 rounded-2xl bg-blue-950/60 border-2 border-blue-500/40 space-y-2 shadow-md">
+          <h4 class="text-xs font-black text-blue-300 uppercase tracking-wider flex items-center gap-1.5">
             <i class="fa-solid fa-circle-check text-sm"></i> Kunci Jawaban yang Benar
           </h4>
-          <div id="bedah-answer-text" class="text-sm sm:text-base text-white font-semibold whitespace-pre-line leading-relaxed"></div>
+          <div id="bedah-answer-text" class="text-sm sm:text-base text-white font-bold whitespace-pre-line leading-relaxed"></div>
+        </div>
+
+        <!-- Bagian 4: PEMBAHASAN & TATA BAHASA -->
+        <div class="p-5 rounded-2xl bg-slate-950 border-2 border-yellow-500/30 space-y-3 shadow-inner">
+          <h4 class="text-xs font-black text-yellow-400 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-lightbulb text-sm"></i> Pembahasan & Analisis Tata Bahasa
+          </h4>
+          <div id="bedah-explanation-text" class="text-sm text-slate-200 whitespace-pre-line leading-relaxed font-normal"></div>
+          <div id="bedah-vocab-box" class="pt-3 border-t border-slate-800 text-xs text-slate-300 leading-relaxed hidden">
+            <strong class="text-yellow-400 font-bold">Kosakata Penting:</strong> <span id="bedah-vocab-text"></span>
+          </div>
+        </div>
+
+        <!-- Bottom Navigation Buttons (Prev / Next) -->
+        <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+          <button id="btn-bedah-prev" onclick="app.prevBedahSoal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold transition text-xs sm:text-sm flex items-center gap-2">
+            <i class="fa-solid fa-chevron-left"></i> Soal Sebelumnya
+          </button>
+          <span id="bedah-counter-text" class="text-xs font-mono font-bold text-yellow-400 bg-slate-950 px-3 py-1.5 rounded-xl border border-yellow-500/30">1 / 29</span>
+          <button id="btn-bedah-next" onclick="app.nextBedahSoal()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-amber-500 hover:from-red-500 hover:to-amber-400 text-white font-bold transition text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-red-600/30 border border-yellow-400/40 pokeball-btn">
+            Soal Berikutnya <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
         </div>
 
         <!-- Bagian 4: PEMBAHASAN & TATA BAHASA -->
