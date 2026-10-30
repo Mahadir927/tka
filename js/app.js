@@ -824,7 +824,8 @@ Jawablah pertanyaan siswa dengan bahasa Indonesia yang jelas, ringkas, mudah dip
 Jika siswa bertanya tentang arti kata, sebutkan cara bacanya (kanji/kana/romaji), artinya, dan beri contoh penggunaan sederhana.
 Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
 
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${this.geminiApiKey}`, {
+      // Mendukung model Gemini terbaru dan fallback otomatis
+      let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${this.geminiApiKey}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -838,6 +839,24 @@ Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
           ]
         })
       });
+
+      // Fallback ke 1.5-flash jika model 2.0 belum aktif di project
+      if (!response.ok) {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${this.geminiApiKey}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [
+              {
+                role: 'user',
+                parts: [
+                  { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
+                ]
+              }
+            ]
+          })
+        });
+      }
 
       const data = await response.json();
 
