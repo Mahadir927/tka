@@ -19,6 +19,10 @@ class AnkiApp {
     this.bedahCards = [];
     this.isImageZoomed = false;
 
+    // AI Sensei state
+    this.geminiApiKey = localStorage.getItem('gemini_api_key') || '';
+    this.aiChatHistory = {}; // { [soalIndex]: [{ role, text }] }
+
     this.init();
   }
 
@@ -649,6 +653,216 @@ class AnkiApp {
     } else {
       vocabBox.classList.add('hidden');
     }
+
+    // Render Riwayat Chat AI untuk soal ini
+    this.renderAIChat();
+    this.updateApiKeyBadge();
+  }
+
+  // ==========================================
+  // FITUR AI TUTOR (ROTOM AI SENSEI)
+  // Tanya kata / tata bahasa / kalimat di soal yang sedang dibuka
+  // ==========================================
+  openApiKeyModal() {
+    const modal = document.getElementById('modal-api-key');
+    const input = document.getElementById('input-gemini-key');
+    if (input) input.value = this.geminiApiKey || '';
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closeApiKeyModal() {
+    const modal = document.getElementById('modal-api-key');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  saveApiKey() {
+    const input = document.getElementById('input-gemini-key');
+    const val = input ? input.value.trim() : '';
+    if (!val) {
+      alert('Silakan masukkan API key yang valid!');
+      return;
+    }
+    this.geminiApiKey = val;
+    localStorage.setItem('gemini_api_key', val);
+    this.updateApiKeyBadge();
+    this.closeApiKeyModal();
+    alert('Gemini API Key berhasil disimpan! Kamu sekarang bisa bebas bertanya ke Rotom AI.');
+  }
+
+  clearApiKey() {
+    this.geminiApiKey = '';
+    localStorage.removeItem('gemini_api_key');
+    const input = document.getElementById('input-gemini-key');
+    if (input) input.value = '';
+    this.updateApiKeyBadge();
+    alert('API Key berhasil dihapus.');
+  }
+
+  updateApiKeyBadge() {
+    const badge = document.getElementById('api-key-status');
+    if (badge) {
+      if (this.geminiApiKey) {
+        badge.innerText = 'Key Terpasang ✔';
+        badge.className = 'text-emerald-400 font-bold';
+      } else {
+        badge.innerText = 'Set API Key ⚙';
+        badge.className = 'text-yellow-400/90 font-medium underline';
+      }
+    }
+  }
+
+  renderAIChat() {
+    const historyContainer = document.getElementById('ai-chat-history');
+    if (!historyContainer) return;
+
+    const currentChat = this.aiChatHistory[this.bedahIndex] || [];
+    
+    // Default welcome bubble
+    let html = `
+      <div class="p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60 text-xs sm:text-sm text-slate-300 flex items-start gap-2.5">
+        <i class="fa-solid fa-comment-dots text-yellow-400 mt-0.5 text-base"></i>
+        <div class="space-y-1">
+          <p class="font-bold text-yellow-300 text-xs">Rotom AI Sensei (Soal #${this.bedahIndex + 1}):</p>
+          <p class="leading-relaxed">Halo! Aku siap bantu jelaskan kata atau kalimat apapun di soal nomor ini. Ada yang belum kamu pahami?</p>
+        </div>
+      </div>
+    `;
+
+    currentChat.forEach(msg => {
+      if (msg.role === 'user') {
+        html += `
+          <div class="flex justify-end">
+            <div class="max-w-[85%] bg-gradient-to-r from-red-600 to-amber-500 text-white p-3 rounded-2xl rounded-tr-sm text-xs sm:text-sm shadow-md">
+              <p class="font-bold text-[10px] text-yellow-200 uppercase tracking-wider mb-0.5">Pertanyaanmu:</p>
+              <p class="leading-relaxed">${this.escapeHtml(msg.text)}</p>
+            </div>
+          </div>
+        `;
+      } else {
+        html += `
+          <div class="flex justify-start">
+            <div class="max-w-[90%] bg-slate-950 border border-yellow-500/30 text-slate-200 p-3.5 rounded-2xl rounded-tl-sm text-xs sm:text-sm space-y-1 shadow-md">
+              <p class="font-bold text-[10px] text-yellow-400 uppercase tracking-wider flex items-center gap-1">
+                <i class="fa-solid fa-robot text-xs"></i> Rotom AI:
+              </p>
+              <div class="leading-relaxed whitespace-pre-line text-slate-100">${this.formatAIResponse(msg.text)}</div>
+            </div>
+          </div>
+        `;
+      }
+    });
+
+    historyContainer.innerHTML = html;
+    historyContainer.scrollTop = historyContainer.scrollHeight;
+  }
+
+  escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>"']/g, m => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    }[m]));
+  }
+
+  formatAIResponse(str) {
+    if (!str) return '';
+    // Bold **text**
+    let formatted = str.replace(/\*\*(.*?)\*\*/g, '<strong class="text-yellow-300 font-bold">$1</strong>');
+    return formatted;
+  }
+
+  askQuickQuestion(promptText) {
+    const input = document.getElementById('ai-question-input');
+    if (input) {
+      input.value = promptText;
+      this.handleAskAI(new Event('submit'));
+    }
+  }
+
+  async handleAskAI(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    const input = document.getElementById('ai-question-input');
+    const question = input ? input.value.trim() : '';
+    if (!question) return;
+
+    if (!this.geminiApiKey) {
+      this.openApiKeyModal();
+      return;
+    }
+
+    // Simpan chat user
+    if (!this.aiChatHistory[this.bedahIndex]) {
+      this.aiChatHistory[this.bedahIndex] = [];
+    }
+    this.aiChatHistory[this.bedahIndex].push({ role: 'user', text: question });
+    if (input) input.value = '';
+    this.renderAIChat();
+
+    const currentCard = this.bedahCards[this.bedahIndex];
+    const submitBtn = document.getElementById('btn-submit-ai');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Mikir...</span>';
+    }
+
+    try {
+      const systemInstruction = `Kamu adalah 'Rotom AI Sensei', guru bahasa Jepang yang ramah, asyik, dan ahli dalam persiapan ujian TKA (Tes Kemampuan Akademik) Bahasa Jepang jenjang SMA/SMK.
+Kamu sedang memandu siswa yang sedang mempelajari Soal Nomor ${this.bedahIndex + 1}.
+
+KONTEKS SOAL INI:
+- Pertanyaan / Wacana: ${currentCard.front}
+- Kunci Jawaban & Pembahasan: ${currentCard.back}
+- Arti / Terjemahan: ${currentCard.meaning}
+- Furigana / Teks: ${currentCard.furigana}
+- Kosakata Terkait: ${currentCard.example}
+
+TUGASMU:
+Jawablah pertanyaan siswa dengan bahasa Indonesia yang jelas, ringkas, mudah dipahami, ramah, dan solutif.
+Jika siswa bertanya tentang arti kata, sebutkan cara bacanya (kanji/kana/romaji), artinya, dan beri contoh penggunaan sederhana.
+Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
+
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${this.geminiApiKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [
+            {
+              role: 'user',
+              parts: [
+                { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
+              ]
+            }
+          ]
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error?.message || 'Gagal menghubungi Gemini API');
+      }
+
+      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Maaf, Rotom belum bisa menjawab saat ini. Coba tanyakan lagi ya!';
+      this.aiChatHistory[this.bedahIndex].push({ role: 'model', text: reply });
+      this.renderAIChat();
+
+    } catch (err) {
+      console.error('Gemini API Error:', err);
+      this.aiChatHistory[this.bedahIndex].push({
+        role: 'model',
+        text: `⚠️ Maaf, terjadi kendala saat memproses: ${err.message}\nPastikan API Key sudah benar dan kuota masih aktif.`
+      });
+      this.renderAIChat();
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>Tanya</span>';
+      }
+    }
+  }
   }
 
   toggleImageZoom() {
