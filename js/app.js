@@ -893,7 +893,6 @@ Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
       }
     }
   }
-  }
 
   toggleImageZoom() {
     this.isImageZoomed = !this.isImageZoomed;
