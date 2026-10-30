@@ -33,6 +33,10 @@ class AnkiApp {
     } else {
       await this.syncDefaultDecksUpdate();
     }
+    // Jika karena suatu hal deck masih kosong, coba muat ulang paksa
+    if (!this.decks || this.decks.length === 0) {
+      await this.loadDefaultDecks();
+    }
     this.checkDayRollover();
     this.renderHome();
     this.bindKeyboardShortcuts();
