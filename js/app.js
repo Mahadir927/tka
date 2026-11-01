@@ -795,23 +795,30 @@ class AnkiApp {
 
   // Helper untuk mendapatkan model Gemini yang aktif dan didukung oleh API key pengguna
   async getWorkingGeminiModel() {
-    if (this.cachedModel) return this.cachedModel;
+    if (this.cachedModel && !this.cachedModel.includes('2.5')) return this.cachedModel;
 
     try {
       // 1. Tanyakan langsung ke Google daftar model yang aktif untuk API key ini
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${this.geminiApiKey}`);
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${this.geminiApiKey}`, {
+        headers: { 'x-goog-api-key': this.geminiApiKey }
+      });
       if (res.ok) {
         const data = await res.json();
         if (data && data.models && Array.isArray(data.models)) {
-          // Cari model yang mendukung generateContent
+          // Cari model yang mendukung generateContent (hindari versi 2.5 yang sudah ditarik Google)
           const contentModels = data.models.filter(m => 
-            m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent')
+            m.supportedGenerationMethods && 
+            m.supportedGenerationMethods.includes('generateContent') &&
+            !m.name.includes('2.5')
           );
           
           if (contentModels.length > 0) {
-            // Prioritaskan model flash yang cepat dan hemat kuota
-            const flashModel = contentModels.find(m => m.name.includes('flash') && !m.name.includes('experimental') && !m.name.includes('thinking'));
-            const chosen = flashModel ? flashModel.name : contentModels[0].name;
+            // Prioritaskan gemini-3.8-flash (standar Google terbaru)
+            const preferred = contentModels.find(m => m.name.includes('3.8-flash'))
+              || contentModels.find(m => m.name.includes('2.0-flash') && !m.name.includes('exp'))
+              || contentModels.find(m => m.name.includes('flash') && !m.name.includes('thinking'))
+              || contentModels[0];
+            const chosen = preferred.name;
             this.cachedModel = chosen;
             console.log('Gemini model terdeteksi otomatis:', chosen);
             return chosen;
@@ -822,8 +829,8 @@ class AnkiApp {
       console.warn('Gagal listModels, mencoba fallback daftar model statis:', e);
     }
 
-    // Fallback jika listModels tidak merespons
-    return 'models/gemini-2.0-flash';
+    // Default ke gemini-3.8-flash sesuai instruksi resmi Google API
+    return 'models/gemini-3.8-flash';
   }
 
   async handleAskAI(e) {
@@ -879,47 +886,50 @@ Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
         ]
       };
 
-      // Dapatkan model yang aktif
-      let modelPath = await this.getWorkingGeminiModel();
-      if (!modelPath.startsWith('models/')) modelPath = 'models/' + modelPath;
+      // Model kandidat prioritas terbaru sesuai Google API terkini
+      const modelCandidates = [
+        'models/gemini-3.8-flash',
+        'models/gemini-2.0-flash',
+        'models/gemini-1.5-flash-latest'
+      ];
 
-      let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/${modelPath}:generateContent?key=${this.geminiApiKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(promptPayload)
-      });
+      let detected = await this.getWorkingGeminiModel();
+      if (!detected.startsWith('models/')) detected = 'models/' + detected;
+      if (!modelCandidates.includes(detected) && !detected.includes('2.5')) {
+        modelCandidates.unshift(detected);
+      }
 
-      // Jika model pilihan gagal, coba serangkaian fallback model yang umum
-      if (!response.ok) {
-        const fallbacks = [
-          'models/gemini-2.0-flash',
-          'models/gemini-2.5-flash',
-          'models/gemini-1.5-flash-latest',
-          'models/gemini-2.0-flash-exp',
-          'models/gemini-1.5-pro'
-        ];
+      let response = null;
+      let lastError = null;
 
-        for (const fb of fallbacks) {
-          if (fb === modelPath) continue;
-          const fbRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/${fb}:generateContent?key=${this.geminiApiKey}`, {
+      for (const model of modelCandidates) {
+        try {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/${model}:generateContent?key=${this.geminiApiKey}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+              'Content-Type': 'application/json',
+              'x-goog-api-key': this.geminiApiKey
+            },
             body: JSON.stringify(promptPayload)
           });
-          if (fbRes.ok) {
-            response = fbRes;
-            this.cachedModel = fb;
+          if (res.ok) {
+            response = res;
+            this.cachedModel = model;
             break;
+          } else {
+            const errJson = await res.json().catch(() => null);
+            lastError = errJson?.error?.message || `HTTP ${res.status}`;
           }
+        } catch (callErr) {
+          lastError = callErr.message;
         }
       }
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error?.message || 'Gagal menghubungi Gemini API');
+      if (!response || !response.ok) {
+        throw new Error(lastError || 'Gagal menghubungi Gemini API dengan model yang tersedia.');
       }
 
+      const data = await response.json();
       const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Maaf, Rotom belum bisa menjawab saat ini. Coba tanyakan lagi ya!';
       this.aiChatHistory[this.bedahIndex].push({ role: 'model', text: reply });
       this.renderAIChat();
