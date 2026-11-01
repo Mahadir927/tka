@@ -793,6 +793,39 @@ class AnkiApp {
     }
   }
 
+  // Helper untuk mendapatkan model Gemini yang aktif dan didukung oleh API key pengguna
+  async getWorkingGeminiModel() {
+    if (this.cachedModel) return this.cachedModel;
+
+    try {
+      // 1. Tanyakan langsung ke Google daftar model yang aktif untuk API key ini
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${this.geminiApiKey}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.models && Array.isArray(data.models)) {
+          // Cari model yang mendukung generateContent
+          const contentModels = data.models.filter(m => 
+            m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent')
+          );
+          
+          if (contentModels.length > 0) {
+            // Prioritaskan model flash yang cepat dan hemat kuota
+            const flashModel = contentModels.find(m => m.name.includes('flash') && !m.name.includes('experimental') && !m.name.includes('thinking'));
+            const chosen = flashModel ? flashModel.name : contentModels[0].name;
+            this.cachedModel = chosen;
+            console.log('Gemini model terdeteksi otomatis:', chosen);
+            return chosen;
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Gagal listModels, mencoba fallback daftar model statis:', e);
+    }
+
+    // Fallback jika listModels tidak merespons
+    return 'models/gemini-2.0-flash';
+  }
+
   async handleAskAI(e) {
     if (e && e.preventDefault) e.preventDefault();
     const input = document.getElementById('ai-question-input');
@@ -835,38 +868,50 @@ Jawablah pertanyaan siswa dengan bahasa Indonesia yang jelas, ringkas, mudah dip
 Jika siswa bertanya tentang arti kata, sebutkan cara bacanya (kanji/kana/romaji), artinya, dan beri contoh penggunaan sederhana.
 Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
 
-      // Mendukung model Gemini terbaru dan fallback otomatis
-      let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${this.geminiApiKey}`, {
+      const promptPayload = {
+        contents: [
+          {
+            role: 'user',
+            parts: [
+              { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
+            ]
+          }
+        ]
+      };
+
+      // Dapatkan model yang aktif
+      let modelPath = await this.getWorkingGeminiModel();
+      if (!modelPath.startsWith('models/')) modelPath = 'models/' + modelPath;
+
+      let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/${modelPath}:generateContent?key=${this.geminiApiKey}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [
-            {
-              role: 'user',
-              parts: [
-                { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
-              ]
-            }
-          ]
-        })
+        body: JSON.stringify(promptPayload)
       });
 
-      // Fallback ke 1.5-flash jika model 2.0 belum aktif di project
+      // Jika model pilihan gagal, coba serangkaian fallback model yang umum
       if (!response.ok) {
-        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${this.geminiApiKey}`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: [
-              {
-                role: 'user',
-                parts: [
-                  { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
-                ]
-              }
-            ]
-          })
-        });
+        const fallbacks = [
+          'models/gemini-2.0-flash',
+          'models/gemini-2.5-flash',
+          'models/gemini-1.5-flash-latest',
+          'models/gemini-2.0-flash-exp',
+          'models/gemini-1.5-pro'
+        ];
+
+        for (const fb of fallbacks) {
+          if (fb === modelPath) continue;
+          const fbRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/${fb}:generateContent?key=${this.geminiApiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(promptPayload)
+          });
+          if (fbRes.ok) {
+            response = fbRes;
+            this.cachedModel = fb;
+            break;
+          }
+        }
       }
 
       const data = await response.json();
