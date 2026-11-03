@@ -20,7 +20,8 @@ class AnkiApp {
     this.isImageZoomed = false;
 
     // AI Sensei state
-    this.geminiApiKey = localStorage.getItem('gemini_api_key') || '';
+    this.geminiApiKey = (localStorage.getItem('gemini_api_key') || '').trim();
+    this.cachedStrategy = null;
     this.aiChatHistory = {}; // { [soalIndex]: [{ role, text }] }
 
     this.init();
@@ -793,44 +794,176 @@ class AnkiApp {
     }
   }
 
-  // Helper untuk mendapatkan model Gemini yang aktif dan didukung oleh API key pengguna
-  async getWorkingGeminiModel() {
-    if (this.cachedModel && !this.cachedModel.includes('2.5')) return this.cachedModel;
+  // Helper ekstraksi teks dari respon Interactions API (Gemini 3.8 / 3.x / 2.5)
+  extractTextFromInteraction(data) {
+    if (!data) return null;
+    if (data.output_text) return data.output_text;
+    if (data.text) return data.text;
 
+    if (data.outputs && Array.isArray(data.outputs)) {
+      for (let i = data.outputs.length - 1; i >= 0; i--) {
+        const out = data.outputs[i];
+        if (typeof out === 'string') return out;
+        if (out.text) return out.text;
+        if (out.content && Array.isArray(out.content)) {
+          const t = out.content.find(c => (c.type === 'text' || !c.type) && c.text);
+          if (t) return t.text;
+        }
+      }
+    }
+
+    if (data.steps && Array.isArray(data.steps)) {
+      for (let i = data.steps.length - 1; i >= 0; i--) {
+        const step = data.steps[i];
+        if (step.text) return step.text;
+        if (step.content && Array.isArray(step.content)) {
+          const t = step.content.find(c => (c.type === 'text' || !c.type) && c.text);
+          if (t) return t.text;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  // Panggil Google Gemini AI dengan multi-strategi:
+  // 1. Google Interactions API (rekomendasi resmi Google AI Studio untuk model gemini-3.8-flash, 3.6, 3.5, 2.5)
+  // 2. Google GenerateContent API v1beta & v1 (gemini-2.0-flash, gemini-1.5-flash, gemini-1.5-pro)
+  async queryGeminiAI(systemInstruction, question) {
+    const apiKey = (this.geminiApiKey || '').trim();
+    if (!apiKey) throw new Error('API Key belum diisi. Silakan masukkan Gemini API Key di tombol kunci.');
+
+    // Jika strategi sebelumnya berhasil, coba langsung
+    if (this.cachedStrategy) {
+      try {
+        const reply = await this.executeStrategy(this.cachedStrategy, systemInstruction, question, apiKey);
+        if (reply) return reply;
+      } catch (e) {
+        console.warn('Cached strategy failed, falling back to full discovery:', e);
+        this.cachedStrategy = null;
+      }
+    }
+
+    // Susunan kandidat strategi otomatis
+    const strategies = [
+      // 1. Interactions API (standar Google terbaru)
+      { type: 'interactions', model: 'gemini-3.8-flash', version: 'v1beta' },
+      { type: 'interactions', model: 'gemini-3.6-flash', version: 'v1beta' },
+      { type: 'interactions', model: 'gemini-3.5-flash', version: 'v1beta' },
+      { type: 'interactions', model: 'gemini-2.5-flash', version: 'v1beta' },
+
+      // 2. GenerateContent API v1beta
+      { type: 'generateContent', model: 'gemini-2.0-flash', version: 'v1beta' },
+      { type: 'generateContent', model: 'gemini-1.5-flash', version: 'v1beta' },
+      { type: 'generateContent', model: 'gemini-1.5-pro', version: 'v1beta' },
+      { type: 'generateContent', model: 'gemini-2.5-flash', version: 'v1beta' },
+
+      // 3. GenerateContent API v1 (GA Production)
+      { type: 'generateContent', model: 'gemini-1.5-flash', version: 'v1' },
+      { type: 'generateContent', model: 'gemini-1.5-pro', version: 'v1' },
+      { type: 'generateContent', model: 'gemini-2.0-flash', version: 'v1' }
+    ];
+
+    // Deteksi model aktif dari akun pengguna via ListModels jika didukung
     try {
-      // 1. Tanyakan langsung ke Google daftar model yang aktif untuk API key ini
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${this.geminiApiKey}`, {
-        headers: { 'x-goog-api-key': this.geminiApiKey }
+      const listRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`, {
+        headers: { 'x-goog-api-key': apiKey }
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.models && Array.isArray(data.models)) {
-          // Cari model yang mendukung generateContent (hindari versi 2.5 yang sudah ditarik Google)
-          const contentModels = data.models.filter(m => 
-            m.supportedGenerationMethods && 
-            m.supportedGenerationMethods.includes('generateContent') &&
-            !m.name.includes('2.5')
+      if (listRes.ok) {
+        const listData = await listRes.json();
+        if (listData && Array.isArray(listData.models)) {
+          const supported = listData.models.filter(m => 
+            m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent')
           );
-          
-          if (contentModels.length > 0) {
-            // Prioritaskan gemini-3.8-flash (standar Google terbaru)
-            const preferred = contentModels.find(m => m.name.includes('3.8-flash'))
-              || contentModels.find(m => m.name.includes('2.0-flash') && !m.name.includes('exp'))
-              || contentModels.find(m => m.name.includes('flash') && !m.name.includes('thinking'))
-              || contentModels[0];
-            const chosen = preferred.name;
-            this.cachedModel = chosen;
-            console.log('Gemini model terdeteksi otomatis:', chosen);
-            return chosen;
+          for (const m of supported) {
+            const cleanName = m.name.replace(/^models\//, '');
+            if (!strategies.some(s => s.model === cleanName)) {
+              strategies.unshift({ type: 'generateContent', model: cleanName, version: 'v1beta' });
+            }
           }
         }
       }
-    } catch (e) {
-      console.warn('Gagal listModels, mencoba fallback daftar model statis:', e);
+    } catch (ignore) {}
+
+    const errorLogs = [];
+
+    for (const strat of strategies) {
+      try {
+        const reply = await this.executeStrategy(strat, systemInstruction, question, apiKey);
+        if (reply) {
+          this.cachedStrategy = strat;
+          console.log('✅ Terhubung dengan Gemini via:', strat);
+          return reply;
+        }
+      } catch (err) {
+        errorLogs.push(`${strat.type}/${strat.model} (${err.message})`);
+      }
     }
 
-    // Default ke gemini-3.8-flash sesuai instruksi resmi Google API
-    return 'models/gemini-3.8-flash';
+    console.error('Semua strategi Gemini API gagal:', errorLogs);
+    const topError = errorLogs[0] || 'Gagal menghubungi server AI';
+    throw new Error(`${topError}\n(Periksa kembali apakah API Key aktif dan izin Generative Language API diaktifkan)`);
+  }
+
+  async executeStrategy(strat, systemInstruction, question, apiKey) {
+    if (strat.type === 'interactions') {
+      const res = await fetch(`https://generativelanguage.googleapis.com/${strat.version}/interactions?key=${apiKey}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-goog-api-key': apiKey
+        },
+        body: JSON.stringify({
+          model: strat.model,
+          system_instruction: systemInstruction,
+          input: question
+        })
+      });
+
+      if (!res.ok) {
+        const errData = await res.json().catch(() => null);
+        throw new Error(errData?.error?.message || `HTTP ${res.status}`);
+      }
+
+      const data = await res.json();
+      const reply = this.extractTextFromInteraction(data);
+      if (!reply) throw new Error('Respon Interactions kosong');
+      return reply;
+
+    } else if (strat.type === 'generateContent') {
+      const modelIdentifier = strat.model.startsWith('models/') ? strat.model : `models/${strat.model}`;
+      const payload = {
+        contents: [
+          {
+            role: 'user',
+            parts: [
+              { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
+            ]
+          }
+        ]
+      };
+
+      const res = await fetch(`https://generativelanguage.googleapis.com/${strat.version}/${modelIdentifier}:generateContent?key=${apiKey}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-goog-api-key': apiKey
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!res.ok) {
+        const errData = await res.json().catch(() => null);
+        throw new Error(errData?.error?.message || `HTTP ${res.status}`);
+      }
+
+      const data = await res.json();
+      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!reply) throw new Error('Respon generateContent kosong');
+      return reply;
+    }
+
+    throw new Error('Metode API tidak dikenal');
   }
 
   async handleAskAI(e) {
@@ -875,62 +1008,7 @@ Jawablah pertanyaan siswa dengan bahasa Indonesia yang jelas, ringkas, mudah dip
 Jika siswa bertanya tentang arti kata, sebutkan cara bacanya (kanji/kana/romaji), artinya, dan beri contoh penggunaan sederhana.
 Gunakan format markdown sederhana dengan bold (**kata**) untuk memperjelas.`;
 
-      const promptPayload = {
-        contents: [
-          {
-            role: 'user',
-            parts: [
-              { text: `${systemInstruction}\n\nPertanyaan Siswa: ${question}` }
-            ]
-          }
-        ]
-      };
-
-      // Model kandidat prioritas terbaru sesuai Google API terkini
-      const modelCandidates = [
-        'models/gemini-3.8-flash',
-        'models/gemini-2.0-flash',
-        'models/gemini-1.5-flash-latest'
-      ];
-
-      let detected = await this.getWorkingGeminiModel();
-      if (!detected.startsWith('models/')) detected = 'models/' + detected;
-      if (!modelCandidates.includes(detected) && !detected.includes('2.5')) {
-        modelCandidates.unshift(detected);
-      }
-
-      let response = null;
-      let lastError = null;
-
-      for (const model of modelCandidates) {
-        try {
-          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/${model}:generateContent?key=${this.geminiApiKey}`, {
-            method: 'POST',
-            headers: { 
-              'Content-Type': 'application/json',
-              'x-goog-api-key': this.geminiApiKey
-            },
-            body: JSON.stringify(promptPayload)
-          });
-          if (res.ok) {
-            response = res;
-            this.cachedModel = model;
-            break;
-          } else {
-            const errJson = await res.json().catch(() => null);
-            lastError = errJson?.error?.message || `HTTP ${res.status}`;
-          }
-        } catch (callErr) {
-          lastError = callErr.message;
-        }
-      }
-
-      if (!response || !response.ok) {
-        throw new Error(lastError || 'Gagal menghubungi Gemini API dengan model yang tersedia.');
-      }
-
-      const data = await response.json();
-      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Maaf, Rotom belum bisa menjawab saat ini. Coba tanyakan lagi ya!';
+      const reply = await this.queryGeminiAI(systemInstruction, question);
       this.aiChatHistory[this.bedahIndex].push({ role: 'model', text: reply });
       this.renderAIChat();
 
